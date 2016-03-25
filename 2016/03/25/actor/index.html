@@ -15,15 +15,15 @@
 	})();
 	</script>
   
-  <title>redis脚本实现分布式锁 | Codingo - Coding狗</title>
+  <title>并行编程下的选择 | Codingo - Coding狗</title>
   <meta name="author" content="zhaohui">
   
-  <meta name="description" content="redis被大量用在分布式的环境中，自然而然分布式环境下的锁如何解决，立马成为一个问题。例如我们当前的手游项目，服务器端是按业务模块划分服务器的，有应用服，战斗服等，但是这两个vm都有可能同时改变玩家的属性，这如果在同一个vm下面，就很容易加锁，但如果在分布式环境下就没那么容易了，当然利用redis现有的功能也有解决办法，比如redis的脚本。">
+  <meta name="description" content="最近在看一些游戏群里面都在讨论actor，以前还真没接触过，赶紧了解一下。感觉最经典的总结就是那句:万物皆Actor。Actor之间只有发送消息这一种通信方式,消息让Actor之间解耦；Actor模型的消息传递形式简化了并行程序的开发。自己做的2个游戏项目都用了不同的并发处理模型，在此做一个总结。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="redis脚本实现分布式锁"/>
+  <meta property="og:title" content="并行编程下的选择"/>
   <meta property="og:site_name" content="Codingo - Coding狗"/>
 
   
@@ -81,44 +81,48 @@
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	redis脚本实现分布式锁
+	并行编程下的选择
   </h1>
   <p class="article-author">By
     
       <a href="http://codingo.github.io/about" title="zhaohui">zhaohui</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-03-24T03:31:29.000Z" itemprop="datePublished">2016-03-24</time>
-    更新日期:<time datetime="2016-03-25T07:09:09.724Z" itemprop="dateModified">2016-03-25</time>
+    <time datetime="2016-03-25T08:20:29.000Z" itemprop="datePublished">2016-03-25</time>
+    更新日期:<time datetime="2016-03-25T08:31:29.359Z" itemprop="dateModified">2016-03-25</time>
     
   </p>
 </header>
     <div class="entry">
 		
-        <p>redis被大量用在分布式的环境中，自然而然分布式环境下的锁如何解决，立马成为一个问题。例如我们当前的手游项目，<br>服务器端是按业务模块划分服务器的，有应用服，战斗服等，但是这两个vm都有可能同时改变玩家的属性，<br>这如果在同一个vm下面，就很容易加锁，但如果在分布式环境下就没那么容易了，当然利用redis现有的功能也有解决办法，比如redis的脚本。<br><a id="more"></a><br>redis在2.6以后的版本中增加了Lua脚本的功能，可以通过eval命令，直接在RedisServer环境中执行Lua脚本，并且可以在Lua脚本中调用Redis命令。</p>
-<h2 id="使用脚本的好处"><a href="#使用脚本的好处" class="headerlink" title="使用脚本的好处:"></a>使用脚本的好处:</h2><p>1.减少网络开销：可以把一些要批量处理的功能，发在一个脚本里面执行，减少客户端和redis的交互次数<br>2.原子操作:这主要就是我们在这边主要利用的功能，在分布式环境下保证数据的原子性。<br>3.复用:客户端发送的脚本会永久的存储在redis中，这就意味着其他客户端可以复用这一脚本而不需要使用代码完成同样的逻辑。</p>
-<p>下面先看一段lua脚本:</p>
-<p><pre><code>local food=redis.call(‘hget’,KEYS[1],’food’);<br>food=food+ARGV[1];<br>redis.call(‘hset’,KEYS[1],’food’,food);<br>local diamond=redis.call(‘hget’,KEYS[1],’diamond’);<br>diamond=diamond+ARGV[2];<br>redis.call(‘hset’,KEYS[1],’diamond’,diamond);</code></pre></p>
-<p><strong>注</strong>:redis.call是我们在脚本中调用redis命令，KEYS和ARGV2个数组，分别是键和参数，下标都是从1开始的，不是0。<br>这段脚本的功能是取出 KEYS指定的玩家food(粮草)和diamond(玉石)，然后就行修改，最后保存在redis中，脚本的执行，保证了整个操作的原子性。</p>
-<p>下面我们用java代码来看看具体的实现过程:</p>
-<p><pre><code>Jedis jedis = new Jedis(“192.168.128.128”, 6379);<br>// 1.初始玩家数据到redis中<br>GamePlayer player = new GamePlayer();<br>player.setId(1001);<br>player.setName(“ksfzhaohui”);<br>player.setFood(100);<br>player.setDiamond(100);<br>Map<string, string=""> beanMap = BeanUtil.warp(player);// 将对象转换成map<br>String beanKey = getRedisBeanKey(player.getClass(), player.getId());<br>System.out.println(“key:” + beanKey);<br>jedis.hmset(beanKey, beanMap);// 将玩家数据保存到redis中</string,></code></pre></p>
-<p>首先模拟了一个玩家将玩家信息保存在redis中，这边的Id随便写了一个，正常的情况下都是通过redis的命令incr生成一个id 结果:<br><img src="/imgs/redis_lock_001.png" alt="Alt text"></p>
-<p>BeanUtil代码:</p>
-<p><pre><code>public class BeanUtil {<br>    private static Logger logger = Logger.getLogger(BeanUtil.class);<br>    private static final String CLASS = “class”;<br>    @SuppressWarnings(“all”)<br>    public static Map<string, string=""> warp(Object bean) {<br>        Map<string, string=""> propertyMap = new HashMap<string, string="">();<br>        try {<br>            PropertyDescriptor[] ps = Introspector.getBeanInfo(bean.getClass())<br>                    .getPropertyDescriptors();<br>            for (PropertyDescriptor propertyDescriptor : ps) {<br>                String propertyName = propertyDescriptor.getName();<br>                if (propertyName != null &amp;&amp; !propertyName.equals(CLASS)) {<br>                    Method getter = propertyDescriptor.getReadMethod();<br>                    if (getter != null) {<br>                        propertyMap.put(propertyName,<br>                                String.valueOf(getter.invoke(bean, null)));<br>                    }<br>                }<br>            }<br>        } catch (Exception e) {<br>            logger.error(e);<br>        }<br>        return propertyMap;<br>    }<br>}</string,></string,></string,></code></pre></p>
-<p>当然网上还有一些其他的方法，如: 用SETNX实现分布式锁<br>可以参考:<a href="http://phl.iteye.com/blog/2029944" target="_blank" rel="external">http://phl.iteye.com/blog/2029944</a></p>
+        <p>最近在看一些游戏群里面都在讨论actor，以前还真没接触过，赶紧了解一下。<br>感觉最经典的总结就是那句:万物皆Actor。Actor之间只有发送消息这一种通信方式,消息让Actor之间解耦；Actor模型的消息传递形式简化了并行程序的开发。<br>自己做的2个游戏项目都用了不同的并发处理模型，在此做一个总结。<br><a id="more"></a></p>
+<h2 id="1-actor模式"><a href="#1-actor模式" class="headerlink" title="1.actor模式"></a>1.actor模式</h2><p>java平台目前还不支持actor,但并不影响我们使用actor，目前已经有多种支持actor的库，如akka，μJavaActors 库，这是一个轻型的、基于 Java 的 actor 包，<br>用于在传统 Java 应用程序中实现高度并行的执行。这里打算用μJavaActors 库做一个简单的实例。<br>具体μJavaActors 库参考:<a href="http://www.ibm.com/developerworks/cn/java/j-javaactors/#resources" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/java/j-javaactors/#resources</a></p>
+<p><pre><code>public class GamePlayerActor extends AbstractActor {<br>    private int gold;// 玩家金币<br>    @Override<br>    protected void loopBody(Message arg0) {<br>        String subject = arg0.getSubject();<br>        if (!subject.equals(“init”)) {<br>            int count = (Integer) arg0.getData();<br>            setGold(getGold() + count);<br>            System.out.println(subject + “，金币+” + count + “,总金币=” + getGold());<br>        }<br>    }<br>    //省略get/set…<br>}</code></pre></p>
+<p>玩家actor，接受各种类型的金币获取</p>
+<p><pre><code>public class RewardActor extends AbstractActor {<br>    private Actor sendTo;<br>    @Override<br>    protected void runBody() {<br>        DefaultMessage m = new DefaultMessage(“奖励”, 100);<br>        getManager().send(m, this, sendTo);<br>    }<br>    @Override<br>    protected void loopBody(Message arg0) {<br>    }<br>    public void setSendTo(Actor sendTo) {<br>        this.sendTo = sendTo;<br>    }<br>}</code></pre></p>
+<p>奖励actor, 获取金币的途径，发送奖励获得金币。<br>下面是一个测试类：</p>
+<p><pre><code>public class Main {<br>    public static void main(String[] args) {<br>        final DefaultActorManager am = new DefaultActorManager();<br>        try {<br>            Map<string, object=""> options = new HashMap<string, object="">();<br>            options.put(DefaultActorManager.ACTOR_THREAD_COUNT, 20);<br>            am.initialize(options);<br>            final GamePlayerActor gamePlayerActor = (GamePlayerActor) am<br>                    .createActor(GamePlayerActor.class, “gamePlayerActor”);<br>            // 接受消息actor<br>            am.startActor(gamePlayerActor);<br>            for (int i = 0; i &lt; 10; i++) {<br>                final int k = i;<br>                new Thread(new Runnable() {<br>                    @Override<br>                    public void run() {<br>                        ResourceActor a = (ResourceActor) am.createActor(<br>                                ResourceActor.class, “a” + k);<br>                        RewardActor b = (RewardActor) am.createActor(<br>                                RewardActor.class, “b” + k);<br>                        a.setSendTo(gamePlayerActor);<br>                        b.setSendTo(gamePlayerActor);<br>                        // 发送消息actor<br>                        am.startActor(a);<br>                        am.startActor(b);<br>                    }<br>                }).start();<br>            }<br>            Thread.sleep(100000);<br>        } catch (Exception e) {<br>            e.printStackTrace();<br>        }<br>    }<br>}</string,></string,></code></pre></p>
+<p>结果:(预期结果是1500,实际结果也是1500)</p>
+<p><pre><code>资源收获，金币+50,总金币=50<br>资源收获，金币+50,总金币=100<br>资源收获，金币+50,总金币=150<br>奖励，金币+100,总金币=250<br>奖励，金币+100,总金币=350<br>资源收获，金币+50,总金币=400<br>资源收获，金币+50,总金币=450<br>奖励，金币+100,总金币=550<br>奖励，金币+100,总金币=650<br>资源收获，金币+50,总金币=700<br>资源收获，金币+50,总金币=750<br>奖励，金币+100,总金币=850<br>奖励，金币+100,总金币=950<br>奖励，金币+100,总金币=1050<br>奖励，金币+100,总金币=1150<br>资源收获，金币+50,总金币=1200<br>资源收获，金币+50,总金币=1250<br>资源收获，金币+50,总金币=1300<br>奖励，金币+100,总金币=1400<br>奖励，金币+100,总金币=1500</code></pre></p>
+<h2 id="2-大家最熟悉的java并发处理"><a href="#2-大家最熟悉的java并发处理" class="headerlink" title="2.大家最熟悉的java并发处理"></a>2.大家最熟悉的java并发处理</h2><p>synchronized 代码块、wait/notify 和 java.util.concurrent 包等关键字，刚开始做第一个游戏的时候，就使用的这种方式。整个游戏只有一个vm，<br>我们通过封装了一下ehcache，将玩家的信息都保存在本地内存中，玩家的每一块信息在内存中都只存在一份，比如gameplayer，<br>在内存中只存在一个对象 gameplayer，整个代码中都是这种模式：</p>
+<p><pre><code>public class GamePlayer {<br>    private int glod;<br>    public synchronized void addGold(int count) {<br>        this.glod += count;<br>    }<br>    //略…<br>}</code></pre></p>
+<h2 id="3-队列模式"><a href="#3-队列模式" class="headerlink" title="3.队列模式"></a>3.队列模式</h2><p>这种模式也是当前游戏中正在使用的,给每个玩家一个消息队列，对某一个玩家来讲，其实都是一个单线程。</p>
+<p><pre><code>private OrderedQueuePoolExecutor recvExcutor = new OrderedQueuePoolExecutor(<br>            “消息接收队列”, 100, 10000);<br>@Override<br>public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)<br>            throws Exception {<br>    Message request = (Message) e.getMessage();<br>    recvExcutor.addTask(request.getHeader().getSessionid(), new MWork(<br>                request, e.getChannel()));<br>}</code></pre></p>
+<p>OrderedQueuePoolExecutor 是一个有序的队列线程池（这里代码就不贴了），这里其实就是用每个玩家的session关联一个消息队列，其实有点想actor模式。</p>
+<p>总结：actor应该是一种很好的模式，而且也提供了一些成熟的框架，但是使用Actor模型编写应用程序，需要开发人员使用一种与以往不同的设计思路，<br>这样的思路说难倒不难，说简单也不简单。第三种队列模式我觉得更加简单。</p>
 
     </div>
     <footer>
         
   
   <div class="categories">
-    <a href="/categories/redis/">redis</a>
+    <a href="/categories/actor/">actor</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/redis/">redis</a>
+    <a href="/tags/java/">java</a>
   </div>
 
 		<div class="bdsharebuttonbox">
@@ -166,8 +170,8 @@ with(document)0[
 
  <nav id="pagination" >
     
-    <a href="/2016/03/25/actor/" class="alignleft prev" title="并行编程下的选择">并行编程下的选择</a>
     
+    <a href="/2016/03/24/redis_lock/" class="alignright next" title="redis脚本实现分布式锁">redis脚本实现分布式锁</a>
     
     <div class="clearfix"></div>
 </nav>
@@ -177,7 +181,7 @@ with(document)0[
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2016/03/24/redis_lock/" data-title="redis脚本实现分布式锁" data-url="http://codingo.github.io/about/2016/03/24/redis_lock/"></div>
+		<div class="ds-thread" data-thread-key="2016/03/25/actor/" data-title="并行编程下的选择" data-url="http://codingo.github.io/about/2016/03/25/actor/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">

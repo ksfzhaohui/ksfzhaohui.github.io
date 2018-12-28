@@ -1,4 +1,4 @@
-﻿## 《Netty实现shadowsocks客户端》
+﻿## Netty实现shadowsocks客户端
 
 ## Shadowsocks是什么
 

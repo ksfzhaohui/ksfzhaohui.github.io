@@ -8,4 +8,4 @@
 
 [GitHub](https://github.com/ksfzhaohui/shadowsocks-netty/)
 [Gitee](https://gitee.com/OutOfMemory/shadowsocks-netty)
-[Get Started](#《Netty实现shadowsocks客户端》)
+[Get Started](#Netty实现shadowsocks客户端)

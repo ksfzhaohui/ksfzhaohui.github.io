@@ -1,4 +1,4 @@
-﻿<img src="../icons/ksfzhaohui.jpg" width="100" >
+﻿<img src="../icons/ksfzhaohui.ico" width="100" >
 
 # shadowsocks-netty
 

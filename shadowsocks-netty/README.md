@@ -1,4 +1,6 @@
-﻿## Shadowsocks是什么
+﻿##《Netty实现shadowsocks客户端》
+
+## Shadowsocks是什么
 
 shadowsocks是基于socks5协议实现的代理方式，分为服务器和客户端，双端之间通过使用指定的加密方式(AES,BlowFish,Table等)进行数据传输，有效的突破了GFW。
 

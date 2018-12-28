@@ -1,49 +1,29 @@
-## **ÏµÁĞÎÄÕÂ**
+ï»¿## **ç³»åˆ—æ–‡ç« **
 
-[Spring-Cloud-Config¿ìËÙ¿ªÊ¼](https://my.oschina.net/OutOfMemory/blog/1848235)
+[Spring-Cloud-Configå¿«é€Ÿå¼€å§‹](https://my.oschina.net/OutOfMemory/blog/1848235)
 
-[Spring-Cloud-ConfigÏûÏ¢×ÜÏßºÍ¸ß¿ÉÓÃ](https://my.oschina.net/OutOfMemory/blog/1865231)
+[Spring-Cloud-Configæ¶ˆæ¯æ€»çº¿å’Œé«˜å¯ç”¨](https://my.oschina.net/OutOfMemory/blog/1865231)
 
-## **Ç°ÑÔ**
+## **å‰è¨€**
 
-ÉÏÎÄÖĞ¼òµ¥µÄ½éÉÜÁËSpring-Cloud-ConfigÈçºÎÊ¹ÓÃ£¬ÈçºÎÊÖ¶¯¸üĞÂÅäÖÃÎÄ¼ş£¬²¢ÇÒÔÚÎÄÄ©Ìá³öÁË¼¸¸öÒÉÎÊ£¬ÆäÖĞ°üÀ¨¶à¸öClient½ÚµãÈçºÎ¸üĞÂ£¬Server¶ËÈçºÎ±£Ö¤¸ß¿ÉÓÃĞÔµÈ£»±¾ÎÄ½«ÖØµã½éÉÜÍ¨¹ıÊ¹ÓÃSpring Cloud BusÀ´ÅúÁ¿¸üĞÂ¿Í»§¶Ë£¬ÒÔ¼°ServerÈçºÎ±£Ö¤¸ß¿ÉÓÃ£»
+ä¸Šæ–‡ä¸­ç®€å•çš„ä»‹ç»äº†Spring-Cloud-Configå¦‚ä½•ä½¿ç”¨ï¼Œå¦‚ä½•æ‰‹åŠ¨æ›´æ–°é…ç½®æ–‡ä»¶ï¼Œå¹¶ä¸”åœ¨æ–‡æœ«æå‡ºäº†å‡ ä¸ªç–‘é—®ï¼Œå…¶ä¸­åŒ…æ‹¬å¤šä¸ªClientèŠ‚ç‚¹å¦‚ä½•æ›´æ–°ï¼ŒServerç«¯å¦‚ä½•ä¿è¯é«˜å¯ç”¨æ€§ç­‰ï¼›æœ¬æ–‡å°†é‡ç‚¹ä»‹ç»é€šè¿‡ä½¿ç”¨Spring Cloud Busæ¥æ‰¹é‡æ›´æ–°å®¢æˆ·ç«¯ï¼Œä»¥åŠServerå¦‚ä½•ä¿è¯é«˜å¯ç”¨ï¼›
 
-## **Spring Cloud BusÏûÏ¢×ÜÏß**
+## **Spring Cloud Busæ¶ˆæ¯æ€»çº¿**
 
-Spring Cloud BusÊ¹ÓÃÇáÁ¿¼¶ÏûÏ¢´úÀíÁ´½Ó·Ö²¼Ê½ÏµÍ³µÄ½Úµã£¬¿ÉÒÔÓÃÓÚ¹ã²¥×´Ì¬¸Ä±ä£¨ÀıÈç£¬ÅäÖÃ¸Ä±ä£©»òÆäËû¹ÜÀíÖ¸Áî£»Ä¿Ç°Î¨Ò»ÊµÏÖµÄ·½Ê½ÊÇÓÃAMQPÏûÏ¢´úÀí×÷ÎªÍ¨µÀ£¬ÆäÊµ±¾ÖÊÊÇÀûÓÃÁËMQµÄ¹ã²¥»úÖÆÔÚ·Ö²¼Ê½µÄÏµÍ³ÖĞ´«²¥ÏûÏ¢£¬Ä¿Ç°³£ÓÃµÄÓĞKafkaºÍRabbitMQ£»ÏÂÃæÖØµãÊ¹ÓÃkafkaÀ´ÊµÏÖ¶à¿Í»§¶ËË¢ĞÂÅäÖÃÎÄ¼ş£»
+Spring Cloud Busä½¿ç”¨è½»é‡çº§æ¶ˆæ¯ä»£ç†é“¾æ¥åˆ†å¸ƒå¼ç³»ç»Ÿçš„èŠ‚ç‚¹ï¼Œå¯ä»¥ç”¨äºå¹¿æ’­çŠ¶æ€æ”¹å˜ï¼ˆä¾‹å¦‚ï¼Œé…ç½®æ”¹å˜ï¼‰æˆ–å…¶ä»–ç®¡ç†æŒ‡ä»¤ï¼›ç›®å‰å”¯ä¸€å®ç°çš„æ–¹å¼æ˜¯ç”¨AMQPæ¶ˆæ¯ä»£ç†ä½œä¸ºé€šé“ï¼Œå…¶å®æœ¬è´¨æ˜¯åˆ©ç”¨äº†MQçš„å¹¿æ’­æœºåˆ¶åœ¨åˆ†å¸ƒå¼çš„ç³»ç»Ÿä¸­ä¼ æ’­æ¶ˆæ¯ï¼Œç›®å‰å¸¸ç”¨çš„æœ‰Kafkaå’ŒRabbitMQï¼›ä¸‹é¢é‡ç‚¹ä½¿ç”¨kafkaæ¥å®ç°å¤šå®¢æˆ·ç«¯åˆ·æ–°é…ç½®æ–‡ä»¶ï¼›
 
-### 1.×ÜÌå¸üĞÂÁ÷³Ì
+### 1.æ€»ä½“æ›´æ–°æµç¨‹
 
-´óÖÂÁ÷³ÌÍ¼ÈçÏÂËùÊ¾£º  
+å¤§è‡´æµç¨‹å›¾å¦‚ä¸‹æ‰€ç¤ºï¼š  
 ![](https://oscimg.oschina.net/oscnet/71ff25fd61bab9d129cdd1d495a36fa932f.jpg)
 
-### 2.kafka°²×°²¿Êğ
+### 2.kafkaå®‰è£…éƒ¨ç½²
 
-kafka²¿ÊğÒÀÀµZookeeper£¬Ê¹ÓÃµÄ°æ±¾·Ö±ğÊÇ£ºkafka_2.11-1.0.1ºÍzookeeper-3.4.3£¬¾ßÌåÈçºÎ°²×°²¿Êğ¿É²Î¿¼£º[Kafka¿ìËÙ¿ªÊ¼](https://my.oschina.net/OutOfMemory/blog/827863)
+kafkaéƒ¨ç½²ä¾èµ–Zookeeperï¼Œä½¿ç”¨çš„ç‰ˆæœ¬åˆ†åˆ«æ˜¯ï¼škafka_2.11-1.0.1å’Œzookeeper-3.4.3ï¼Œå…·ä½“å¦‚ä½•å®‰è£…éƒ¨ç½²å¯å‚è€ƒï¼š[Kafkaå¿«é€Ÿå¼€å§‹](https://my.oschina.net/OutOfMemory/blog/827863)
 
-### 3.server¶Ë¸ÄÔì
+### 3.serverç«¯æ”¹é€ 
 
-3.1Ìí¼ÓĞÂµÄÒÀÀµ
-
-```
-<dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-bus-kafka</artifactId>
-</dependency>
-```
-
-3.2application.propertiesÌí¼ÓÅäÖÃ
-
-```
-#¿ªÆôÏûÏ¢×ÜÏß
-spring.cloud.bus.trace.enabled=true
-spring.cloud.stream.kafka.binder.brokers=192.168.237.128
-spring.cloud.stream.kafka.binder.defaultBrokerPort=9092
-```
-
-### 4.client¸ÄÔì
-
-4.1Ìí¼ÓĞÂµÄÒÀÀµ
+3.1æ·»åŠ æ–°çš„ä¾èµ–
 
 ```
 <dependency>
@@ -52,31 +32,51 @@ spring.cloud.stream.kafka.binder.defaultBrokerPort=9092
 </dependency>
 ```
 
-4.2application.propertiesÌí¼ÓÅäÖÃ
+3.2application.propertiesæ·»åŠ é…ç½®
 
 ```
-#¿ªÆôÏûÏ¢×ÜÏß
+#å¼€å¯æ¶ˆæ¯æ€»çº¿
 spring.cloud.bus.trace.enabled=true
 spring.cloud.stream.kafka.binder.brokers=192.168.237.128
 spring.cloud.stream.kafka.binder.defaultBrokerPort=9092
 ```
 
-### 5.Æô¶¯²âÊÔ
+### 4.clientæ”¹é€ 
 
-5.1Æô¶¯Server¶Ë  
-¹Û²ìÆô¶¯ÈÕÖ¾£¬¿ÉÒÔ·¢ÏÖ/actuator/bus-refreshÓ³Éä
+4.1æ·»åŠ æ–°çš„ä¾èµ–
+
+```
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-bus-kafka</artifactId>
+</dependency>
+```
+
+4.2application.propertiesæ·»åŠ é…ç½®
+
+```
+#å¼€å¯æ¶ˆæ¯æ€»çº¿
+spring.cloud.bus.trace.enabled=true
+spring.cloud.stream.kafka.binder.brokers=192.168.237.128
+spring.cloud.stream.kafka.binder.defaultBrokerPort=9092
+```
+
+### 5.å¯åŠ¨æµ‹è¯•
+
+5.1å¯åŠ¨Serverç«¯  
+è§‚å¯Ÿå¯åŠ¨æ—¥å¿—ï¼Œå¯ä»¥å‘ç°/actuator/bus-refreshæ˜ å°„
 
 ```
 2018-07-18 10:51:44.434 INFO 12532 --- [ main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/bus-refresh],methods=[POST]}" onto public java.lang.Objectorg.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
 ```
 
-ÍùÏÂ¿ÉÒÔÓĞÈçÏÂÕâĞĞÈÕÖ¾£º
+å¾€ä¸‹å¯ä»¥æœ‰å¦‚ä¸‹è¿™è¡Œæ—¥å¿—ï¼š
 
 ```
 2018-07-18 10:52:08.803 INFO 6308 --- [ main] o.s.c.s.b.k.p.KafkaTopicProvisioner : Using kafka topicfor outbound: springCloudBus
 ```
 
-Server¶ËÁ¬½Ókafka´´½¨ÁËÒ»¸öÃû³ÆÎªspringCloudBusµÄTopic£¬ÓÃÀ´×÷ÎªÅäÖÃÎÄ¼ş¸üĞÂµÄÏûÏ¢Í¨Öª£»¿ÉÒÔÈ¥kafkaÉÏ²é¿´£º
+Serverç«¯è¿æ¥kafkaåˆ›å»ºäº†ä¸€ä¸ªåç§°ä¸ºspringCloudBusçš„Topicï¼Œç”¨æ¥ä½œä¸ºé…ç½®æ–‡ä»¶æ›´æ–°çš„æ¶ˆæ¯é€šçŸ¥ï¼›å¯ä»¥å»kafkaä¸ŠæŸ¥çœ‹ï¼š
 
 ```
 [root@localhost bin]# ./kafka-topics.sh --list --zookeeper 10.13.83.7:2181
@@ -84,46 +84,46 @@ __consumer_offsets
 springCloudBus
 ```
 
-5.2Æô¶¯Client  
-·Ö±ğÖ¸¶¨Æô¶¯¶Ë¿ÚÎª8881ºÍ8882£¬¿ÉÒÔ¿´µ½ºÍServer¶ËÀàËÆµÄÈÕÖ¾£¬¶©ÔÄÁËÃûÎªspringCloudBusµÄTopic£¬ÕâÑùServer¶Ë·¢ËÍÏûÏ¢¸økafka£¬kafkaÍ¨Öªclient¸üĞÂÊı¾İ£»
+5.2å¯åŠ¨Client  
+åˆ†åˆ«æŒ‡å®šå¯åŠ¨ç«¯å£ä¸º8881å’Œ8882ï¼Œå¯ä»¥çœ‹åˆ°å’ŒServerç«¯ç±»ä¼¼çš„æ—¥å¿—ï¼Œè®¢é˜…äº†åä¸ºspringCloudBusçš„Topicï¼Œè¿™æ ·Serverç«¯å‘é€æ¶ˆæ¯ç»™kafkaï¼Œkafkaé€šçŸ¥clientæ›´æ–°æ•°æ®ï¼›
 
-5.3²âÊÔ  
-·Ö±ğ·ÃÎÊ[http://localhost](http://localhost/):8881/helloºÍ[http://localhost](http://localhost/):8882/hello£¬½á¹ûÈçÏÂ£º
+5.3æµ‹è¯•  
+åˆ†åˆ«è®¿é—®[http://localhost](http://localhost/):8881/helloå’Œ[http://localhost](http://localhost/):8882/helloï¼Œç»“æœå¦‚ä¸‹ï¼š
 
 ```
 hello test
 ```
 
-¸üĞÂgitÖĞµÄÅäÖÃÎÄ¼şÎª£º
+æ›´æ–°gitä¸­çš„é…ç½®æ–‡ä»¶ä¸ºï¼š
 
 ```
 foo=hello test update
 ```
 
-POST·½Ê½ÇëÇóServer¶Ë£¬ÓÃÀ´¸üĞÂÅäÖÃÎÄ¼ş
+POSTæ–¹å¼è¯·æ±‚Serverç«¯ï¼Œç”¨æ¥æ›´æ–°é…ç½®æ–‡ä»¶
 
 ```
 c:\curl-7.61.0\I386>curl -X POST http://localhost:8888/actuator/bus-refresh
 ```
 
-·Ö±ğ·ÃÎÊ[http://localhost](http://localhost/):8881/helloºÍ[http://localhost](http://localhost/):8882/hello£¬½á¹ûÈçÏÂ£º
+åˆ†åˆ«è®¿é—®[http://localhost](http://localhost/):8881/helloå’Œ[http://localhost](http://localhost/):8882/helloï¼Œç»“æœå¦‚ä¸‹ï¼š
 
 ```
 hello test update
 ```
 
-2¸ö¿Í»§¶Ë¶¼»ñÈ¡µ½ÁË×îĞÂµÄÊı¾İ£¬±íÊ¾¸üĞÂ³É¹¦£»
+2ä¸ªå®¢æˆ·ç«¯éƒ½è·å–åˆ°äº†æœ€æ–°çš„æ•°æ®ï¼Œè¡¨ç¤ºæ›´æ–°æˆåŠŸï¼›
 
-ÔÚÉÏÍ¼ÖĞÎÒÃÇ·¢ÏÖServer¶Ë³Ğµ£ÁËÌ«¶àµÄÈÎÎñ£¬¶øÉÏÍ¼ÖĞServer¶ËÊÇÒ»¸öµ¥µã£¬ÕâÑù¾Í²»ÄÜ±£Ö¤ÏµÍ³¸ß¿ÉÓÃ£¬ÏÂÃæ¿´Ò»ÏÂÈçºÎ·Ö²¼Ê½²¿ÊğServer¶Ë£»
+åœ¨ä¸Šå›¾ä¸­æˆ‘ä»¬å‘ç°Serverç«¯æ‰¿æ‹…äº†å¤ªå¤šçš„ä»»åŠ¡ï¼Œè€Œä¸Šå›¾ä¸­Serverç«¯æ˜¯ä¸€ä¸ªå•ç‚¹ï¼Œè¿™æ ·å°±ä¸èƒ½ä¿è¯ç³»ç»Ÿé«˜å¯ç”¨ï¼Œä¸‹é¢çœ‹ä¸€ä¸‹å¦‚ä½•åˆ†å¸ƒå¼éƒ¨ç½²Serverç«¯ï¼›
 
-## **Server¶Ë±£Ö¤¸ß¿ÉÓÃ**
+## **Serverç«¯ä¿è¯é«˜å¯ç”¨**
 
-Server¶ËÍ¨¹ı×¢²áÖĞĞÄEurekaÀ´±£Ö¤¸ß¿ÉÓÃ£¬ÏÂÃæ¿´Ò»ÏÂ¾ßÌåÁ÷³Ì£º  
+Serverç«¯é€šè¿‡æ³¨å†Œä¸­å¿ƒEurekaæ¥ä¿è¯é«˜å¯ç”¨ï¼Œä¸‹é¢çœ‹ä¸€ä¸‹å…·ä½“æµç¨‹ï¼š  
 ![](https://oscimg.oschina.net/oscnet/1cc9ad60fe256bc86e5596356be2e5b4a08.jpg)
 
-### 1.Eureka×¢²áÖĞĞÄ
+### 1.Eurekaæ³¨å†Œä¸­å¿ƒ
 
-1.1Eureka-ServerÒÀÀµ
+1.1Eureka-Serverä¾èµ–
 
 ```
 <dependency>
@@ -133,7 +133,7 @@ Server¶ËÍ¨¹ı×¢²áÖĞĞÄEurekaÀ´±£Ö¤¸ß¿ÉÓÃ£¬ÏÂÃæ¿´Ò»ÏÂ¾ßÌåÁ÷³Ì£º
 </dependency>
 ```
 
-1.2Æô¶¯ÅäÖÃÎÄ¼ş
+1.2å¯åŠ¨é…ç½®æ–‡ä»¶
 
 ```
 spring.application.name=eureka-server
@@ -144,11 +144,11 @@ eureka.client.fetch-registry=false
 eureka.client.serviceUrl.defaultZone=http://localhost:8880/eureka/
 ```
 
-eureka.client.register-with-eureka£ºÊÇ·ñ½«×Ô¼º×¢²áµ½Eureka Server£¬Ä¬ÈÏÎªtrue  
-eureka.client.fetch-registry£ºÊÇ·ñ´ÓEureka Server»ñÈ¡×¢²áĞÅÏ¢£¬Ä¬ÈÏÎªtrue  
-eureka.client.serviceUrl.defaultZone£ºEureka Server½»»¥µØÖ·
+eureka.client.register-with-eurekaï¼šæ˜¯å¦å°†è‡ªå·±æ³¨å†Œåˆ°Eureka Serverï¼Œé»˜è®¤ä¸ºtrue  
+eureka.client.fetch-registryï¼šæ˜¯å¦ä»Eureka Serverè·å–æ³¨å†Œä¿¡æ¯ï¼Œé»˜è®¤ä¸ºtrue  
+eureka.client.serviceUrl.defaultZoneï¼šEureka Serveräº¤äº’åœ°å€
 
-1.3×¼±¸Æô¶¯Àà
+1.3å‡†å¤‡å¯åŠ¨ç±»
 
 ```
 @SpringBootApplication
@@ -160,9 +160,9 @@ public class EurekaServer {
 }
 ```
 
-### 2.¸ÄÔìServer¶Ë£¨·şÎñÌá¹©·½£©
+### 2.æ”¹é€ Serverç«¯ï¼ˆæœåŠ¡æä¾›æ–¹ï¼‰
 
-2.1Eureka-ClientÒÀÀµ
+2.1Eureka-Clientä¾èµ–
 
 ```
 <dependency>
@@ -171,15 +171,15 @@ public class EurekaServer {
 </dependency>
 ```
 
-2.2Æô¶¯ÅäÖÃÎÄ¼ş
+2.2å¯åŠ¨é…ç½®æ–‡ä»¶
 
 ```
 eureka.client.serviceUrl.defaultZone=http://localhost:8880/eureka/
 ```
 
-Ö¸¶¨×¢²áÖĞĞÄµØÖ·£¬Ò²¾ÍÊÇEureka-ServerÅäÖÃµÄµØÖ·
+æŒ‡å®šæ³¨å†Œä¸­å¿ƒåœ°å€ï¼Œä¹Ÿå°±æ˜¯Eureka-Serveré…ç½®çš„åœ°å€
 
-2.3Æô¶¯ÀàÌí¼Ó@EnableDiscoveryClient×¢ÊÍ£¬ÊµÏÖ·şÎñ×¢²áºÍ·¢ÏÖ
+2.3å¯åŠ¨ç±»æ·»åŠ @EnableDiscoveryClientæ³¨é‡Šï¼Œå®ç°æœåŠ¡æ³¨å†Œå’Œå‘ç°
 
 ```
 @EnableDiscoveryClient
@@ -192,9 +192,9 @@ public class ConfigServer {
 }
 ```
 
-### 3.¸ÄÔìClient¶Ë£¨·şÎñÏûºÄ·½£©
+### 3.æ”¹é€ Clientç«¯ï¼ˆæœåŠ¡æ¶ˆè€—æ–¹ï¼‰
 
-3.1Eureka-ClientÒÀÀµ
+3.1Eureka-Clientä¾èµ–
 
 ```
 <dependency>
@@ -203,7 +203,7 @@ public class ConfigServer {
 </dependency>
 ```
 
-3.2Æô¶¯ÅäÖÃÎÄ¼ş
+3.2å¯åŠ¨é…ç½®æ–‡ä»¶
 
 ```
 #spring.cloud.config.uri= http://localhost:8888/
@@ -212,69 +212,69 @@ spring.cloud.config.discovery.serviceId=config-server
 eureka.client.serviceUrl.defaultZone=http://localhost:8880/eureka/
 ```
 
-×¢ÊÍµô¾ßÌåµÄServer¶ËµØÖ·  
-spring.cloud.config.discovery.enabled£º¿ªÆô·şÎñ·¢ÏÖÖ§³Ö  
-spring.cloud.config.discovery.serviceId£º·şÎñÌá¹©¶ËµÄÃû³Æ  
-eureka.client.serviceUrl.defaultZone£ºÅäÖÃÖĞĞÄµÄµØÖ·
+æ³¨é‡Šæ‰å…·ä½“çš„Serverç«¯åœ°å€  
+spring.cloud.config.discovery.enabledï¼šå¼€å¯æœåŠ¡å‘ç°æ”¯æŒ  
+spring.cloud.config.discovery.serviceIdï¼šæœåŠ¡æä¾›ç«¯çš„åç§°  
+eureka.client.serviceUrl.defaultZoneï¼šé…ç½®ä¸­å¿ƒçš„åœ°å€
 
-### 4.²âÊÔ
+### 4.æµ‹è¯•
 
-Ê×ÏÈÆô¶¯×¢²áÖĞĞÄeurekaServer£¬¶Ë¿ÚÎª8880£»È»ºóÆô¶¯¶à¸öconfig-server¶Ë£¬¶Ë¿Ú·Ö±ğÎª£º8887£¬8888£»×îºóÆô¶¯¶à¸öconfig-client¶Ë£¬¶Ë¿Ú·Ö±ğÊÇ£º8883£¬8884£»  
-¿ÉÒÔ²é¿´×¢²áÖĞĞÄ£¬×¢²áµÄ·şÎñ£º  
+é¦–å…ˆå¯åŠ¨æ³¨å†Œä¸­å¿ƒeurekaServerï¼Œç«¯å£ä¸º8880ï¼›ç„¶åå¯åŠ¨å¤šä¸ªconfig-serverç«¯ï¼Œç«¯å£åˆ†åˆ«ä¸ºï¼š8887ï¼Œ8888ï¼›æœ€åå¯åŠ¨å¤šä¸ªconfig-clientç«¯ï¼Œç«¯å£åˆ†åˆ«æ˜¯ï¼š8883ï¼Œ8884ï¼›  
+å¯ä»¥æŸ¥çœ‹æ³¨å†Œä¸­å¿ƒï¼Œæ³¨å†Œçš„æœåŠ¡ï¼š  
 ![](https://oscimg.oschina.net/oscnet/d5f65edf21bc09fd754e85674196875fbcc.jpg)
 
-·Ö±ğ·ÃÎÊ[http://localhost](http://localhost/):8883/helloºÍ[http://localhost](http://localhost/):8884/hello£¬½á¹ûÈçÏÂ£º
+åˆ†åˆ«è®¿é—®[http://localhost](http://localhost/):8883/helloå’Œ[http://localhost](http://localhost/):8884/helloï¼Œç»“æœå¦‚ä¸‹ï¼š
 
 ```
 hello test
 ```
 
-¸üĞÂgitÖĞµÄÅäÖÃÎÄ¼şÎª£º
+æ›´æ–°gitä¸­çš„é…ç½®æ–‡ä»¶ä¸ºï¼š
 
 ```
 foo=hello test update
 ```
 
-POST·½Ê½ÇëÇóServer¶Ë£¬ÓÃÀ´¸üĞÂÅäÖÃÎÄ¼ş
+POSTæ–¹å¼è¯·æ±‚Serverç«¯ï¼Œç”¨æ¥æ›´æ–°é…ç½®æ–‡ä»¶
 
 ```
 c:\curl-7.61.0\I386>curl -X POST http://localhost:8888/actuator/bus-refresh
 ```
 
-ÕâÀïÖ»ÊÇÑ¡ÔñÁËÆäÖĞÒ»¸öserver¶ËÈ¥¸üĞÂ£¬ÈÎÒâÒ»¸ö¶¼¿ÉÒÔ£»
+è¿™é‡Œåªæ˜¯é€‰æ‹©äº†å…¶ä¸­ä¸€ä¸ªserverç«¯å»æ›´æ–°ï¼Œä»»æ„ä¸€ä¸ªéƒ½å¯ä»¥ï¼›
 
-·Ö±ğ·ÃÎÊ[http://localhost](http://localhost/):8883/helloºÍ[http://localhost](http://localhost/):8884/hello£¬½á¹ûÈçÏÂ£º
+åˆ†åˆ«è®¿é—®[http://localhost](http://localhost/):8883/helloå’Œ[http://localhost](http://localhost/):8884/helloï¼Œç»“æœå¦‚ä¸‹ï¼š
 
 ```
 hello test update
 ```
 
-2¸ö¿Í»§¶Ë¶¼»ñÈ¡µ½ÁË×îĞÂµÄÊı¾İ£¬±íÊ¾¸üĞÂ³É¹¦£»
+2ä¸ªå®¢æˆ·ç«¯éƒ½è·å–åˆ°äº†æœ€æ–°çš„æ•°æ®ï¼Œè¡¨ç¤ºæ›´æ–°æˆåŠŸï¼›
 
-½«8888¶Ë¿ÚµÄServer¶ËÍ£µô£¬ÔÙ´Î¸üĞÂÅäÖÃÎÄ¼şÎª
+å°†8888ç«¯å£çš„Serverç«¯åœæ‰ï¼Œå†æ¬¡æ›´æ–°é…ç½®æ–‡ä»¶ä¸º
 
 ```
 foo=hello test update2
 ```
 
-POST·½Ê½ÇëÇóServer¶Ë£¬ÓÃÀ´¸üĞÂÅäÖÃÎÄ¼ş
+POSTæ–¹å¼è¯·æ±‚Serverç«¯ï¼Œç”¨æ¥æ›´æ–°é…ç½®æ–‡ä»¶
 
 ```
 c:\curl-7.61.0\I386>curl -X POST http://localhost:8887/actuator/bus-refresh
 ```
 
-·Ö±ğ·ÃÎÊ[http://localhost](http://localhost/):8883/helloºÍ[http://localhost](http://localhost/):8884/hello£¬½á¹ûÈçÏÂ£º
+åˆ†åˆ«è®¿é—®[http://localhost](http://localhost/):8883/helloå’Œ[http://localhost](http://localhost/):8884/helloï¼Œç»“æœå¦‚ä¸‹ï¼š
 
 ```
 hello test update2
 ```
 
-2¸ö¿Í»§¶Ë¶¼»ñÈ¡µ½ÁË×îĞÂµÄÊı¾İ£¬±íÊ¾¸üĞÂ³É¹¦£»
+2ä¸ªå®¢æˆ·ç«¯éƒ½è·å–åˆ°äº†æœ€æ–°çš„æ•°æ®ï¼Œè¡¨ç¤ºæ›´æ–°æˆåŠŸï¼›
 
-## **×Ü½á**
+## **æ€»ç»“**
 
-Í¨¹ıÏûÏ¢×ÜÏßµÄ·½Ê½½â¾öÁË¶à¸öClient¸üĞÂµÄÎÊÌâ£¬ÒÔ¼°Í¨¹ıeurekaÀ´±£Ö¤ServerµÄ¸ß¿ÉÓÃĞÔ£»µ±È»eureka×¢²áÖĞĞÄºÍÏûÏ¢×ÜÏß±¾ÉíÒ²ĞèÒª¸ß¿ÉÓÃĞÔ£¬ÕâÀï¾Í²»¹ı¶à½éÉÜÁË¡£
+é€šè¿‡æ¶ˆæ¯æ€»çº¿çš„æ–¹å¼è§£å†³äº†å¤šä¸ªClientæ›´æ–°çš„é—®é¢˜ï¼Œä»¥åŠé€šè¿‡eurekaæ¥ä¿è¯Serverçš„é«˜å¯ç”¨æ€§ï¼›å½“ç„¶eurekaæ³¨å†Œä¸­å¿ƒå’Œæ¶ˆæ¯æ€»çº¿æœ¬èº«ä¹Ÿéœ€è¦é«˜å¯ç”¨æ€§ï¼Œè¿™é‡Œå°±ä¸è¿‡å¤šä»‹ç»äº†ã€‚
 
-## **Ê¾Àı´úÂëµØÖ·**
+## **ç¤ºä¾‹ä»£ç åœ°å€**
 
-Github:[https://github.com/ksfzhaohui¡­](https://github.com/ksfzhaohui/blog)
+Github:[https://github.com/ksfzhaohuiâ€¦](https://github.com/ksfzhaohui/blog)

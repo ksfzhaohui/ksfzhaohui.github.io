@@ -1,8 +1,8 @@
-##Ç°ÑÔ
-½ô½ÓÉÏÎÄ[Dubbo·ÖÎöÖ®Cluster²ã][1]£¬±¾ÎÄ¼ÌĞø·ÖÎödubboµÄregister²ã£»´Ë²ã·â×°·şÎñµØÖ·µÄ×¢²áÓë·¢ÏÖ£¬ÒÔ·şÎñURLÎªÖĞĞÄ£¬À©Õ¹½Ó¿ÚÎªRegistryFactory, Registry, RegistryService£»
+ï»¿##å‰è¨€
+ç´§æ¥ä¸Šæ–‡[Dubboåˆ†æä¹‹Clusterå±‚][1]ï¼Œæœ¬æ–‡ç»§ç»­åˆ†ædubboçš„registerå±‚ï¼›æ­¤å±‚å°è£…æœåŠ¡åœ°å€çš„æ³¨å†Œä¸å‘ç°ï¼Œä»¥æœåŠ¡URLä¸ºä¸­å¿ƒï¼Œæ‰©å±•æ¥å£ä¸ºRegistryFactory, Registry, RegistryServiceï¼›
 
-##Registry½Ó¿Ú
-½Ó¿Ú¶¨ÒåÈçÏÂ£º
+##Registryæ¥å£
+æ¥å£å®šä¹‰å¦‚ä¸‹ï¼š
 
 ```
 public interface Registry extends Node, RegistryService {
@@ -22,15 +22,15 @@ public interface RegistryService {
  
 }
 ```
-Ö÷ÒªÌá¹©ÁË×¢²á(register)£¬×¢Ïú(unregister)£¬¶©ÔÄ(subscribe)£¬ÍË¶©(unsubscribe)µÈ¹¦ÄÜ£»dubboÌá¹©ÁË¶àÖÖ×¢²á·½Ê½·Ö±ğÊÇ£ºMulticast £¬Zookeeper£¬RedisÒÔ¼°Simple·½Ê½£»
-Multicast£ºMulticast×¢²áÖĞĞÄ²»ĞèÒªÆô¶¯ÈÎºÎÖĞĞÄ½Úµã£¬Ö»Òª¹ã²¥µØÖ·Ò»Ñù£¬¾Í¿ÉÒÔ»¥Ïà·¢ÏÖ£»
-Zookeeper£ºZookeeperÊÇApacahe HadoopµÄ×ÓÏîÄ¿£¬ÊÇÒ»¸öÊ÷ĞÍµÄÄ¿Â¼·şÎñ£¬Ö§³Ö±ä¸üÍÆËÍ£¬ÊÊºÏ×÷ÎªDubbo·şÎñµÄ×¢²áÖĞĞÄ£¬¹¤ÒµÇ¿¶È½Ï¸ß£¬¿ÉÓÃÓÚÉú²ú»·¾³£¬²¢ÍÆ¼öÊ¹ÓÃ£»
-Redis£º»ùÓÚRedisÊµÏÖµÄ×¢²áÖĞĞÄ£¬Ê¹ÓÃ RedisµÄPublish/SubscribeÊÂ¼şÍ¨ÖªÊı¾İ±ä¸ü£»
-Simple£ºSimple×¢²áÖĞĞÄ±¾Éí¾ÍÊÇÒ»¸öÆÕÍ¨µÄDubbo·şÎñ£¬¿ÉÒÔ¼õÉÙµÚÈı·½ÒÀÀµ£¬Ê¹ÕûÌåÍ¨Ñ¶·½Ê½Ò»ÖÂ£»
-ºóÃæÖØµã½éÉÜ¹Ù·½ÍÆ¼öµÄZookeeper×¢²á·½Ê½£»¾ßÌåµÄRegisterÊÇÔÚRegistryFactoryÖĞÉú³ÉµÄ£¬¾ßÌå¿´Ò»ÏÂ½Ó¿Ú¶¨Òå£»
+ä¸»è¦æä¾›äº†æ³¨å†Œ(register)ï¼Œæ³¨é”€(unregister)ï¼Œè®¢é˜…(subscribe)ï¼Œé€€è®¢(unsubscribe)ç­‰åŠŸèƒ½ï¼›dubboæä¾›äº†å¤šç§æ³¨å†Œæ–¹å¼åˆ†åˆ«æ˜¯ï¼šMulticast ï¼ŒZookeeperï¼ŒRedisä»¥åŠSimpleæ–¹å¼ï¼›
+Multicastï¼šMulticastæ³¨å†Œä¸­å¿ƒä¸éœ€è¦å¯åŠ¨ä»»ä½•ä¸­å¿ƒèŠ‚ç‚¹ï¼Œåªè¦å¹¿æ’­åœ°å€ä¸€æ ·ï¼Œå°±å¯ä»¥äº’ç›¸å‘ç°ï¼›
+Zookeeperï¼šZookeeperæ˜¯Apacahe Hadoopçš„å­é¡¹ç›®ï¼Œæ˜¯ä¸€ä¸ªæ ‘å‹çš„ç›®å½•æœåŠ¡ï¼Œæ”¯æŒå˜æ›´æ¨é€ï¼Œé€‚åˆä½œä¸ºDubboæœåŠ¡çš„æ³¨å†Œä¸­å¿ƒï¼Œå·¥ä¸šå¼ºåº¦è¾ƒé«˜ï¼Œå¯ç”¨äºç”Ÿäº§ç¯å¢ƒï¼Œå¹¶æ¨èä½¿ç”¨ï¼›
+Redisï¼šåŸºäºRediså®ç°çš„æ³¨å†Œä¸­å¿ƒï¼Œä½¿ç”¨ Redisçš„Publish/Subscribeäº‹ä»¶é€šçŸ¥æ•°æ®å˜æ›´ï¼›
+Simpleï¼šSimpleæ³¨å†Œä¸­å¿ƒæœ¬èº«å°±æ˜¯ä¸€ä¸ªæ™®é€šçš„DubboæœåŠ¡ï¼Œå¯ä»¥å‡å°‘ç¬¬ä¸‰æ–¹ä¾èµ–ï¼Œä½¿æ•´ä½“é€šè®¯æ–¹å¼ä¸€è‡´ï¼›
+åé¢é‡ç‚¹ä»‹ç»å®˜æ–¹æ¨èçš„Zookeeperæ³¨å†Œæ–¹å¼ï¼›å…·ä½“çš„Registeræ˜¯åœ¨RegistryFactoryä¸­ç”Ÿæˆçš„ï¼Œå…·ä½“çœ‹ä¸€ä¸‹æ¥å£å®šä¹‰ï¼›
 
-##RegistryFactory½Ó¿Ú
-½Ó¿Ú¶¨ÒåÈçÏÂ£º
+##RegistryFactoryæ¥å£
+æ¥å£å®šä¹‰å¦‚ä¸‹ï¼š
 
 ```
 @SPI("dubbo")
@@ -41,7 +41,7 @@ public interface RegistryFactory {
  
 }
 ```
-RegistryFactoryÌá¹©ÁËSPIÀ©Õ¹£¬Ä¬ÈÏÊ¹ÓÃdubbo£¬¾ßÌåÓĞÄÄĞ©À©Õ¹¿ÉÒÔ²é¿´META-INF/dubbo/internal/com.alibaba.dubbo.registry.RegistryFactory£º
+RegistryFactoryæä¾›äº†SPIæ‰©å±•ï¼Œé»˜è®¤ä½¿ç”¨dubboï¼Œå…·ä½“æœ‰å“ªäº›æ‰©å±•å¯ä»¥æŸ¥çœ‹META-INF/dubbo/internal/com.alibaba.dubbo.registry.RegistryFactoryï¼š
 
 ```
 dubbo=com.alibaba.dubbo.registry.dubbo.DubboRegistryFactory
@@ -49,7 +49,7 @@ multicast=com.alibaba.dubbo.registry.multicast.MulticastRegistryFactory
 zookeeper=com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistryFactory
 redis=com.alibaba.dubbo.registry.redis.RedisRegistryFactory
 ```
-ÒÑÍÆ¼öÊ¹ÓÃµÄZookeeperÎªÊµÀı£¬²é¿´ZookeeperRegistryFactory£¬Ìá¹©ÁËcreateRegistry·½·¨£º
+å·²æ¨èä½¿ç”¨çš„Zookeeperä¸ºå®ä¾‹ï¼ŒæŸ¥çœ‹ZookeeperRegistryFactoryï¼Œæä¾›äº†createRegistryæ–¹æ³•ï¼š
 
 ```
 private ZookeeperTransporter zookeeperTransporter;
@@ -58,7 +58,7 @@ public Registry createRegistry(URL url) {
        return new ZookeeperRegistry(url, zookeeperTransporter);
 }
 ```
-ÊµÀı»¯ZookeeperRegistry£¬Á½¸ö²ÎÊı·Ö±ğÊÇurlºÍzookeeperTransporter£¬zookeeperTransporterÊÇ²Ù×÷ZookeeperµÄ¿Í»§¶Ë×é¼ş°üÀ¨£ºzkclientºÍcuratorÁ½ÖÖ·½Ê½
+å®ä¾‹åŒ–ZookeeperRegistryï¼Œä¸¤ä¸ªå‚æ•°åˆ†åˆ«æ˜¯urlå’ŒzookeeperTransporterï¼ŒzookeeperTransporteræ˜¯æ“ä½œZookeeperçš„å®¢æˆ·ç«¯ç»„ä»¶åŒ…æ‹¬ï¼šzkclientå’Œcuratorä¸¤ç§æ–¹å¼
 
 ```
 @SPI("curator")
@@ -69,24 +69,24 @@ public interface ZookeeperTransporter {
  
 }
 ```
-ZookeeperTransporterÍ¬ÑùÌá¹©ÁËSPIÀ©Õ¹£¬Ä¬ÈÏÊ¹ÓÃcurator·½Ê½£»½ÓÏÂÀ´ÖØµã¿´Ò»ÏÂZookeeper×¢²áÖĞĞÄ¡£
+ZookeeperTransporteråŒæ ·æä¾›äº†SPIæ‰©å±•ï¼Œé»˜è®¤ä½¿ç”¨curatoræ–¹å¼ï¼›æ¥ä¸‹æ¥é‡ç‚¹çœ‹ä¸€ä¸‹Zookeeperæ³¨å†Œä¸­å¿ƒã€‚
 
-##Zookeeper×¢²áÖĞĞÄ
-###1.ÕûÌåÉè¼ÆÁ÷³Ì
-ÔÚdubboµÄÕûÌåÉè¼ÆÖĞ£¬¿ÉÒÔ´óÖÂ²é¿´Registry²ãµÄ´óÖÂÁ÷³Ì£¬Ê×ÏÈÍ¨¹ıRegistryFactoryÊµÀı»¯Registry£¬Registry¿ÉÒÔ½ÓÊÕRegistryProtocol´«¹ıÀ´µÄ×¢²á(register)ºÍ¶©ÔÄ(subscribe)ÏûÏ¢£¬È»ºóRegistryÍ¨¹ıZKClientÀ´ÏòZookeeperÖ¸¶¨µÄÄ¿Â¼ÏÂĞ´ÈëurlĞÅÏ¢£¬Èç¹ûÊÇ¶©ÔÄÏûÏ¢Registry»áÍ¨¹ıNotifyListenerÀ´Í¨ÖªRegitryDirctory½øĞĞ¸üĞÂurl£¬×îºó¾ÍÊÇCluster²ãÍ¨¹ıÂ·ÓÉ£¬¸ºÔØ¾ùºâÑ¡Ôñ¾ßÌåµÄÌá¹©·½£»
+##Zookeeperæ³¨å†Œä¸­å¿ƒ
+###1.æ•´ä½“è®¾è®¡æµç¨‹
+åœ¨dubboçš„æ•´ä½“è®¾è®¡ä¸­ï¼Œå¯ä»¥å¤§è‡´æŸ¥çœ‹Registryå±‚çš„å¤§è‡´æµç¨‹ï¼Œé¦–å…ˆé€šè¿‡RegistryFactoryå®ä¾‹åŒ–Registryï¼ŒRegistryå¯ä»¥æ¥æ”¶RegistryProtocolä¼ è¿‡æ¥çš„æ³¨å†Œ(register)å’Œè®¢é˜…(subscribe)æ¶ˆæ¯ï¼Œç„¶åRegistryé€šè¿‡ZKClientæ¥å‘ZookeeperæŒ‡å®šçš„ç›®å½•ä¸‹å†™å…¥urlä¿¡æ¯ï¼Œå¦‚æœæ˜¯è®¢é˜…æ¶ˆæ¯Registryä¼šé€šè¿‡NotifyListeneræ¥é€šçŸ¥RegitryDirctoryè¿›è¡Œæ›´æ–°urlï¼Œæœ€åå°±æ˜¯Clusterå±‚é€šè¿‡è·¯ç”±ï¼Œè´Ÿè½½å‡è¡¡é€‰æ‹©å…·ä½“çš„æä¾›æ–¹ï¼›
 
-###2.Zookeeper×¢²áÖĞĞÄÁ÷³Ì
-¹Ù·½Ìá¹©ÁËdubboÔÚZookeeperÖĞĞÄµÄÁ÷³ÌÍ¼£º
-![Í¼Æ¬ÃèÊö][2]
+###2.Zookeeperæ³¨å†Œä¸­å¿ƒæµç¨‹
+å®˜æ–¹æä¾›äº†dubboåœ¨Zookeeperä¸­å¿ƒçš„æµç¨‹å›¾ï¼š
+![å›¾ç‰‡æè¿°][2]
 
-Á÷³ÌËµÃ÷£º
-·şÎñÌá¹©ÕßÆô¶¯Ê±: Ïò/dubbo/com.foo.BarService/providersÄ¿Â¼ÏÂĞ´Èë×Ô¼ºµÄURLµØÖ·£»
-·şÎñÏû·ÑÕßÆô¶¯Ê±: ¶©ÔÄ/dubbo/com.foo.BarService/providersÄ¿Â¼ÏÂµÄÌá¹©ÕßURLµØÖ·£»²¢Ïò/dubbo/com.foo.BarService/consumersÄ¿Â¼ÏÂĞ´Èë×Ô¼ºµÄURLµØÖ·£»
-¼à¿ØÖĞĞÄÆô¶¯Ê±: ¶©ÔÄ/dubbo/com.foo.BarService Ä¿Â¼ÏÂµÄËùÓĞÌá¹©ÕßºÍÏû·ÑÕßURLµØÖ·¡£
-ÏÂÃæ·Ö±ğ´Ó×¢²á(register)£¬×¢Ïú(unregister)£¬¶©ÔÄ(subscribe)£¬ÍË¶©(unsubscribe)ËÄ¸ö·½ÃæÀ´·ÖÎö
+æµç¨‹è¯´æ˜ï¼š
+æœåŠ¡æä¾›è€…å¯åŠ¨æ—¶: å‘/dubbo/com.foo.BarService/providersç›®å½•ä¸‹å†™å…¥è‡ªå·±çš„URLåœ°å€ï¼›
+æœåŠ¡æ¶ˆè´¹è€…å¯åŠ¨æ—¶: è®¢é˜…/dubbo/com.foo.BarService/providersç›®å½•ä¸‹çš„æä¾›è€…URLåœ°å€ï¼›å¹¶å‘/dubbo/com.foo.BarService/consumersç›®å½•ä¸‹å†™å…¥è‡ªå·±çš„URLåœ°å€ï¼›
+ç›‘æ§ä¸­å¿ƒå¯åŠ¨æ—¶: è®¢é˜…/dubbo/com.foo.BarService ç›®å½•ä¸‹çš„æ‰€æœ‰æä¾›è€…å’Œæ¶ˆè´¹è€…URLåœ°å€ã€‚
+ä¸‹é¢åˆ†åˆ«ä»æ³¨å†Œ(register)ï¼Œæ³¨é”€(unregister)ï¼Œè®¢é˜…(subscribe)ï¼Œé€€è®¢(unsubscribe)å››ä¸ªæ–¹é¢æ¥åˆ†æ
 
-###3.×¢²á(register)
-ZookeeperRegistryµÄ¸¸ÀàFailbackRegistryÖĞÊµÏÖÁËregister·½·¨£¬FailbackRegistry´ÓÃû×Ö¿ÉÒÔ¿´³öÀ´¾ßÓĞ£ºÊ§°Ü×Ô¶¯»Ö¸´£¬ºóÌ¨¼ÇÂ¼Ê§°ÜÇëÇó£¬¶¨Ê±ÖØ·¢¹¦ÄÜ£»ÏÂÃæ¾ßÌå¿´Ò»ÏÂregister·½·¨£º
+###3.æ³¨å†Œ(register)
+ZookeeperRegistryçš„çˆ¶ç±»FailbackRegistryä¸­å®ç°äº†registeræ–¹æ³•ï¼ŒFailbackRegistryä»åå­—å¯ä»¥çœ‹å‡ºæ¥å…·æœ‰ï¼šå¤±è´¥è‡ªåŠ¨æ¢å¤ï¼Œåå°è®°å½•å¤±è´¥è¯·æ±‚ï¼Œå®šæ—¶é‡å‘åŠŸèƒ½ï¼›ä¸‹é¢å…·ä½“çœ‹ä¸€ä¸‹registeræ–¹æ³•ï¼š
 
 ```
 public void register(URL url) {
@@ -118,7 +118,7 @@ public void register(URL url) {
         }
     }
 ```
-ºóÌ¨¼ÇÂ¼ÁËÊ§°ÜµÄÇëÇó£¬°üÀ¨failedRegisteredºÍfailedUnregistered£¬×¢²áµÄÊ±ºò½«ÀïÃæ´æ·ÅµÄurlÉ¾³ı£¬È»ºóÖ´ĞĞdoRegister·½·¨£¬´Ë·½Ê½ÔÚZookeeperRegistryÖĞÊµÏÖ£¬Ö÷ÒªÊÇÔÚZookeeperÖ¸¶¨µÄÄ¿Â¼ÏÂĞ´ÈëurlĞÅÏ¢£¬Èç¹ûÊ§°Ü»á¼ÇÂ¼×¢²áÊ§°ÜµÄurl£¬µÈ´ı×Ô¶¯»Ö¸´£»doRegisterÏà¹Ø´úÂëÈçÏÂ£º
+åå°è®°å½•äº†å¤±è´¥çš„è¯·æ±‚ï¼ŒåŒ…æ‹¬failedRegisteredå’ŒfailedUnregisteredï¼Œæ³¨å†Œçš„æ—¶å€™å°†é‡Œé¢å­˜æ”¾çš„urlåˆ é™¤ï¼Œç„¶åæ‰§è¡ŒdoRegisteræ–¹æ³•ï¼Œæ­¤æ–¹å¼åœ¨ZookeeperRegistryä¸­å®ç°ï¼Œä¸»è¦æ˜¯åœ¨ZookeeperæŒ‡å®šçš„ç›®å½•ä¸‹å†™å…¥urlä¿¡æ¯ï¼Œå¦‚æœå¤±è´¥ä¼šè®°å½•æ³¨å†Œå¤±è´¥çš„urlï¼Œç­‰å¾…è‡ªåŠ¨æ¢å¤ï¼›doRegisterç›¸å…³ä»£ç å¦‚ä¸‹ï¼š
 
 ```
 protected void doRegister(URL url) {
@@ -129,7 +129,7 @@ protected void doRegister(URL url) {
         }
 }
 ```
-µ÷ÓÃzkClientµÄcreate·½·¨ÔÚZookeeperÉÏ´´½¨½Úµã£¬Ä¬ÈÏ´´½¨ÁÙÊ±½Úµã£¬create·½·¨ÔÚAbstractZookeeperClientÖĞÊµÏÖ£¬¾ßÌåÔ´ÂëÈçÏÂ£º
+è°ƒç”¨zkClientçš„createæ–¹æ³•åœ¨Zookeeperä¸Šåˆ›å»ºèŠ‚ç‚¹ï¼Œé»˜è®¤åˆ›å»ºä¸´æ—¶èŠ‚ç‚¹ï¼Œcreateæ–¹æ³•åœ¨AbstractZookeeperClientä¸­å®ç°ï¼Œå…·ä½“æºç å¦‚ä¸‹ï¼š
 
 ```
 public void create(String path, boolean ephemeral) {
@@ -149,12 +149,12 @@ public void create(String path, boolean ephemeral) {
        }
    }
 ```
-pathÖ¸¶¨ĞèÒª´´½¨µÄÄ¿Â¼£¬ephemeralÖ¸¶¨ÊÇ·ñÊÇ´´½¨ÁÙÊ±½Úµã£¬²¢ÇÒÌá¹©ÁËµİ¹é´´½¨Ä¿Â¼£¬³ıÁËÒ¶×ÓÄ¿Â¼ÆäËûÄ¿Â¼¶¼ÊÇ³Ö¾Ã»¯µÄ£»¿ÉÒÔ·¢ÏÖ²»¹ÜÊÇ´´½¨ÁÙÊ±Ä¿Â¼»¹ÊÇ³Ö¾Ã»¯Ä¿Â¼£¬¶¼Ã»ÓĞÖ¸¶¨Ä¿Â¼µÄData£¬ËùÓĞÊ¹ÓÃµÄÊÇÄ¬ÈÏÖµ£¬Ò²¾ÍÊÇ±¾µØipµØÖ·£»ÊµÀıÖĞ´´½¨µÄÄ¿Â¼ÈçÏÂ£º
+pathæŒ‡å®šéœ€è¦åˆ›å»ºçš„ç›®å½•ï¼ŒephemeralæŒ‡å®šæ˜¯å¦æ˜¯åˆ›å»ºä¸´æ—¶èŠ‚ç‚¹ï¼Œå¹¶ä¸”æä¾›äº†é€’å½’åˆ›å»ºç›®å½•ï¼Œé™¤äº†å¶å­ç›®å½•å…¶ä»–ç›®å½•éƒ½æ˜¯æŒä¹…åŒ–çš„ï¼›å¯ä»¥å‘ç°ä¸ç®¡æ˜¯åˆ›å»ºä¸´æ—¶ç›®å½•è¿˜æ˜¯æŒä¹…åŒ–ç›®å½•ï¼Œéƒ½æ²¡æœ‰æŒ‡å®šç›®å½•çš„Dataï¼Œæ‰€æœ‰ä½¿ç”¨çš„æ˜¯é»˜è®¤å€¼ï¼Œä¹Ÿå°±æ˜¯æœ¬åœ°ipåœ°å€ï¼›å®ä¾‹ä¸­åˆ›å»ºçš„ç›®å½•å¦‚ä¸‹ï¼š
 
 ```
 /dubbo/com.dubboApi.DemoService/providers/dubbo%3A%2F%2F10.13.83.7%3A20880%2Fcom.dubboApi.DemoService%3Fanyhost%3Dtrue%26application%3Dhello-world-app%26dubbo%3D2.0.2%26generic%3Dfalse%26interface%3Dcom.dubboApi.DemoService%26methods%3DsyncSayHello%2CsayHello%2CasyncSayHello%26pid%3D13252%26serialization%3Dprotobuf%26side%3Dprovider%26timestamp%3D1545297239027
 ```
-dubboÊÇÒ»¸ö¸ù½Úµã£¬È»ºóÊÇserviceÃû³Æ£¬providersÊÇ¹Ì¶¨µÄÒ»¸öÀàĞÍ£¬Èç¹ûÊÇÏû·Ñ¶ËÕâÀï¾ÍÊÇconsumers£¬×îºó¾ÍÊÇÒ»¸öÁÙÊ±½Úµã£»Ê¹ÓÃÁÙÊ±½ÚµãµÄÄ¿µÄ¾ÍÊÇÌá¹©Õß³öÏÖ¶ÏµçµÈÒì³£Í£»úÊ±£¬×¢²áÖĞĞÄÄÜ×Ô¶¯É¾³ıÌá¹©ÕßĞÅÏ¢£»¿ÉÒÔÍ¨¹ıÈçÏÂ·½·¨²éÑ¯µ±Ç°µÄÄ¿Â¼½ÚµãĞÅÏ¢£º
+dubboæ˜¯ä¸€ä¸ªæ ¹èŠ‚ç‚¹ï¼Œç„¶åæ˜¯serviceåç§°ï¼Œprovidersæ˜¯å›ºå®šçš„ä¸€ä¸ªç±»å‹ï¼Œå¦‚æœæ˜¯æ¶ˆè´¹ç«¯è¿™é‡Œå°±æ˜¯consumersï¼Œæœ€åå°±æ˜¯ä¸€ä¸ªä¸´æ—¶èŠ‚ç‚¹ï¼›ä½¿ç”¨ä¸´æ—¶èŠ‚ç‚¹çš„ç›®çš„å°±æ˜¯æä¾›è€…å‡ºç°æ–­ç”µç­‰å¼‚å¸¸åœæœºæ—¶ï¼Œæ³¨å†Œä¸­å¿ƒèƒ½è‡ªåŠ¨åˆ é™¤æä¾›è€…ä¿¡æ¯ï¼›å¯ä»¥é€šè¿‡å¦‚ä¸‹æ–¹æ³•æŸ¥è¯¢å½“å‰çš„ç›®å½•èŠ‚ç‚¹ä¿¡æ¯ï¼š
 
 ```
 public class CuratorTest {
@@ -192,7 +192,7 @@ public class CuratorTest {
     }
 }
 ```
-µİ¹é±éÀú/dubboÄ¿Â¼ÏÂµÄËùÓĞ×ÓÄ¿Â¼£¬Í¬Ê±½«½Úµã´æ´¢µÄÊı¾İ¶¼²éÑ¯³öÀ´£¬½á¹ûÈçÏÂ£º
+é€’å½’éå†/dubboç›®å½•ä¸‹çš„æ‰€æœ‰å­ç›®å½•ï¼ŒåŒæ—¶å°†èŠ‚ç‚¹å­˜å‚¨çš„æ•°æ®éƒ½æŸ¥è¯¢å‡ºæ¥ï¼Œç»“æœå¦‚ä¸‹ï¼š
 
 ```
 path:/dubbo,value:10.13.83.7
@@ -201,10 +201,10 @@ path:/dubbo/com.dubboApi.DemoService/configurators,value:10.13.83.7
 path:/dubbo/com.dubboApi.DemoService/providers,value:10.13.83.7
 path:/dubbo/com.dubboApi.DemoService/providers/dubbo%3A%2F%2F10.13.83.7%3A20880%2Fcom.dubboApi.DemoService%3Fanyhost%3Dtrue%26application%3Dhello-world-app%26dubbo%3D2.0.2%26generic%3Dfalse%26interface%3Dcom.dubboApi.DemoService%26methods%3DsyncSayHello%2CsayHello%2CasyncSayHello%26pid%3D4712%26serialization%3Dprotobuf%26side%3Dprovider%26timestamp%3D1545358401966,value:10.13.83.7
 ```
-³ıÁË×îºóÒ»¸ö½ÚµãÊÇÁÙÊ±½Úµã£¬ÆäËû¶¼ÊÇ³Ö¾Ã»¯µÄ£»
+é™¤äº†æœ€åä¸€ä¸ªèŠ‚ç‚¹æ˜¯ä¸´æ—¶èŠ‚ç‚¹ï¼Œå…¶ä»–éƒ½æ˜¯æŒä¹…åŒ–çš„ï¼›
 
-###4.×¢Ïú(unregister)
-Í¬ÑùÔÚ¸¸ÀàFailbackRegistryÖĞÊµÏÖÁËunregister·½·¨£¬´úÂëÈçÏÂ£º
+###4.æ³¨é”€(unregister)
+åŒæ ·åœ¨çˆ¶ç±»FailbackRegistryä¸­å®ç°äº†unregisteræ–¹æ³•ï¼Œä»£ç å¦‚ä¸‹ï¼š
 
 ```
 public void unregister(URL url) {
@@ -236,7 +236,7 @@ public void unregister(URL url) {
        }
    }
 ```
-×¢ÏúÊ±Í¬ÑùÉ¾³ıÁËfailedRegisteredºÍfailedUnregistered´æ·ÅµÄurl£¬È»ºóµ÷ÓÃdoUnregister£¬É¾³ıZookeeperÖĞµÄÄ¿Â¼½Úµã£¬Ê§°ÜµÄÇé¿öÏÂ»á´æ´¢ÔÚfailedUnregisteredÖĞ£¬µÈ´ıÖØÊÔ£»
+æ³¨é”€æ—¶åŒæ ·åˆ é™¤äº†failedRegisteredå’ŒfailedUnregisteredå­˜æ”¾çš„urlï¼Œç„¶åè°ƒç”¨doUnregisterï¼Œåˆ é™¤Zookeeperä¸­çš„ç›®å½•èŠ‚ç‚¹ï¼Œå¤±è´¥çš„æƒ…å†µä¸‹ä¼šå­˜å‚¨åœ¨failedUnregisteredä¸­ï¼Œç­‰å¾…é‡è¯•ï¼›
 
 ```
 protected void doUnregister(URL url) {
@@ -247,7 +247,7 @@ protected void doUnregister(URL url) {
     }
 }
  
-//CuratorZookeeperClientÉ¾³ı²Ù×÷
+//CuratorZookeeperClientåˆ é™¤æ“ä½œ
 public void delete(String path) {
     try {
         client.delete().forPath(path);
@@ -257,10 +257,10 @@ public void delete(String path) {
     }
 }
 ```
-Ö±½ÓÊ¹ÓÃCuratorZookeeperClientÖĞµÄdelete·½·¨É¾³ıÁÙÊ±½Úµã£»
+ç›´æ¥ä½¿ç”¨CuratorZookeeperClientä¸­çš„deleteæ–¹æ³•åˆ é™¤ä¸´æ—¶èŠ‚ç‚¹ï¼›
 
-###5.¶©ÔÄ(subscribe)
-·şÎñÏû·ÑÕßÆô¶¯Ê±£¬»áÏÈÏòZookeeper×¢²áÏû·ÑÕß½ÚµãĞÅÏ¢£¬È»ºó¶©ÔÄ¡­/providersÄ¿Â¼ÏÂÌá¹©ÕßµÄURLµØÖ·£»Ïû·Ñ¶ËÒ²Í¬ÑùĞèÒª×¢²á½ÚµãĞÅÏ¢£¬ÊÇÒòÎª¼à¿ØÖĞĞÄĞèÒª¶Ô·şÎñ¶ËºÍÏû·Ñ¶Ë¶¼½øĞĞ¼à¿Ø£»ÏÂÃæÖØµã¿´Ò»ÏÂ¶©ÔÄµÄÏà¹Ø´úÂë£¬ÔÚ¸¸ÀàFailbackRegistryÖĞÊµÏÖÁËsubscribe·½·¨£º
+###5.è®¢é˜…(subscribe)
+æœåŠ¡æ¶ˆè´¹è€…å¯åŠ¨æ—¶ï¼Œä¼šå…ˆå‘Zookeeperæ³¨å†Œæ¶ˆè´¹è€…èŠ‚ç‚¹ä¿¡æ¯ï¼Œç„¶åè®¢é˜…â€¦/providersç›®å½•ä¸‹æä¾›è€…çš„URLåœ°å€ï¼›æ¶ˆè´¹ç«¯ä¹ŸåŒæ ·éœ€è¦æ³¨å†ŒèŠ‚ç‚¹ä¿¡æ¯ï¼Œæ˜¯å› ä¸ºç›‘æ§ä¸­å¿ƒéœ€è¦å¯¹æœåŠ¡ç«¯å’Œæ¶ˆè´¹ç«¯éƒ½è¿›è¡Œç›‘æ§ï¼›ä¸‹é¢é‡ç‚¹çœ‹ä¸€ä¸‹è®¢é˜…çš„ç›¸å…³ä»£ç ï¼Œåœ¨çˆ¶ç±»FailbackRegistryä¸­å®ç°äº†subscribeæ–¹æ³•ï¼š
 
 ```
 public void subscribe(URL url, NotifyListener listener) {
@@ -296,7 +296,7 @@ public void subscribe(URL url, NotifyListener listener) {
        }
    }
 ```
-ÀàËÆµÄ¸ñÊ½£¬Í¬Ñù´æ´¢ÁËÊ§°ÜÁË¶©ÔÄurlĞÅÏ¢£¬ÖØµã¿´ZookeeperRegistryÖĞµÄdoSubscribe·½·¨£º
+ç±»ä¼¼çš„æ ¼å¼ï¼ŒåŒæ ·å­˜å‚¨äº†å¤±è´¥äº†è®¢é˜…urlä¿¡æ¯ï¼Œé‡ç‚¹çœ‹ZookeeperRegistryä¸­çš„doSubscribeæ–¹æ³•ï¼š
 
 ```
 private final ConcurrentMap<URL, ConcurrentMap<NotifyListener, ChildListener>> zkListeners = new ConcurrentHashMap<URL, ConcurrentMap<NotifyListener, ChildListener>>();
@@ -368,7 +368,7 @@ protected void doSubscribe(final URL url, final NotifyListener listener) {
        }
    }
 ```
-ÔÚZookeeperRegistryÖĞ¶¨ÒåÁËÒ»¸özkListeners±äÁ¿£¬Ã¿¸öURL¶ÔÓ¦ÁËÒ»¸ömap£»mapÀïÃæ·Ö±ğÊÇNotifyListenerºÍChildListenerµÄ¶ÔÓ¦¹ØÏµ£¬Ïû·Ñ¶Ë¶©ÔÄÊ±ÕâÀïµÄNotifyListenerÆäÊµ¾ÍÊÇRegistryDirectory£¬ChildListenerÊÇÒ»¸öÄÚ²¿Àà£¬ÓÃÀ´ÔÚ¼àÌıµÄ½Úµã·¢Éú±ä¸üÊ±£¬Í¨Öª¶ÔÓ¦µÄÏû·Ñ¶Ë£¬¾ßÌåµÄ¼àÌı´¦ÀíÊÇÔÚzkClient.addChildListenerÖĞÊµÏÖµÄ£º
+åœ¨ZookeeperRegistryä¸­å®šä¹‰äº†ä¸€ä¸ªzkListenerså˜é‡ï¼Œæ¯ä¸ªURLå¯¹åº”äº†ä¸€ä¸ªmapï¼›mapé‡Œé¢åˆ†åˆ«æ˜¯NotifyListenerå’ŒChildListenerçš„å¯¹åº”å…³ç³»ï¼Œæ¶ˆè´¹ç«¯è®¢é˜…æ—¶è¿™é‡Œçš„NotifyListenerå…¶å®å°±æ˜¯RegistryDirectoryï¼ŒChildListeneræ˜¯ä¸€ä¸ªå†…éƒ¨ç±»ï¼Œç”¨æ¥åœ¨ç›‘å¬çš„èŠ‚ç‚¹å‘ç”Ÿå˜æ›´æ—¶ï¼Œé€šçŸ¥å¯¹åº”çš„æ¶ˆè´¹ç«¯ï¼Œå…·ä½“çš„ç›‘å¬å¤„ç†æ˜¯åœ¨zkClient.addChildListenerä¸­å®ç°çš„ï¼š
 
 ```
 public List<String> addChildListener(String path, final ChildListener listener) {
@@ -423,10 +423,10 @@ private class CuratorWatcherImpl implements CuratorWatcher {
     }
 }
 ```
-CuratorWatcherImplÊµÏÖÁËZookeeperµÄ¼àÌı½Ó¿ÚCuratorWatcher£¬ÓÃÀ´ÔÚ½ÚµãÓĞ±ä¸üÊ±Í¨Öª¶ÔÓ¦µÄChildListener£¬ÕâÑùChildListener¾Í¿ÉÒÔÍ¨ÖªRegistryDirectory½øĞĞ¸üĞÂÊı¾İ£»
+CuratorWatcherImplå®ç°äº†Zookeeperçš„ç›‘å¬æ¥å£CuratorWatcherï¼Œç”¨æ¥åœ¨èŠ‚ç‚¹æœ‰å˜æ›´æ—¶é€šçŸ¥å¯¹åº”çš„ChildListenerï¼Œè¿™æ ·ChildListenerå°±å¯ä»¥é€šçŸ¥RegistryDirectoryè¿›è¡Œæ›´æ–°æ•°æ®ï¼›
 
-###6.ÍË¶©(unsubscribe)
-ÔÚ¸¸ÀàFailbackRegistryÖĞÊµÏÖÁËunsubscribe·½·¨
+###6.é€€è®¢(unsubscribe)
+åœ¨çˆ¶ç±»FailbackRegistryä¸­å®ç°äº†unsubscribeæ–¹æ³•
 
 ```
 public void unsubscribe(URL url, NotifyListener listener) {
@@ -461,7 +461,7 @@ public void unsubscribe(URL url, NotifyListener listener) {
         }
     }
 ```
-Í¬ÑùÊ¹ÓÃfailedUnsubscribedÓÃÀ´´æ´¢Ê§°ÜÍË¶©µÄurl£¬¾ßÌå¿´ZookeeperRegistryÖĞµÄdoUnsubscribe·½·¨
+åŒæ ·ä½¿ç”¨failedUnsubscribedç”¨æ¥å­˜å‚¨å¤±è´¥é€€è®¢çš„urlï¼Œå…·ä½“çœ‹ZookeeperRegistryä¸­çš„doUnsubscribeæ–¹æ³•
 
 ```
 protected void doUnsubscribe(URL url, NotifyListener listener) {
@@ -481,10 +481,10 @@ protected void doUnsubscribe(URL url, NotifyListener listener) {
         }
     }
 ```
-ÍË¶©¾Í±È½Ï¼òµ¥ÁË£¬Ö»ĞèÒªÒÆ³ı¼àÌıÆ÷¾Í¿ÉÒÔÁË£»
+é€€è®¢å°±æ¯”è¾ƒç®€å•äº†ï¼Œåªéœ€è¦ç§»é™¤ç›‘å¬å™¨å°±å¯ä»¥äº†ï¼›
 
-###7.Ê§°ÜÖØÊÔ
-FailbackRegistry´ÓÃû×Ö¿ÉÒÔ¿´³öÀ´¾ßÓĞ£ºÊ§°Ü×Ô¶¯»Ö¸´£¬ºóÌ¨¼ÇÂ¼Ê§°ÜÇëÇó£¬¶¨Ê±ÖØ·¢¹¦ÄÜ£»ÔÚFailbackRegistryµÄ¹¹ÔìÆ÷ÖĞÆô¶¯ÁËÒ»¸ö¶¨Ê±Æ÷£º
+###7.å¤±è´¥é‡è¯•
+FailbackRegistryä»åå­—å¯ä»¥çœ‹å‡ºæ¥å…·æœ‰ï¼šå¤±è´¥è‡ªåŠ¨æ¢å¤ï¼Œåå°è®°å½•å¤±è´¥è¯·æ±‚ï¼Œå®šæ—¶é‡å‘åŠŸèƒ½ï¼›åœ¨FailbackRegistryçš„æ„é€ å™¨ä¸­å¯åŠ¨äº†ä¸€ä¸ªå®šæ—¶å™¨ï¼š
 
 ```
 this.retryFuture = retryExecutor.scheduleWithFixedDelay(new Runnable() {
@@ -499,7 +499,7 @@ this.retryFuture = retryExecutor.scheduleWithFixedDelay(new Runnable() {
            }
        }, retryPeriod, retryPeriod, TimeUnit.MILLISECONDS);
 ```
-ÊµÀı»¯ÁËÒ»¸ö¼ä¸ô5ÃëÖ´ĞĞÒ»´ÎÖØÊÔµÄ¶¨Ê±Æ÷£¬retry²¿·Ö´úÂëÈçÏÂ£º
+å®ä¾‹åŒ–äº†ä¸€ä¸ªé—´éš”5ç§’æ‰§è¡Œä¸€æ¬¡é‡è¯•çš„å®šæ—¶å™¨ï¼Œretryéƒ¨åˆ†ä»£ç å¦‚ä¸‹ï¼š
 
 ```
 protected void retry() {
@@ -523,15 +523,15 @@ protected void retry() {
                 }
             }
         }
-        ...Ê¡ÂÔ...
+        ...çœç•¥...
 }
 ```
-¶¨ÆÚ¼ì²éÊÇ·ñ´æÔÚÊ§°ÜµÄ×¢²á(register)£¬×¢Ïú(unregister)£¬¶©ÔÄ(subscribe)£¬ÍË¶©(unsubscribe)URL£¬Èç¹û´æÔÚÔòÖØÊÔ£»
+å®šæœŸæ£€æŸ¥æ˜¯å¦å­˜åœ¨å¤±è´¥çš„æ³¨å†Œ(register)ï¼Œæ³¨é”€(unregister)ï¼Œè®¢é˜…(subscribe)ï¼Œé€€è®¢(unsubscribe)URLï¼Œå¦‚æœå­˜åœ¨åˆ™é‡è¯•ï¼›
 
-##×Ü½á
-±¾ÎÄÊ×ÏÈ½éÉÜÁËRegistryFactory, Registry, RegistryService¼¸¸öºËĞÄ½Ó¿Ú£¬È»ºóÒÔZookeeperÎª×¢²áÖĞĞÄÖØµã½éÉÜÁË×¢²á(register)£¬×¢Ïú(unregister)£¬¶©ÔÄ(subscribe)£¬ÍË¶©(unsubscribe)·½Ê½¡£
+##æ€»ç»“
+æœ¬æ–‡é¦–å…ˆä»‹ç»äº†RegistryFactory, Registry, RegistryServiceå‡ ä¸ªæ ¸å¿ƒæ¥å£ï¼Œç„¶åä»¥Zookeeperä¸ºæ³¨å†Œä¸­å¿ƒé‡ç‚¹ä»‹ç»äº†æ³¨å†Œ(register)ï¼Œæ³¨é”€(unregister)ï¼Œè®¢é˜…(subscribe)ï¼Œé€€è®¢(unsubscribe)æ–¹å¼ã€‚
 
-##Ê¾Àı´úÂëµØÖ·
+##ç¤ºä¾‹ä»£ç åœ°å€
 [https://github.com/ksfzhaohui/blog][3]
 [https://gitee.com/OutOfMemory/blog][4]
 

@@ -1,13 +1,13 @@
-##ÏµÁĞÎÄÕÂ
-[Dubbo·ÖÎöSerialize²ã][1]
-[Dubbo·ÖÎöÖ®Transport²ã][2]
-[Dubbo·ÖÎöÖ®Exchange ²ã][3]
+ï»¿##ç³»åˆ—æ–‡ç« 
+[Dubboåˆ†æSerializeå±‚][1]
+[Dubboåˆ†æä¹‹Transportå±‚][2]
+[Dubboåˆ†æä¹‹Exchange å±‚][3]
 
-##Ç°ÑÔ
-½ô½Ó×ÅÉÏÎÄDubbo·ÖÎöÖ®Transport²ã£¬±¾ÎÄ¼ÌĞø½éÉÜExchange²ã£¬´Ë²ã¹Ù·½½éÉÜÎªĞÅÏ¢½»»»²ã£º·â×°ÇëÇóÏìÓ¦Ä£Ê½£¬Í¬²½×ªÒì²½£¬ÒÔ Request, Response ÎªÖĞĞÄ£¬À©Õ¹½Ó¿ÚÎª Exchanger, ExchangeChannel, ExchangeClient, ExchangeServer£»ÏÂÃæ·Ö±ğ½øĞĞ½éÉÜ
+##å‰è¨€
+ç´§æ¥ç€ä¸Šæ–‡Dubboåˆ†æä¹‹Transportå±‚ï¼Œæœ¬æ–‡ç»§ç»­ä»‹ç»Exchangeå±‚ï¼Œæ­¤å±‚å®˜æ–¹ä»‹ç»ä¸ºä¿¡æ¯äº¤æ¢å±‚ï¼šå°è£…è¯·æ±‚å“åº”æ¨¡å¼ï¼ŒåŒæ­¥è½¬å¼‚æ­¥ï¼Œä»¥ Request, Response ä¸ºä¸­å¿ƒï¼Œæ‰©å±•æ¥å£ä¸º Exchanger, ExchangeChannel, ExchangeClient, ExchangeServerï¼›ä¸‹é¢åˆ†åˆ«è¿›è¡Œä»‹ç»
 
-##Exchanger·ÖÎö
-ExchangerÊÇ´Ë²ãµÄºËĞÄ½Ó¿ÚÀà£¬Ìá¹©ÁËconnect()ºÍbind()½Ó¿Ú£¬·Ö±ğ·µ»ØExchangeClientºÍExchangeServer£»dubboÌá¹©ÁË´Ë½Ó¿ÚµÄÄ¬ÈÏÊµÏÖÀàHeaderExchanger£¬´úÂëÈçÏÂ£º
+##Exchangeråˆ†æ
+Exchangeræ˜¯æ­¤å±‚çš„æ ¸å¿ƒæ¥å£ç±»ï¼Œæä¾›äº†connect()å’Œbind()æ¥å£ï¼Œåˆ†åˆ«è¿”å›ExchangeClientå’ŒExchangeServerï¼›dubboæä¾›äº†æ­¤æ¥å£çš„é»˜è®¤å®ç°ç±»HeaderExchangerï¼Œä»£ç å¦‚ä¸‹ï¼š
 
 ```
 public class HeaderExchanger implements Exchanger {
@@ -26,10 +26,10 @@ public class HeaderExchanger implements Exchanger {
  
 }
 ```
-ÔÚÊµÏÖÀàÖĞÔÚconnectºÍbindÖĞ·Ö±ğÊµÀı»¯ÁËHeaderExchangeClientºÍHeaderExchangeServer£¬´«ÈëµÄ²ÎÊıÊÇTransporters£¬¿ÉÒÔÈÏÎªÕâÀï¾ÍÊÇTransport²ãµÄÈë¿ÚÀà£»ÕâÀïµÄExchangeClient/ExchangeServerÆäÊµ¾ÍÊÇ¶ÔClient/ServerµÄ°ü×°£¬Í¬Ê±´«ÈëÁË×Ô¼ºµÄChannelHandler£»ChannelHandlerÒÑ¾­ÔÚTransport²ã½éÉÜ¹ıÁË£¬Ìá¹©ÁËÁ¬½Ó½¨Á¢£¬Á¬½Ó¶Ë¿Ú£¬·¢ËÍÇëÇó£¬½ÓÊÜÇëÇóµÈ½Ó¿Ú£»ÒÑÄ¬ÈÏÊ¹ÓÃµÄNettyÎªÀı£¬ÕâÀï¾ÍÊÇ¶ÔNettyClientºÍNettyServerµÄ°ü×°£¬Í¬Ê±´«ÈëDecodeHandler£¬ÔÚNettyHandlerÖĞ±»µ÷ÓÃ£»
+åœ¨å®ç°ç±»ä¸­åœ¨connectå’Œbindä¸­åˆ†åˆ«å®ä¾‹åŒ–äº†HeaderExchangeClientå’ŒHeaderExchangeServerï¼Œä¼ å…¥çš„å‚æ•°æ˜¯Transportersï¼Œå¯ä»¥è®¤ä¸ºè¿™é‡Œå°±æ˜¯Transportå±‚çš„å…¥å£ç±»ï¼›è¿™é‡Œçš„ExchangeClient/ExchangeServerå…¶å®å°±æ˜¯å¯¹Client/Serverçš„åŒ…è£…ï¼ŒåŒæ—¶ä¼ å…¥äº†è‡ªå·±çš„ChannelHandlerï¼›ChannelHandlerå·²ç»åœ¨Transportå±‚ä»‹ç»è¿‡äº†ï¼Œæä¾›äº†è¿æ¥å»ºç«‹ï¼Œè¿æ¥ç«¯å£ï¼Œå‘é€è¯·æ±‚ï¼Œæ¥å—è¯·æ±‚ç­‰æ¥å£ï¼›å·²é»˜è®¤ä½¿ç”¨çš„Nettyä¸ºä¾‹ï¼Œè¿™é‡Œå°±æ˜¯å¯¹NettyClientå’ŒNettyServerçš„åŒ…è£…ï¼ŒåŒæ—¶ä¼ å…¥DecodeHandlerï¼Œåœ¨NettyHandlerä¸­è¢«è°ƒç”¨ï¼›
 
-##ExchangeClient·ÖÎö
-ExchangeClient±¾ÉíÒ²¼Ì³ĞÓÚClient£¬Í¬Ê±Ò²¼Ì³ĞÓÚExchangeChannel£º
+##ExchangeClientåˆ†æ
+ExchangeClientæœ¬èº«ä¹Ÿç»§æ‰¿äºClientï¼ŒåŒæ—¶ä¹Ÿç»§æ‰¿äºExchangeChannelï¼š
 
 ```
 public interface ExchangeClient extends Client, ExchangeChannel {
@@ -49,7 +49,7 @@ public interface ExchangeChannel extends Channel {
  
 }
 ```
-ExchangeChannel¸ºÔğ½«ÉÏ²ãµÄdata°ü×°³ÉRequest£¬È»ºó·¢ËÍ¸øTransport²ã£»¾ßÌåµÄÂß¼­ÔÚHeaderExchangeChannelÖĞ£º
+ExchangeChannelè´Ÿè´£å°†ä¸Šå±‚çš„dataåŒ…è£…æˆRequestï¼Œç„¶åå‘é€ç»™Transportå±‚ï¼›å…·ä½“çš„é€»è¾‘åœ¨HeaderExchangeChannelä¸­ï¼š
 
 ```
 public ResponseFuture request(Object request, int timeout) throws RemotingException {
@@ -71,7 +71,7 @@ public ResponseFuture request(Object request, int timeout) throws RemotingExcept
        return future;
    }
 ```
-´´½¨ÁËÒ»¸öRequest£¬ÔÚ¹¹ÔìÆ÷ÖĞÍ¬Ê±»á²úÉúÒ»¸öRequestId£»ÉèÖÃÁËĞ­Òé°æ±¾£¬ÊÇ·ñË«ÏòÍ¨ĞÅ£¬×îºóÉèÖÃÁËÕæÊµµÄÒµÎñÊı¾İ£»½ÓÏÂÀ´ÊµÀı»¯ÁËÒ»¸öDefaultFutureÀà£¬´ËÀàÊµÏÖÁËÍ¬²½×ªÒì²½µÄ·½Ê½£¬channelµ÷ÓÃsend·¢ËÍÇëÇóÖ®ºó£¬²»ĞèÒªµÈ´ı½á¹û£¬Ö±½Ó½«DefaultFuture·µ»Ø¸øÉÏ²ã£¬ÉÏ²ã¿ÉÒÔÍ¨¹ıµ÷ÓÃDefaultFutureµÄget·½·¨À´»ñÈ¡ÏìÓ¦£¬get·½·¨»á×èÈûµÈ´ı»ñÈ¡·şÎñÆ÷µÄÏìÓ¦²Å»á·µ»Ø£»Client½ÓÊÕÏûÏ¢ÔÚhandlerÀïÃæ£¬±ÈÈçNettyÔÚNettyHandlerÀïÃæmessageReceived·½·¨½éÉÜÏìÓ¦ÏûÏ¢£¬NettyHandler×îÖÕ»áµ÷ÓÃÉÏÃæ´«ÈëµÄDecodeHandler£¬DecodeHandler»áÏÈÅĞ¶ÏÒ»ÏÂÊÇ·ñÒÑ¾­½âÂë£¬Èç¹û½âÂë¾ÍÖ±½Óµ÷ÓÃHeaderExchangeHandler£¬Ä¬ÈÏÒÑ¾­ÉèÖÃÁË±àÂë½âÂëÆ÷£¬ËùÒÔ»áÖ±½Óµ÷ÓÃHeaderExchangeHandlerÀïÃæµÄreceived·½·¨£º
+åˆ›å»ºäº†ä¸€ä¸ªRequestï¼Œåœ¨æ„é€ å™¨ä¸­åŒæ—¶ä¼šäº§ç”Ÿä¸€ä¸ªRequestIdï¼›è®¾ç½®äº†åè®®ç‰ˆæœ¬ï¼Œæ˜¯å¦åŒå‘é€šä¿¡ï¼Œæœ€åè®¾ç½®äº†çœŸå®çš„ä¸šåŠ¡æ•°æ®ï¼›æ¥ä¸‹æ¥å®ä¾‹åŒ–äº†ä¸€ä¸ªDefaultFutureç±»ï¼Œæ­¤ç±»å®ç°äº†åŒæ­¥è½¬å¼‚æ­¥çš„æ–¹å¼ï¼Œchannelè°ƒç”¨sendå‘é€è¯·æ±‚ä¹‹åï¼Œä¸éœ€è¦ç­‰å¾…ç»“æœï¼Œç›´æ¥å°†DefaultFutureè¿”å›ç»™ä¸Šå±‚ï¼Œä¸Šå±‚å¯ä»¥é€šè¿‡è°ƒç”¨DefaultFutureçš„getæ–¹æ³•æ¥è·å–å“åº”ï¼Œgetæ–¹æ³•ä¼šé˜»å¡ç­‰å¾…è·å–æœåŠ¡å™¨çš„å“åº”æ‰ä¼šè¿”å›ï¼›Clientæ¥æ”¶æ¶ˆæ¯åœ¨handleré‡Œé¢ï¼Œæ¯”å¦‚Nettyåœ¨NettyHandleré‡Œé¢messageReceivedæ–¹æ³•ä»‹ç»å“åº”æ¶ˆæ¯ï¼ŒNettyHandleræœ€ç»ˆä¼šè°ƒç”¨ä¸Šé¢ä¼ å…¥çš„DecodeHandlerï¼ŒDecodeHandlerä¼šå…ˆåˆ¤æ–­ä¸€ä¸‹æ˜¯å¦å·²ç»è§£ç ï¼Œå¦‚æœè§£ç å°±ç›´æ¥è°ƒç”¨HeaderExchangeHandlerï¼Œé»˜è®¤å·²ç»è®¾ç½®äº†ç¼–ç è§£ç å™¨ï¼Œæ‰€ä»¥ä¼šç›´æ¥è°ƒç”¨HeaderExchangeHandleré‡Œé¢çš„receivedæ–¹æ³•ï¼š
 
 ```
 public void received(Channel channel, Object message) throws RemotingException {
@@ -111,7 +111,7 @@ public void received(Channel channel, Object message) throws RemotingException {
        }
    }
 ```
-·şÎñ¶ËºÍ¿Í»§¶Ë¶¼»áÊ¹ÓÃ´Ë·½·¨£¬ÕâÀïÊÇ¿Í»§¶Ë½ÓÊÜµÄÊÇResponse£¬Ö±½Óµ÷ÓÃhandleResponse·½·¨£º
+æœåŠ¡ç«¯å’Œå®¢æˆ·ç«¯éƒ½ä¼šä½¿ç”¨æ­¤æ–¹æ³•ï¼Œè¿™é‡Œæ˜¯å®¢æˆ·ç«¯æ¥å—çš„æ˜¯Responseï¼Œç›´æ¥è°ƒç”¨handleResponseæ–¹æ³•ï¼š
 
 ```
 static void handleResponse(Channel channel, Response response) throws RemotingException {
@@ -120,7 +120,7 @@ static void handleResponse(Channel channel, Response response) throws RemotingEx
     }
 }
 ```
-½ÓÊÕµ½ÏìÓ¦Ö®ºó£¬ÔÙÈ¥¸æËßDefaultFutureÒÑ¾­ÊÕµ½ÏìÓ¦£¬DefaultFuture±¾Éí´æ·ÅÁËrequestId¶ÔÓ¦DefaultFutureµÄÒ»¸öConcurrentHashMap£»¾ßÌåÔõÃ´Ó³Éä¹ıÈ¥£¬ResponseÒ²°üº¬Ò»¸öresponseId£¬´ËresponseIdºÍrequestIdÊÇÏàÍ¬µÄ£»
+æ¥æ”¶åˆ°å“åº”ä¹‹åï¼Œå†å»å‘Šè¯‰DefaultFutureå·²ç»æ”¶åˆ°å“åº”ï¼ŒDefaultFutureæœ¬èº«å­˜æ”¾äº†requestIdå¯¹åº”DefaultFutureçš„ä¸€ä¸ªConcurrentHashMapï¼›å…·ä½“æ€ä¹ˆæ˜ å°„è¿‡å»ï¼ŒResponseä¹ŸåŒ…å«ä¸€ä¸ªresponseIdï¼Œæ­¤responseIdå’ŒrequestIdæ˜¯ç›¸åŒçš„ï¼›
 
 ```
 private final Lock lock = new ReentrantLock();
@@ -158,7 +158,7 @@ public static void received(Channel channel, Response response) {
       }
   }
 ```
-Í¨¹ıresponseId»ñÈ¡ÁËÖ®Ç°ÇëÇóÊ±´´½¨µÄDefaultFuture£¬È»ºóÔÙ¸üĞÂDefaultFutureÄÚ²¿µÄresponse¶ÔÏó£¬¸üĞÂÍêÖ®ºóÔÚµ÷ÓÃConditionµÄsignal·½·¨£¬ÓÃ»§»½ÆğÍ¨¹ıDefaultFutureµÄget·½·¨»ñÈ¡ÏìÓ¦µÄ×èÈûÏß³Ì£º
+é€šè¿‡responseIdè·å–äº†ä¹‹å‰è¯·æ±‚æ—¶åˆ›å»ºçš„DefaultFutureï¼Œç„¶åå†æ›´æ–°DefaultFutureå†…éƒ¨çš„responseå¯¹è±¡ï¼Œæ›´æ–°å®Œä¹‹ååœ¨è°ƒç”¨Conditionçš„signalæ–¹æ³•ï¼Œç”¨æˆ·å”¤èµ·é€šè¿‡DefaultFutureçš„getæ–¹æ³•è·å–å“åº”çš„é˜»å¡çº¿ç¨‹ï¼š
 
 ```
 public Object get(int timeout) throws RemotingException {
@@ -187,10 +187,10 @@ public Object get(int timeout) throws RemotingException {
         return returnFromResponse();
     }
 ```
-¿ÉÒÔ·¢ÏÖ×èÈûÒªÃ´±»»ñÈ¡±»signal·½·¨»½ĞÑ£¬ÒªÃ´µÈ´ı³¬Ê±£»ÒÔÉÏ´óÖÂÊÇ¿Í»§¶Ë·¢ËÍ»ñÈ¡ÏìÓ¦µÄÁ÷³Ì£¬ÏÂÃæ¿´¿´·şÎñÆ÷¶ËÁ÷³Ì
+å¯ä»¥å‘ç°é˜»å¡è¦ä¹ˆè¢«è·å–è¢«signalæ–¹æ³•å”¤é†’ï¼Œè¦ä¹ˆç­‰å¾…è¶…æ—¶ï¼›ä»¥ä¸Šå¤§è‡´æ˜¯å®¢æˆ·ç«¯å‘é€è·å–å“åº”çš„æµç¨‹ï¼Œä¸‹é¢çœ‹çœ‹æœåŠ¡å™¨ç«¯æµç¨‹
 
-##ExchangeServer·ÖÎö
-ExchangeServer¼Ì³ĞÓÚServer£¬Í¬Ê±Ìá¹©ÁËÁ½¸ö°ü×°·şÎñ¶ËChannelµÄ·½·¨
+##ExchangeServeråˆ†æ
+ExchangeServerç»§æ‰¿äºServerï¼ŒåŒæ—¶æä¾›äº†ä¸¤ä¸ªåŒ…è£…æœåŠ¡ç«¯Channelçš„æ–¹æ³•
 
 ```
 public interface ExchangeServer extends Server {
@@ -200,7 +200,7 @@ public interface ExchangeServer extends Server {
     ExchangeChannel getExchangeChannel(InetSocketAddress remoteAddress);
 }
 ```
-·şÎñÆ÷¶ËÖ÷ÒªÓÃÓÚ½ÓÊÕRequestÏûÏ¢£¬È»ºó´¦ÀíÏûÏ¢£¬×îºó°ÑÏìÓ¦·¢ËÍ¸ø¿Í»§¶Ë£¬Ïà¹Ø½ÓÊÕÏûÏ¢ÒÑ¾­ÔÚÉÏÃæ½éÉÜ¹ıÁË£¬Í¬ÑùÊÇÔÚHeaderExchangeHandlerÀïÃæµÄreceived·½·¨ÖĞ£¬Ö»²»¹ıÕâÀïµÄÏûÏ¢ÀàĞÍÎªRequest£»
+æœåŠ¡å™¨ç«¯ä¸»è¦ç”¨äºæ¥æ”¶Requestæ¶ˆæ¯ï¼Œç„¶åå¤„ç†æ¶ˆæ¯ï¼Œæœ€åæŠŠå“åº”å‘é€ç»™å®¢æˆ·ç«¯ï¼Œç›¸å…³æ¥æ”¶æ¶ˆæ¯å·²ç»åœ¨ä¸Šé¢ä»‹ç»è¿‡äº†ï¼ŒåŒæ ·æ˜¯åœ¨HeaderExchangeHandleré‡Œé¢çš„receivedæ–¹æ³•ä¸­ï¼Œåªä¸è¿‡è¿™é‡Œçš„æ¶ˆæ¯ç±»å‹ä¸ºRequestï¼›
 
 ```
 Response handleRequest(ExchangeChannel channel, Request req) throws RemotingException {
@@ -231,12 +231,12 @@ Response handleRequest(ExchangeChannel channel, Request req) throws RemotingExce
       return res;
   }
 ```
-Ê×ÏÈ´´½¨ÁËÒ»¸öResponse£¬²¢ÇÒÖ¸¶¨responseIdÎªrequestId£¬·½±ãÔÚ¿Í»§¶Ë¶¨Î»µ½¾ßÌåµÄDefaultFuture£»È»ºóµ÷ÓÃhandlerµÄreply·½·¨´¦ÀíÏûÏ¢£¬·µ»Ø½á¹û£¬ÈçºÎ´¦ÀíµÄ½«ÔÚºóÃæµÄprotocol²ã½éÉÜ£¬´óÖÂ¾ÍÊÇÍ¨¹ıRequestµÄĞÅÏ¢£¬·´Éäµ÷ÓÃServer¶ËµÄ·şÎñ£¬È»ºó·µ»Ø½á¹û£¬È»ºó½«½á¹û·ÅÈëResponse¶ÔÏóÖĞ£¬Í¨¹ıchannel½«ÏûÏ¢·¢ËÍ¿Í»§¶Ë£»
+é¦–å…ˆåˆ›å»ºäº†ä¸€ä¸ªResponseï¼Œå¹¶ä¸”æŒ‡å®šresponseIdä¸ºrequestIdï¼Œæ–¹ä¾¿åœ¨å®¢æˆ·ç«¯å®šä½åˆ°å…·ä½“çš„DefaultFutureï¼›ç„¶åè°ƒç”¨handlerçš„replyæ–¹æ³•å¤„ç†æ¶ˆæ¯ï¼Œè¿”å›ç»“æœï¼Œå¦‚ä½•å¤„ç†çš„å°†åœ¨åé¢çš„protocolå±‚ä»‹ç»ï¼Œå¤§è‡´å°±æ˜¯é€šè¿‡Requestçš„ä¿¡æ¯ï¼Œåå°„è°ƒç”¨Serverç«¯çš„æœåŠ¡ï¼Œç„¶åè¿”å›ç»“æœï¼Œç„¶åå°†ç»“æœæ”¾å…¥Responseå¯¹è±¡ä¸­ï¼Œé€šè¿‡channelå°†æ¶ˆæ¯å‘é€å®¢æˆ·ç«¯ï¼›
 
-##×Ü½á
-±¾ÎÄ½éÉÜÁËExchange²ãµÄ´óÌåÁ÷³Ì£¬Î§ÈÆExchanger£¬ExchangeClientºÍExchangeServerÕ¹¿ª£»ÇëÇó·â×°³ÉRequest£¬ÏìÓ¦·â×°³ÉResponse£¬¿Í»§¶ËÍ¨¹ıÒì²½µÄ·½Ê½½ÓÊÕ·şÎñÆ÷ÇëÇó£»
+##æ€»ç»“
+æœ¬æ–‡ä»‹ç»äº†Exchangeå±‚çš„å¤§ä½“æµç¨‹ï¼Œå›´ç»•Exchangerï¼ŒExchangeClientå’ŒExchangeServerå±•å¼€ï¼›è¯·æ±‚å°è£…æˆRequestï¼Œå“åº”å°è£…æˆResponseï¼Œå®¢æˆ·ç«¯é€šè¿‡å¼‚æ­¥çš„æ–¹å¼æ¥æ”¶æœåŠ¡å™¨è¯·æ±‚ï¼›
 
-##Ê¾Àı´úÂëµØÖ·
+##ç¤ºä¾‹ä»£ç åœ°å€
 [https://github.com/ksfzhaohui/blog][4]
 [https://gitee.com/OutOfMemory/blog][5]
 

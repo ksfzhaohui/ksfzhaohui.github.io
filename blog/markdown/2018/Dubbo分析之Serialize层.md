@@ -1,28 +1,28 @@
-##DubboÕûÌåÉè¼Æ
-¹ØÓÚDubboµÄÕûÌåÉè¼Æ¿ÉÒÔ²é¿´¹Ù·½ÎÄµµ£¬ÏÂÍ¼¿ÉÒÔÇåÎúµÄ±í´ïDubboµÄÕûÌåÉè¼Æ£º
-![Í¼Æ¬ÃèÊö][1]
+ï»¿##Dubboæ•´ä½“è®¾è®¡
+å…³äºDubboçš„æ•´ä½“è®¾è®¡å¯ä»¥æŸ¥çœ‹å®˜æ–¹æ–‡æ¡£ï¼Œä¸‹å›¾å¯ä»¥æ¸…æ™°çš„è¡¨è¾¾Dubboçš„æ•´ä½“è®¾è®¡ï¼š
+![å›¾ç‰‡æè¿°][1]
 
-###1.Í¼ÀıËµÃ÷
-Í¼ÖĞ×ó±ßµ­À¶±³¾°µÄÎª·şÎñÏû·Ñ·½Ê¹ÓÃµÄ½Ó¿Ú£¬ÓÒ±ßµ­ÂÌÉ«±³¾°µÄÎª·şÎñÌá¹©·½Ê¹ÓÃµÄ½Ó¿Ú£¬Î»ÓÚÖĞÖáÏßÉÏµÄÎªË«·½¶¼ÓÃµ½µÄ½Ó¿Ú£»
-Í¼ÖĞ´ÓÏÂÖÁÉÏ·ÖÎªÊ®²ã£¬¸÷²ã¾ùÎªµ¥ÏòÒÀÀµ£¬ÓÒ±ßµÄºÚÉ«¼ıÍ·´ú±í²ãÖ®¼äµÄÒÀÀµ¹ØÏµ£»
-Í¼ÖĞÂÌÉ«Ğ¡¿éµÄÎªÀ©Õ¹½Ó¿Ú£¬À¶É«Ğ¡¿éÎªÊµÏÖÀà£¬Í¼ÖĞÖ»ÏÔÊ¾ÓÃÓÚ¹ØÁª¸÷²ãµÄÊµÏÖÀà£»
-Í¼ÖĞÀ¶É«ĞéÏßÎª³õÊ¼»¯¹ı³Ì£¬¼´Æô¶¯Ê±×é×°Á´£¬ºìÉ«ÊµÏßÎª·½·¨µ÷ÓÃ¹ı³Ì£¬¼´ÔËĞĞÊ±µ÷Ê±Á´£¬×ÏÉ«Èı½Ç¼ıÍ·Îª¼Ì³Ğ£¬¿ÉÒÔ°Ñ×ÓÀà¿´×÷¸¸ÀàµÄÍ¬Ò»¸ö½Úµã£¬ÏßÉÏµÄÎÄ×ÖÎªµ÷ÓÃµÄ·½·¨£»
+###1.å›¾ä¾‹è¯´æ˜
+å›¾ä¸­å·¦è¾¹æ·¡è“èƒŒæ™¯çš„ä¸ºæœåŠ¡æ¶ˆè´¹æ–¹ä½¿ç”¨çš„æ¥å£ï¼Œå³è¾¹æ·¡ç»¿è‰²èƒŒæ™¯çš„ä¸ºæœåŠ¡æä¾›æ–¹ä½¿ç”¨çš„æ¥å£ï¼Œä½äºä¸­è½´çº¿ä¸Šçš„ä¸ºåŒæ–¹éƒ½ç”¨åˆ°çš„æ¥å£ï¼›
+å›¾ä¸­ä»ä¸‹è‡³ä¸Šåˆ†ä¸ºåå±‚ï¼Œå„å±‚å‡ä¸ºå•å‘ä¾èµ–ï¼Œå³è¾¹çš„é»‘è‰²ç®­å¤´ä»£è¡¨å±‚ä¹‹é—´çš„ä¾èµ–å…³ç³»ï¼›
+å›¾ä¸­ç»¿è‰²å°å—çš„ä¸ºæ‰©å±•æ¥å£ï¼Œè“è‰²å°å—ä¸ºå®ç°ç±»ï¼Œå›¾ä¸­åªæ˜¾ç¤ºç”¨äºå…³è”å„å±‚çš„å®ç°ç±»ï¼›
+å›¾ä¸­è“è‰²è™šçº¿ä¸ºåˆå§‹åŒ–è¿‡ç¨‹ï¼Œå³å¯åŠ¨æ—¶ç»„è£…é“¾ï¼Œçº¢è‰²å®çº¿ä¸ºæ–¹æ³•è°ƒç”¨è¿‡ç¨‹ï¼Œå³è¿è¡Œæ—¶è°ƒæ—¶é“¾ï¼Œç´«è‰²ä¸‰è§’ç®­å¤´ä¸ºç»§æ‰¿ï¼Œå¯ä»¥æŠŠå­ç±»çœ‹ä½œçˆ¶ç±»çš„åŒä¸€ä¸ªèŠ‚ç‚¹ï¼Œçº¿ä¸Šçš„æ–‡å­—ä¸ºè°ƒç”¨çš„æ–¹æ³•ï¼›
 
-###2.¸÷²ãËµÃ÷
-config ÅäÖÃ²ã£º¶ÔÍâÅäÖÃ½Ó¿Ú£¬ÒÔ ServiceConfig, ReferenceConfig ÎªÖĞĞÄ£¬¿ÉÒÔÖ±½Ó³õÊ¼»¯ÅäÖÃÀà£¬Ò²¿ÉÒÔÍ¨¹ı spring ½âÎöÅäÖÃÉú³ÉÅäÖÃÀà£»
-proxy ·şÎñ´úÀí²ã£º·şÎñ½Ó¿ÚÍ¸Ã÷´úÀí£¬Éú³É·şÎñµÄ¿Í»§¶Ë Stub ºÍ·şÎñÆ÷¶Ë Skeleton, ÒÔ ServiceProxy ÎªÖĞĞÄ£¬À©Õ¹½Ó¿ÚÎª ProxyFactory£»
-registry ×¢²áÖĞĞÄ²ã£º·â×°·şÎñµØÖ·µÄ×¢²áÓë·¢ÏÖ£¬ÒÔ·şÎñ URL ÎªÖĞĞÄ£¬À©Õ¹½Ó¿ÚÎª RegistryFactory, Registry, RegistryService£»
-cluster Â·ÓÉ²ã£º·â×°¶à¸öÌá¹©ÕßµÄÂ·ÓÉ¼°¸ºÔØ¾ùºâ£¬²¢ÇÅ½Ó×¢²áÖĞĞÄ£¬ÒÔ Invoker ÎªÖĞĞÄ£¬À©Õ¹½Ó¿ÚÎª Cluster, Directory, Router, LoadBalance£»
-monitor ¼à¿Ø²ã£ºRPC µ÷ÓÃ´ÎÊıºÍµ÷ÓÃÊ±¼ä¼à¿Ø£¬ÒÔ Statistics ÎªÖĞĞÄ£¬À©Õ¹½Ó¿ÚÎª MonitorFactory, Monitor, MonitorService£»
-protocol Ô¶³Ìµ÷ÓÃ²ã£º·â×° RPC µ÷ÓÃ£¬ÒÔ Invocation, Result ÎªÖĞĞÄ£¬À©Õ¹½Ó¿ÚÎª Protocol, Invoker, Exporter£»
-exchange ĞÅÏ¢½»»»²ã£º·â×°ÇëÇóÏìÓ¦Ä£Ê½£¬Í¬²½×ªÒì²½£¬ÒÔ Request, Response ÎªÖĞĞÄ£¬À©Õ¹½Ó¿ÚÎª Exchanger, ExchangeChannel, ExchangeClient, ExchangeServer£»
-transport ÍøÂç´«Êä²ã£º³éÏó mina ºÍ netty ÎªÍ³Ò»½Ó¿Ú£¬ÒÔ Message ÎªÖĞĞÄ£¬À©Õ¹½Ó¿ÚÎª Channel, Transporter, Client, Server, Codec£»
-serialize Êı¾İĞòÁĞ»¯²ã£º¿É¸´ÓÃµÄÒ»Ğ©¹¤¾ß£¬À©Õ¹½Ó¿ÚÎª Serialization, ObjectInput, ObjectOutput, ThreadPool£»
+###2.å„å±‚è¯´æ˜
+config é…ç½®å±‚ï¼šå¯¹å¤–é…ç½®æ¥å£ï¼Œä»¥ ServiceConfig, ReferenceConfig ä¸ºä¸­å¿ƒï¼Œå¯ä»¥ç›´æ¥åˆå§‹åŒ–é…ç½®ç±»ï¼Œä¹Ÿå¯ä»¥é€šè¿‡ spring è§£æé…ç½®ç”Ÿæˆé…ç½®ç±»ï¼›
+proxy æœåŠ¡ä»£ç†å±‚ï¼šæœåŠ¡æ¥å£é€æ˜ä»£ç†ï¼Œç”ŸæˆæœåŠ¡çš„å®¢æˆ·ç«¯ Stub å’ŒæœåŠ¡å™¨ç«¯ Skeleton, ä»¥ ServiceProxy ä¸ºä¸­å¿ƒï¼Œæ‰©å±•æ¥å£ä¸º ProxyFactoryï¼›
+registry æ³¨å†Œä¸­å¿ƒå±‚ï¼šå°è£…æœåŠ¡åœ°å€çš„æ³¨å†Œä¸å‘ç°ï¼Œä»¥æœåŠ¡ URL ä¸ºä¸­å¿ƒï¼Œæ‰©å±•æ¥å£ä¸º RegistryFactory, Registry, RegistryServiceï¼›
+cluster è·¯ç”±å±‚ï¼šå°è£…å¤šä¸ªæä¾›è€…çš„è·¯ç”±åŠè´Ÿè½½å‡è¡¡ï¼Œå¹¶æ¡¥æ¥æ³¨å†Œä¸­å¿ƒï¼Œä»¥ Invoker ä¸ºä¸­å¿ƒï¼Œæ‰©å±•æ¥å£ä¸º Cluster, Directory, Router, LoadBalanceï¼›
+monitor ç›‘æ§å±‚ï¼šRPC è°ƒç”¨æ¬¡æ•°å’Œè°ƒç”¨æ—¶é—´ç›‘æ§ï¼Œä»¥ Statistics ä¸ºä¸­å¿ƒï¼Œæ‰©å±•æ¥å£ä¸º MonitorFactory, Monitor, MonitorServiceï¼›
+protocol è¿œç¨‹è°ƒç”¨å±‚ï¼šå°è£… RPC è°ƒç”¨ï¼Œä»¥ Invocation, Result ä¸ºä¸­å¿ƒï¼Œæ‰©å±•æ¥å£ä¸º Protocol, Invoker, Exporterï¼›
+exchange ä¿¡æ¯äº¤æ¢å±‚ï¼šå°è£…è¯·æ±‚å“åº”æ¨¡å¼ï¼ŒåŒæ­¥è½¬å¼‚æ­¥ï¼Œä»¥ Request, Response ä¸ºä¸­å¿ƒï¼Œæ‰©å±•æ¥å£ä¸º Exchanger, ExchangeChannel, ExchangeClient, ExchangeServerï¼›
+transport ç½‘ç»œä¼ è¾“å±‚ï¼šæŠ½è±¡ mina å’Œ netty ä¸ºç»Ÿä¸€æ¥å£ï¼Œä»¥ Message ä¸ºä¸­å¿ƒï¼Œæ‰©å±•æ¥å£ä¸º Channel, Transporter, Client, Server, Codecï¼›
+serialize æ•°æ®åºåˆ—åŒ–å±‚ï¼šå¯å¤ç”¨çš„ä¸€äº›å·¥å…·ï¼Œæ‰©å±•æ¥å£ä¸º Serialization, ObjectInput, ObjectOutput, ThreadPoolï¼›
 
-±¾ÎÄ½«´Ó×îµ×²ãµÄserialize²ã¿ªÊ¼À´¶Ôdubbo½øĞĞÔ´Âë·ÖÎö£»
+æœ¬æ–‡å°†ä»æœ€åº•å±‚çš„serializeå±‚å¼€å§‹æ¥å¯¹dubboè¿›è¡Œæºç åˆ†æï¼›
 
-##Í¨Ñ¶¿ò¼Ü
-dubboµÄµ×²ãÍ¨Ñ¶Ê¹ÓÃµÄÊÇµÚÈı·½¿ò¼Ü£¬°üÀ¨£ºnetty£¬netty4£¬minaºÍgrizzly£»Ä¬ÈÏÊ¹ÓÃµÄÊÇnetty£¬·Ö±ğÌá¹©ÁËserver¶Ë(·şÎñÌá¹©·½)ºÍclient¶Ë(·şÎñÏû·Ñ·½)£»ÏÂÃæÒÑÊ¹ÓÃµÄnettyÎªÀıÀ´¿´ÄÇÒ»ÏÂNettyServerµÄ²¿·Ö´úÂë£º
+##é€šè®¯æ¡†æ¶
+dubboçš„åº•å±‚é€šè®¯ä½¿ç”¨çš„æ˜¯ç¬¬ä¸‰æ–¹æ¡†æ¶ï¼ŒåŒ…æ‹¬ï¼šnettyï¼Œnetty4ï¼Œminaå’Œgrizzlyï¼›é»˜è®¤ä½¿ç”¨çš„æ˜¯nettyï¼Œåˆ†åˆ«æä¾›äº†serverç«¯(æœåŠ¡æä¾›æ–¹)å’Œclientç«¯(æœåŠ¡æ¶ˆè´¹æ–¹)ï¼›ä¸‹é¢å·²ä½¿ç”¨çš„nettyä¸ºä¾‹æ¥çœ‹é‚£ä¸€ä¸‹NettyServerçš„éƒ¨åˆ†ä»£ç ï¼š
 
 ```
 protected void doOpen() throws Throwable {
@@ -57,14 +57,14 @@ protected void doOpen() throws Throwable {
         channel = bootstrap.bind(getBindAddress());
     }
 ```
-ÔÚÆô¶¯·şÎñÌá¹©·½Ê±¾Í»áµ÷ÓÃ´ËdoOpen·½·¨£¬ÓÃÀ´Æô¶¯·şÎñ¶Ë¿Ú£¬¹©Ïû·Ñ·½Á¬½Ó£»ÒÔÉÏ´úÂë¾ÍÊÇ³£¹æµÄÆô¶¯nettyServer¶Ë´úÂë£¬ÒòÎª±¾ÎÄÖØµã½éÉÜdubboµÄĞòÁĞ»¯£¬ËùÒÔÕâÀïÖ÷Òª¿´decoderºÍencoder£¬ÕâÁ½¸öÀà·Ö±ğ¶¨ÒåÔÚNettyCodecAdapterÖĞ£º
+åœ¨å¯åŠ¨æœåŠ¡æä¾›æ–¹æ—¶å°±ä¼šè°ƒç”¨æ­¤doOpenæ–¹æ³•ï¼Œç”¨æ¥å¯åŠ¨æœåŠ¡ç«¯å£ï¼Œä¾›æ¶ˆè´¹æ–¹è¿æ¥ï¼›ä»¥ä¸Šä»£ç å°±æ˜¯å¸¸è§„çš„å¯åŠ¨nettyServerç«¯ä»£ç ï¼Œå› ä¸ºæœ¬æ–‡é‡ç‚¹ä»‹ç»dubboçš„åºåˆ—åŒ–ï¼Œæ‰€ä»¥è¿™é‡Œä¸»è¦çœ‹decoderå’Œencoderï¼Œè¿™ä¸¤ä¸ªç±»åˆ†åˆ«å®šä¹‰åœ¨NettyCodecAdapterä¸­ï¼š
 
 ```
 private final ChannelHandler encoder = new InternalEncoder();
 private final ChannelHandler decoder = new InternalDecoder();
 ```
-###1.±àÂëÆ÷
-ÔÚNettyCodecAdapter¶¨ÒåÁËÄÚ²¿ÀàInternalEncoder£º
+###1.ç¼–ç å™¨
+åœ¨NettyCodecAdapterå®šä¹‰äº†å†…éƒ¨ç±»InternalEncoderï¼š
 
 ```
 private class InternalEncoder extends OneToOneEncoder {
@@ -83,7 +83,7 @@ private class InternalEncoder extends OneToOneEncoder {
         }
     }
 ```
-´ËÀàÆäÊµÊÇ¶ÔcodecµÄ°ü×°£¬±¾Éí²¢Ã»ÓĞ×ö±àÂë´¦Àí£¬ÏÂÃæÖØµã¿´Ò»ÏÂcodecÀà£¬´ËÀàÊÇÒ»¸ö½Ó¿ÚÀà£¬ÓĞ¶àÖÖÊµÏÖÀà£¬Codec2Ô´ÂëÈçÏÂ£º
+æ­¤ç±»å…¶å®æ˜¯å¯¹codecçš„åŒ…è£…ï¼Œæœ¬èº«å¹¶æ²¡æœ‰åšç¼–ç å¤„ç†ï¼Œä¸‹é¢é‡ç‚¹çœ‹ä¸€ä¸‹codecç±»ï¼Œæ­¤ç±»æ˜¯ä¸€ä¸ªæ¥å£ç±»ï¼Œæœ‰å¤šç§å®ç°ç±»ï¼ŒCodec2æºç å¦‚ä¸‹ï¼š
 
 ```
 @SPI
@@ -102,8 +102,8 @@ public interface Codec2 {
  
 }
 ```
-ÊµÏÖ°üÀ¨£ºTransportCodec£¬TelnetCodec£¬ExchangeCodec£¬DubboCountCodecÒÔ¼°ThriftCodec£¬µ±È»Ò²¿ÉÒÔ×ÔĞĞÀ©Õ¹£»²»¿ÉÄÜÆô¶¯Ê±°ÑÃ¿ÖÖÀàĞÍ¶¼¼ÓÔØ£¬dubboÊÇÍ¨¹ıÔÚÅäÖÃÎÄ¼şÖĞÅäÖÃºÃËùÓĞµÄÀàĞÍ£¬È»ºóÔÚÔËĞĞÖĞĞèÒªÊ²Ã´Àà¼ÓÔØÊ²Ã´Àà£¬
-ÅäÖÃÎÄ¼şµÄ¾ßÌåÂ·¾¶£ºMETA-INF/dubbo/internal/com.alibaba.dubbo.remoting.Codec2£¬ÄÚÈİÈçÏÂ£º
+å®ç°åŒ…æ‹¬ï¼šTransportCodecï¼ŒTelnetCodecï¼ŒExchangeCodecï¼ŒDubboCountCodecä»¥åŠThriftCodecï¼Œå½“ç„¶ä¹Ÿå¯ä»¥è‡ªè¡Œæ‰©å±•ï¼›ä¸å¯èƒ½å¯åŠ¨æ—¶æŠŠæ¯ç§ç±»å‹éƒ½åŠ è½½ï¼Œdubboæ˜¯é€šè¿‡åœ¨é…ç½®æ–‡ä»¶ä¸­é…ç½®å¥½æ‰€æœ‰çš„ç±»å‹ï¼Œç„¶ååœ¨è¿è¡Œä¸­éœ€è¦ä»€ä¹ˆç±»åŠ è½½ä»€ä¹ˆç±»ï¼Œ
+é…ç½®æ–‡ä»¶çš„å…·ä½“è·¯å¾„ï¼šMETA-INF/dubbo/internal/com.alibaba.dubbo.remoting.Codec2ï¼Œå†…å®¹å¦‚ä¸‹ï¼š
 
 ```
 transport=com.alibaba.dubbo.remoting.transport.codec.TransportCodec
@@ -112,7 +112,7 @@ exchange=com.alibaba.dubbo.remoting.exchange.codec.ExchangeCodec
 dubbo=com.alibaba.dubbo.rpc.protocol.dubbo.DubboCountCodec
 thrift=com.alibaba.dubbo.rpc.protocol.thrift.ThriftCodec
 ```
-»ñÈ¡¾ßÌåCodec2µÄ´úÂëÈçÏÂ£º
+è·å–å…·ä½“Codec2çš„ä»£ç å¦‚ä¸‹ï¼š
 
 ```
 protected static Codec2 getChannelCodec(URL url) {
@@ -125,7 +125,7 @@ protected static Codec2 getChannelCodec(URL url) {
     }
 }
 ```
-Í¨¹ıÔÚurlÖĞ»ñÈ¡ÊÇ·ñÓĞ¹Ø¼ü×Öcodec£¬Èç¹ûÓĞµÄ»°¾Í»ñÈ¡µ±Ç°µÄÖµ£¬dubboÄ¬ÈÏµÄcodecÎªdubbo£»Èç¹ûÃ»ÓĞÖµÄ¬ÈÏÎªtelnet£»ÕâÀïÓĞÄ¬ÈÏÖµÎªdubbo£¬ËùÒÔÊµÏÖÀàDubboCountCodec»á±»ExtensionLoader½øĞĞ¼ÓÔØ²¢½øĞĞ»º´æ£¬ÏÂÃæ¾ßÌå¿´Ò»ÏÂDubboCountCodecµÄ±à½âÂë£»
+é€šè¿‡åœ¨urlä¸­è·å–æ˜¯å¦æœ‰å…³é”®å­—codecï¼Œå¦‚æœæœ‰çš„è¯å°±è·å–å½“å‰çš„å€¼ï¼Œdubboé»˜è®¤çš„codecä¸ºdubboï¼›å¦‚æœæ²¡æœ‰å€¼é»˜è®¤ä¸ºtelnetï¼›è¿™é‡Œæœ‰é»˜è®¤å€¼ä¸ºdubboï¼Œæ‰€ä»¥å®ç°ç±»DubboCountCodecä¼šè¢«ExtensionLoaderè¿›è¡ŒåŠ è½½å¹¶è¿›è¡Œç¼“å­˜ï¼Œä¸‹é¢å…·ä½“çœ‹ä¸€ä¸‹DubboCountCodecçš„ç¼–è§£ç ï¼›
 
 ```
 private DubboCodec codec = new DubboCodec();
@@ -135,7 +135,7 @@ public void encode(Channel channel, ChannelBuffer buffer, Object msg) throws IOE
     codec.encode(channel, buffer, msg);
 }
 ```
-DubboCountCodecÄÚ²¿µ÷ÓÃµÄÊÇDubboCodecµÄencode·½·¨£¬¿´Ò»ÏÂÈçºÎ¶ÔRequest¶ÔÏó½øĞĞ±àÂëµÄ£¬¾ßÌå´úÂë¿éÈçÏÂ£º
+DubboCountCodecå†…éƒ¨è°ƒç”¨çš„æ˜¯DubboCodecçš„encodeæ–¹æ³•ï¼Œçœ‹ä¸€ä¸‹å¦‚ä½•å¯¹Requestå¯¹è±¡è¿›è¡Œç¼–ç çš„ï¼Œå…·ä½“ä»£ç å—å¦‚ä¸‹ï¼š
 
 ```
 protected void encodeRequest(Channel channel, ChannelBuffer buffer, Request req) throws IOException {
@@ -180,13 +180,13 @@ protected void encodeRequest(Channel channel, ChannelBuffer buffer, Request req)
        buffer.writerIndex(savedWriteIndex + HEADER_LENGTH + len);
    }
 ```
-Ç°Á½¸ö×Ö½Ú´æ·ÅÁËÄ§Êı£º0xdabb£»µÚÈı¸ö×Ö½Ú°üº¬ÁËËÄ¸öĞÅÏ¢·Ö±ğÊÇ£ºÊÇ·ñÊÇÇëÇóÏûÏ¢(»¹ÊÇÏìÓ¦ÏûÏ¢)£¬ĞòÁĞ»¯ÀàĞÍ£¬ÊÇ·ñË«ÏòÍ¨ĞÅ£¬ÊÇ·ñÊÇĞÄÌøÏûÏ¢£»
-ÔÚÇëÇóÏûÏ¢ÖĞÖ±½ÓÌø¹ıÁËµÚËÄ¸ö×Ö½Ú£¬Ö±½ÓÔÚ5-12Î»ÖÃ´æ·ÅÁËrequestId£¬ÊÇÒ»¸ölongÀàĞÍ£¬µÚËÄ¸ö×Ö½ÚÔÚÈç¹ûÊÇ±àÂëÏìÓ¦ÏûÏ¢ÖĞ»á´æ·ÅÏìÓ¦µÄ×´Ì¬£»
-´úÂëÍùÏÂ¿´£¬bufferÌø¹ıÁËHEADER_LENGTH³¤¶ÈµÄ×Ö½Ú£¬ÕâÀï±íÊ¾µÄÊÇheader²¿·ÖµÄ³¤¶ÈÎª16¸ö×Ö½Ú£¬È»ºóÍ¨¹ıÖ¸¶¨µÄĞòÁĞ»¯·½Ê½°Ñdata¶ÔÏóĞòÁĞ»¯µ½bufferÖĞ£¬ĞòÁĞ»¯Ö®ºó¿ÉÒÔ»ñÈ¡µ½data¶ÔÏó×Ü¹²µÄ×Ö½ÚÊı£¬ÓÃÒ»¸öintÀàĞÍÀ´±£´æ×Ö½ÚÊı£¬´ËintÀàĞÍ´æ·ÅÔÚheaderµÄ×îºóËÄ¸ö×Ö½ÚÖĞ£»
-×îºó°ÑbufferµÄwriterIndexÉèÖÃµ½Ğ´ÍêheaderºÍdataµÄµØ·½£¬·ÀÖ¹Êı¾İ±»¸²¸Ç£»
+å‰ä¸¤ä¸ªå­—èŠ‚å­˜æ”¾äº†é­”æ•°ï¼š0xdabbï¼›ç¬¬ä¸‰ä¸ªå­—èŠ‚åŒ…å«äº†å››ä¸ªä¿¡æ¯åˆ†åˆ«æ˜¯ï¼šæ˜¯å¦æ˜¯è¯·æ±‚æ¶ˆæ¯(è¿˜æ˜¯å“åº”æ¶ˆæ¯)ï¼Œåºåˆ—åŒ–ç±»å‹ï¼Œæ˜¯å¦åŒå‘é€šä¿¡ï¼Œæ˜¯å¦æ˜¯å¿ƒè·³æ¶ˆæ¯ï¼›
+åœ¨è¯·æ±‚æ¶ˆæ¯ä¸­ç›´æ¥è·³è¿‡äº†ç¬¬å››ä¸ªå­—èŠ‚ï¼Œç›´æ¥åœ¨5-12ä½ç½®å­˜æ”¾äº†requestIdï¼Œæ˜¯ä¸€ä¸ªlongç±»å‹ï¼Œç¬¬å››ä¸ªå­—èŠ‚åœ¨å¦‚æœæ˜¯ç¼–ç å“åº”æ¶ˆæ¯ä¸­ä¼šå­˜æ”¾å“åº”çš„çŠ¶æ€ï¼›
+ä»£ç å¾€ä¸‹çœ‹ï¼Œbufferè·³è¿‡äº†HEADER_LENGTHé•¿åº¦çš„å­—èŠ‚ï¼Œè¿™é‡Œè¡¨ç¤ºçš„æ˜¯headeréƒ¨åˆ†çš„é•¿åº¦ä¸º16ä¸ªå­—èŠ‚ï¼Œç„¶åé€šè¿‡æŒ‡å®šçš„åºåˆ—åŒ–æ–¹å¼æŠŠdataå¯¹è±¡åºåˆ—åŒ–åˆ°bufferä¸­ï¼Œåºåˆ—åŒ–ä¹‹åå¯ä»¥è·å–åˆ°dataå¯¹è±¡æ€»å…±çš„å­—èŠ‚æ•°ï¼Œç”¨ä¸€ä¸ªintç±»å‹æ¥ä¿å­˜å­—èŠ‚æ•°ï¼Œæ­¤intç±»å‹å­˜æ”¾åœ¨headerçš„æœ€åå››ä¸ªå­—èŠ‚ä¸­ï¼›
+æœ€åæŠŠbufferçš„writerIndexè®¾ç½®åˆ°å†™å®Œheaderå’Œdataçš„åœ°æ–¹ï¼Œé˜²æ­¢æ•°æ®è¢«è¦†ç›–ï¼›
 
-###2.½âÂëÆ÷
-ÔÚNettyCodecAdapter¶¨ÒåÁËÄÚ²¿ÀàInternalEncoder£¬Í¬ÑùÊÇµ÷ÓÃDubboCodecµÄdecode·½·¨£¬²¿·Ö´úÂëÈçÏÂ£º
+###2.è§£ç å™¨
+åœ¨NettyCodecAdapterå®šä¹‰äº†å†…éƒ¨ç±»InternalEncoderï¼ŒåŒæ ·æ˜¯è°ƒç”¨DubboCodecçš„decodeæ–¹æ³•ï¼Œéƒ¨åˆ†ä»£ç å¦‚ä¸‹ï¼š
 
 ```
 public Object decode(Channel channel, ChannelBuffer buffer) throws IOException {
@@ -248,7 +248,7 @@ public Object decode(Channel channel, ChannelBuffer buffer) throws IOException {
         }
     }
 ```
-Ê×ÏÈ¶ÁÈ¡Math.min(readable, HEADER_LENGTH)£¬Èç¹ûreadableĞ¡ÓÚHEADER_LENGTH£¬±íÊ¾½ÓÊÕ·½Á¬Í·²¿µÄ16¸ö×Ö½Ú»¹Ã»½ÓÊÜÍê£¬ĞèÒªµÈ´ı½ÓÊÕ£»Õı³£header½ÓÊÕÍêÖ®ºóĞèÒª½øĞĞ¼ì²é£¬Ö÷Òª°üÀ¨£ºÄ§ÊıµÄ¼ì²é£¬headerÏûÏ¢³¤¶È¼ì²é£¬ÏûÏ¢Ìå³¤¶È¼ì²é(¼ì²éÏûÏ¢ÌåÊÇ·ñÒÑ¾­½ÓÊÕÍê³É)£»¼ì²éÍêÖ®ºóĞèÒª¶ÔÏûÏ¢Ìå½øĞĞ·´ĞòÁĞ»¯£¬¾ßÌåÔÚdecodeBody·½·¨ÖĞ£º
+é¦–å…ˆè¯»å–Math.min(readable, HEADER_LENGTH)ï¼Œå¦‚æœreadableå°äºHEADER_LENGTHï¼Œè¡¨ç¤ºæ¥æ”¶æ–¹è¿å¤´éƒ¨çš„16ä¸ªå­—èŠ‚è¿˜æ²¡æ¥å—å®Œï¼Œéœ€è¦ç­‰å¾…æ¥æ”¶ï¼›æ­£å¸¸headeræ¥æ”¶å®Œä¹‹åéœ€è¦è¿›è¡Œæ£€æŸ¥ï¼Œä¸»è¦åŒ…æ‹¬ï¼šé­”æ•°çš„æ£€æŸ¥ï¼Œheaderæ¶ˆæ¯é•¿åº¦æ£€æŸ¥ï¼Œæ¶ˆæ¯ä½“é•¿åº¦æ£€æŸ¥(æ£€æŸ¥æ¶ˆæ¯ä½“æ˜¯å¦å·²ç»æ¥æ”¶å®Œæˆ)ï¼›æ£€æŸ¥å®Œä¹‹åéœ€è¦å¯¹æ¶ˆæ¯ä½“è¿›è¡Œååºåˆ—åŒ–ï¼Œå…·ä½“åœ¨decodeBodyæ–¹æ³•ä¸­ï¼š
 
 ```
 @Override
@@ -340,13 +340,13 @@ public Object decode(Channel channel, ChannelBuffer buffer) throws IOException {
         }
     }
 ```
-Ê×ÏÈÍ¨¹ı½âÎöheader²¿·ÖµÄµÚÈı¸ö×Ö½Ú£¬Ê¶±ğ³öÊÇÇëÇóÏûÏ¢»¹ÊÇÏìÓ¦ÏûÏ¢£¬»¹ÓĞÊ¹ÓÃÄÄÖÖÀàĞÍµÄĞòÁĞ»¯·½Ê½£¬È»ºó·Ö±ğ½øĞĞĞòÁĞ»¯£»
+é¦–å…ˆé€šè¿‡è§£æheaderéƒ¨åˆ†çš„ç¬¬ä¸‰ä¸ªå­—èŠ‚ï¼Œè¯†åˆ«å‡ºæ˜¯è¯·æ±‚æ¶ˆæ¯è¿˜æ˜¯å“åº”æ¶ˆæ¯ï¼Œè¿˜æœ‰ä½¿ç”¨å“ªç§ç±»å‹çš„åºåˆ—åŒ–æ–¹å¼ï¼Œç„¶ååˆ†åˆ«è¿›è¡Œåºåˆ—åŒ–ï¼›
 
-##ĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯
-Í¨¹ıÒÔÉÏ¶Ô±àÂëÆ÷½âÂëÆ÷µÄÁË½â£¬ÔÚ±àÂëÆ÷ÖĞĞèÒªĞòÁĞ»¯Request/Response£¬ÔÚ½âÂëÆ÷ÖĞĞèÒªĞòÁĞ»¯Request/Response£¬ÏÂÃæ¾ßÌå¿´¿´ĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯£»
+##åºåˆ—åŒ–å’Œååºåˆ—åŒ–
+é€šè¿‡ä»¥ä¸Šå¯¹ç¼–ç å™¨è§£ç å™¨çš„äº†è§£ï¼Œåœ¨ç¼–ç å™¨ä¸­éœ€è¦åºåˆ—åŒ–Request/Responseï¼Œåœ¨è§£ç å™¨ä¸­éœ€è¦åºåˆ—åŒ–Request/Responseï¼Œä¸‹é¢å…·ä½“çœ‹çœ‹åºåˆ—åŒ–å’Œååºåˆ—åŒ–ï¼›
 
-###1.ĞòÁĞ»¯
-ÔÚ±àÂëÆ÷ÖĞĞèÒª»ñÈ¡¾ßÌåµÄSerialization£¬¾ßÌå´úÂëÈçÏÂ£º
+###1.åºåˆ—åŒ–
+åœ¨ç¼–ç å™¨ä¸­éœ€è¦è·å–å…·ä½“çš„Serializationï¼Œå…·ä½“ä»£ç å¦‚ä¸‹ï¼š
 
 ```
 public static Serialization getSerialization(URL url) {
@@ -354,8 +354,8 @@ public static Serialization getSerialization(URL url) {
             url.getParameter(Constants.SERIALIZATION_KEY, Constants.DEFAULT_REMOTING_SERIALIZATION));
 }
 ```
-Í¬»ñÈ¡codecµÄ·½Ê½£¬dubboÒ²Ìá¹©ÁË¶àÖÖĞòÁĞ»¯·½Ê½£¬Í¬Ê±¿ÉÒÔ×Ô¶¨ÒåÀ©Õ¹£»Í¨¹ıÔÚurlÖĞ»ñÈ¡serialization¹Ø¼ü×Ö£¬Èç¹û»ñÈ¡²»µ½Ä¬ÈÏÎªhession2£»Í¬Ñù¶àÖÖĞòÁĞ»¯ÀàÒ²ÅäÖÃÔÚÒ»¸öÎÄ¼şÖĞ£¬
-Â·¾¶£ºMETA-INF/dubbo/internal/com.alibaba.dubbo.common.serialize.Serialization£¬¾ßÌåÄÚÈİÈçÏÂ£º
+åŒè·å–codecçš„æ–¹å¼ï¼Œdubboä¹Ÿæä¾›äº†å¤šç§åºåˆ—åŒ–æ–¹å¼ï¼ŒåŒæ—¶å¯ä»¥è‡ªå®šä¹‰æ‰©å±•ï¼›é€šè¿‡åœ¨urlä¸­è·å–serializationå…³é”®å­—ï¼Œå¦‚æœè·å–ä¸åˆ°é»˜è®¤ä¸ºhession2ï¼›åŒæ ·å¤šç§åºåˆ—åŒ–ç±»ä¹Ÿé…ç½®åœ¨ä¸€ä¸ªæ–‡ä»¶ä¸­ï¼Œ
+è·¯å¾„ï¼šMETA-INF/dubbo/internal/com.alibaba.dubbo.common.serialize.Serializationï¼Œå…·ä½“å†…å®¹å¦‚ä¸‹ï¼š
 
 ```
 fastjson=com.alibaba.dubbo.common.serialize.fastjson.FastJsonSerialization
@@ -366,9 +366,9 @@ compactedjava=com.alibaba.dubbo.common.serialize.java.CompactedJavaSerialization
 nativejava=com.alibaba.dubbo.common.serialize.nativejava.NativeJavaSerialization
 kryo=com.alibaba.dubbo.common.serialize.kryo.KryoSerialization
 ```
-dubboÄ¬ÈÏÌá¹©ÁËfastjson£¬fst£¬hessian2£¬java£¬compactedjava£¬nativejavaºÍkryo¶àÖÖĞòÁĞ»¯·½Ê½£»
-Ã¿ÖÖĞòÁĞ»¯·½Ê½¶¼ĞèÒªÊµÏÖÈçÏÂÈı¸ö½Ó¿ÚÀà£ºSerialization£¬ObjectInputÒÔ¼°ObjectOutput£»
-Serialization½Ó¿ÚÀà£º
+dubboé»˜è®¤æä¾›äº†fastjsonï¼Œfstï¼Œhessian2ï¼Œjavaï¼Œcompactedjavaï¼Œnativejavaå’Œkryoå¤šç§åºåˆ—åŒ–æ–¹å¼ï¼›
+æ¯ç§åºåˆ—åŒ–æ–¹å¼éƒ½éœ€è¦å®ç°å¦‚ä¸‹ä¸‰ä¸ªæ¥å£ç±»ï¼šSerializationï¼ŒObjectInputä»¥åŠObjectOutputï¼›
+Serializationæ¥å£ç±»ï¼š
 
 ```
 public interface Serialization {
@@ -385,8 +385,8 @@ public interface Serialization {
  
 }
 ```
-ÆäÖĞµÄContentTypeId¾ÍÊÇÔÚheaderÖĞ´æ·ÅµÄĞòÁĞ»¯ÀàĞÍ£¬·´ĞòÁĞ»¯µÄÊ±ºòĞèÒªÍ¨¹ı´Ëid»ñÈ¡¾ßÌåµÄSerialization£¬ËùÒÔ´ËContentTypeId²»ÄÜ³öÏÖÖØ¸´µÄ£¬·ñÔò»á±»¸²¸Ç£»
-ObjectInput½Ó¿ÚÀà£º
+å…¶ä¸­çš„ContentTypeIdå°±æ˜¯åœ¨headerä¸­å­˜æ”¾çš„åºåˆ—åŒ–ç±»å‹ï¼Œååºåˆ—åŒ–çš„æ—¶å€™éœ€è¦é€šè¿‡æ­¤idè·å–å…·ä½“çš„Serializationï¼Œæ‰€ä»¥æ­¤ContentTypeIdä¸èƒ½å‡ºç°é‡å¤çš„ï¼Œå¦åˆ™ä¼šè¢«è¦†ç›–ï¼›
+ObjectInputæ¥å£ç±»ï¼š
 
 ```
 public interface ObjectOutput extends DataOutput {
@@ -394,7 +394,7 @@ public interface ObjectOutput extends DataOutput {
     void writeObject(Object obj) throws IOException;
 }
 ```
-ObjectOutput½Ó¿ÚÀà£º
+ObjectOutputæ¥å£ç±»ï¼š
 
 ```
 public interface ObjectInput extends DataInput {
@@ -406,7 +406,7 @@ public interface ObjectInput extends DataInput {
     <T> T readObject(Class<T> cls, Type type) throws IOException, ClassNotFoundException;
 }
 ```
-·Ö±ğÌá¹©ÁË¶ÁÈ¡¶ÔÏóºÍĞ´¶ÔÏóµÄ½Ó¿Ú·½·¨£¬DataOutputºÍDataInput·Ö±ğÌá¹©ÁË¶Ô»ù±¾Êı¾İÀàĞÍµÄ¶ÁºÍĞ´£»ĞòÁĞ»¯Ö»ĞèÒªµ÷ÓÃwriteObject·½·¨½«DataĞ´ÈëÊı¾İÁ÷¼´¿É£»¾ßÌå¿ÉÒÔ¿´Ò»ÏÂ±àÂëÆ÷ÖĞµ÷ÓÃµÄencodeRequestData·½·¨£º
+åˆ†åˆ«æä¾›äº†è¯»å–å¯¹è±¡å’Œå†™å¯¹è±¡çš„æ¥å£æ–¹æ³•ï¼ŒDataOutputå’ŒDataInputåˆ†åˆ«æä¾›äº†å¯¹åŸºæœ¬æ•°æ®ç±»å‹çš„è¯»å’Œå†™ï¼›åºåˆ—åŒ–åªéœ€è¦è°ƒç”¨writeObjectæ–¹æ³•å°†Dataå†™å…¥æ•°æ®æµå³å¯ï¼›å…·ä½“å¯ä»¥çœ‹ä¸€ä¸‹ç¼–ç å™¨ä¸­è°ƒç”¨çš„encodeRequestDataæ–¹æ³•ï¼š
 
 ```
 @Override
@@ -427,10 +427,10 @@ protected void encodeRequestData(Channel channel, ObjectOutput out, Object data,
     out.writeObject(inv.getAttachments());
 }
 ```
-Ä¬ÈÏÊ¹ÓÃµÄDubboCountCodec·½Ê½²¢Ã»ÓĞÖ±½Ó½«dataĞ´ÈëÁ÷ÖĞ£¬¶øÊÇ½«RpcInvocationÖĞµÄÊı¾İÈ¡³ö·Ö±ğĞ´ÈëÁ÷£»
+é»˜è®¤ä½¿ç”¨çš„DubboCountCodecæ–¹å¼å¹¶æ²¡æœ‰ç›´æ¥å°†dataå†™å…¥æµä¸­ï¼Œè€Œæ˜¯å°†RpcInvocationä¸­çš„æ•°æ®å–å‡ºåˆ†åˆ«å†™å…¥æµï¼›
 
-###2.·´ĞòÁĞ»¯
-·´ĞòÁĞ»¯Í¨¹ı¶ÁÈ¡headerÖĞµÄĞòÁĞ»¯ÀàĞÍ£¬È»ºóÍ¨¹ıÈçÏÂ·½·¨»ñÈ¡¾ßÌåµÄSerialization£¬¾ßÌåÔÚÀàCodecSupportÖĞ£º
+###2.ååºåˆ—åŒ–
+ååºåˆ—åŒ–é€šè¿‡è¯»å–headerä¸­çš„åºåˆ—åŒ–ç±»å‹ï¼Œç„¶åé€šè¿‡å¦‚ä¸‹æ–¹æ³•è·å–å…·ä½“çš„Serializationï¼Œå…·ä½“åœ¨ç±»CodecSupportä¸­ï¼š
 
 ```
 public static Serialization getSerialization(URL url, Byte id) throws IOException {
@@ -450,17 +450,17 @@ public static Serialization getSerializationById(Byte id) {
     return ID_SERIALIZATION_MAP.get(id);
 }
 ```
-ID_SERIALIZATION_MAP´æ·Å×ÅContentTypeIdºÍ¾ßÌåSerializationµÄ¶ÔÓ¦¹ØÏµ£¬È»ºóÍ¨¹ıid»ñÈ¡¾ßÌåµÄSerialization£¬È»ºó¸ù¾İĞ´ÈëµÄË³Ğò¶ÁÈ¡Êı¾İ£»
+ID_SERIALIZATION_MAPå­˜æ”¾ç€ContentTypeIdå’Œå…·ä½“Serializationçš„å¯¹åº”å…³ç³»ï¼Œç„¶åé€šè¿‡idè·å–å…·ä½“çš„Serializationï¼Œç„¶åæ ¹æ®å†™å…¥çš„é¡ºåºè¯»å–æ•°æ®ï¼›
 
-##À©Õ¹ĞòÁĞ»¯ÀàĞÍ
-dubbo±¾Éí¶ÔºÜ¶àÄ£¿éÌá¹©ÁËºÜºÃµÄÀ©Õ¹¹¦ÄÜ£¬°üÀ¨ĞòÁĞ»¯¹¦ÄÜ£¬ÒÔÏÂÀ´·ÖÎöÒ»ÏÂÈçºÎÊ¹ÓÃprotobufÀ´ÊµÏÖĞòÁĞ»¯·½Ê½£»
+##æ‰©å±•åºåˆ—åŒ–ç±»å‹
+dubboæœ¬èº«å¯¹å¾ˆå¤šæ¨¡å—æä¾›äº†å¾ˆå¥½çš„æ‰©å±•åŠŸèƒ½ï¼ŒåŒ…æ‹¬åºåˆ—åŒ–åŠŸèƒ½ï¼Œä»¥ä¸‹æ¥åˆ†æä¸€ä¸‹å¦‚ä½•ä½¿ç”¨protobufæ¥å®ç°åºåˆ—åŒ–æ–¹å¼ï¼›
 
-###1.ÕûÌå´úÂë½á¹¹
-Ê×ÏÈ¿´Ò»ÏÂÕûÌåµÄ´úÂë½á¹¹£¬ÈçÏÂÍ¼ËùÊ¾£º
-![Í¼Æ¬ÃèÊö][2]
-·Ö±ğÊµÏÖÈı¸ö½Ó¿ÚÀà£ºSerialization£¬ObjectInputÒÔ¼°ObjectOutput£»È»ºóÔÚÖ¸¶¨Ä¿Â¼ÏÂÌá¹©Ò»¸öÎÄ±¾ÎÄ¼ş£»
+###1.æ•´ä½“ä»£ç ç»“æ„
+é¦–å…ˆçœ‹ä¸€ä¸‹æ•´ä½“çš„ä»£ç ç»“æ„ï¼Œå¦‚ä¸‹å›¾æ‰€ç¤ºï¼š
+![å›¾ç‰‡æè¿°][2]
+åˆ†åˆ«å®ç°ä¸‰ä¸ªæ¥å£ç±»ï¼šSerializationï¼ŒObjectInputä»¥åŠObjectOutputï¼›ç„¶ååœ¨æŒ‡å®šç›®å½•ä¸‹æä¾›ä¸€ä¸ªæ–‡æœ¬æ–‡ä»¶ï¼›
 
-###2.ÒıÈëÀ©Õ¹°ü
+###2.å¼•å…¥æ‰©å±•åŒ…
 
 ```
 <dependency>
@@ -474,7 +474,7 @@ dubbo±¾Éí¶ÔºÜ¶àÄ£¿éÌá¹©ÁËºÜºÃµÄÀ©Õ¹¹¦ÄÜ£¬°üÀ¨ĞòÁĞ»¯¹¦ÄÜ£¬ÒÔÏÂÀ´·ÖÎöÒ»ÏÂÈçºÎÊ¹ÓÃp
      <version>1.1.3</version>
 </dependency>
 ```
-###3.ÊµÏÖ½Ó¿ÚObjectInputºÍObjectOutput
+###3.å®ç°æ¥å£ObjectInputå’ŒObjectOutput
 
 ```
 public class ProtobufObjectInput implements ObjectInput {
@@ -485,7 +485,7 @@ public class ProtobufObjectInput implements ObjectInput {
         this.input = new ObjectInputStream(inputStream);
     }
  
-    ....Ê¡ÂÔ»ù´¡ÀàĞÍ...
+    ....çœç•¥åŸºç¡€ç±»å‹...
      
     @Override
     public Object readObject() throws IOException, ClassNotFoundException {
@@ -524,7 +524,7 @@ public class ProtobufObjectOutput implements ObjectOutput {
         this.outputStream = new ObjectOutputStream(outputStream);
     }
  
-    ....Ê¡ÂÔ»ù´¡ÀàĞÍ...
+    ....çœç•¥åŸºç¡€ç±»å‹...
  
     @Override
     public void writeObject(Object v) throws IOException {
@@ -539,7 +539,7 @@ public class ProtobufObjectOutput implements ObjectOutput {
     }
 }
 ```
-4.ÊµÏÖSerialization½Ó¿Ú
+4.å®ç°Serializationæ¥å£
 
 ```
 public class ProtobufSerialization implements Serialization {
@@ -565,25 +565,25 @@ public class ProtobufSerialization implements Serialization {
     }
 }
 ```
-ÕâÀïÒıÈëÁËÒ»¸öĞÂµÄContentTypeId£¬ĞèÒª±£Ö¤ºÍdubboÀïÃæÒÑ´æÔÚµÄ²»Òª³åÍ»
+è¿™é‡Œå¼•å…¥äº†ä¸€ä¸ªæ–°çš„ContentTypeIdï¼Œéœ€è¦ä¿è¯å’Œdubboé‡Œé¢å·²å­˜åœ¨çš„ä¸è¦å†²çª
 
-###5.Ö¸¶¨Ä¿Â¼Ìá¹©×¢²á
-ÔÚMETA-INF/dubbo/internal/Ä¿Â¼ÏÂÌá¹©ÎÄ¼şcom.alibaba.dubbo.common.serialize.Serialization£¬ÄÚÈİÈçÏÂ£º
+###5.æŒ‡å®šç›®å½•æä¾›æ³¨å†Œ
+åœ¨META-INF/dubbo/internal/ç›®å½•ä¸‹æä¾›æ–‡ä»¶com.alibaba.dubbo.common.serialize.Serializationï¼Œå†…å®¹å¦‚ä¸‹ï¼š
 
 ```
 protobuf=com.dubboCommon.ProtobufSerialization
 ```
-###6.ÔÚÌá¹©·½ÅäÖÃĞÂµÄĞòÁĞ»¯·½Ê½
+###6.åœ¨æä¾›æ–¹é…ç½®æ–°çš„åºåˆ—åŒ–æ–¹å¼
 
 ```
 <dubbo:protocol name="dubbo" port="20880" serialization="protobuf"/>
 ```
-ÕâÑù¾Í»áÊ¹ÓÃĞÂÀ©Õ¹µÄprotobufĞòÁĞ»¯·½Ê½À´ĞòÁĞ»¯¶ÔÏó£»
+è¿™æ ·å°±ä¼šä½¿ç”¨æ–°æ‰©å±•çš„protobufåºåˆ—åŒ–æ–¹å¼æ¥åºåˆ—åŒ–å¯¹è±¡ï¼›
 
-##×Ü½á
-±¾ÎÄ´ÓdubboÕûÌåÉè¼ÆµÄ×îµ×²ãserialization²ãÀ´·ÖÎöºÍÁË½âdubbo£¬ºóÃæ»áÖğ²ã½øĞĞ·ÖÎö£¬¶ÔdubboÓĞÒ»¸ö¸ü¼ÓÍ¸³¹µÄÁË½â£»
+##æ€»ç»“
+æœ¬æ–‡ä»dubboæ•´ä½“è®¾è®¡çš„æœ€åº•å±‚serializationå±‚æ¥åˆ†æå’Œäº†è§£dubboï¼Œåé¢ä¼šé€å±‚è¿›è¡Œåˆ†æï¼Œå¯¹dubboæœ‰ä¸€ä¸ªæ›´åŠ é€å½»çš„äº†è§£ï¼›
 
-##Ê¾Àı´úÂëµØÖ·
+##ç¤ºä¾‹ä»£ç åœ°å€
 [https://github.com/ksfzhaohui/blog][3]
 
 

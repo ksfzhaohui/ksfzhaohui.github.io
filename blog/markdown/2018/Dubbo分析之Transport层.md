@@ -1,8 +1,8 @@
-##Ç°ÑÔ
-ÉÏÒ»ÆªÎÄÕÂ[Dubbo·ÖÎöÖ®Serialize²ã][1]£¬½éÉÜÁË×îµ×²ãµÄĞòÁĞ»¯/·´ĞòÁĞ»¯²ã£¬±¾ÎÄ¼ÌĞø·ÖÎöSerialize²ãµÄÉÏÒ»²ãtransportÍøÂç´«Êä²ã£¬´Ë²ãÊ¹ÓÃÁËÏÖÓĞµÄÒ»Ğ©Í¨Ñ¶¿ªÔ´¿ò¼Ü(ex:netty,mina,grizzly)À´×öµ×²ãÍ¨Ñ¶£¬ÉÏÎÄÒ²×öÁË¼òµ¥½éÉÜ£¬±¾ÎÄ½«×ö¸üÉîÈëµÄÁË½â£»
+ï»¿##å‰è¨€
+ä¸Šä¸€ç¯‡æ–‡ç« [Dubboåˆ†æä¹‹Serializeå±‚][1]ï¼Œä»‹ç»äº†æœ€åº•å±‚çš„åºåˆ—åŒ–/ååºåˆ—åŒ–å±‚ï¼Œæœ¬æ–‡ç»§ç»­åˆ†æSerializeå±‚çš„ä¸Šä¸€å±‚transportç½‘ç»œä¼ è¾“å±‚ï¼Œæ­¤å±‚ä½¿ç”¨äº†ç°æœ‰çš„ä¸€äº›é€šè®¯å¼€æºæ¡†æ¶(ex:netty,mina,grizzly)æ¥åšåº•å±‚é€šè®¯ï¼Œä¸Šæ–‡ä¹Ÿåšäº†ç®€å•ä»‹ç»ï¼Œæœ¬æ–‡å°†åšæ›´æ·±å…¥çš„äº†è§£ï¼›
 
-##TransporterÀà·ÖÎö
-dubboÎªÍ¨Ñ¶¿ò¼ÜÌá¹©ÁËÍ³Ò»µÄbindºÍconnet½Ó¿Ú£¬·½±ã½øĞĞ¹ÜÀíºÍÀ©Õ¹£¬·â×°ÔÚ½Ó¿ÚÀà£ºTransporterÖĞ£º
+##Transporterç±»åˆ†æ
+dubboä¸ºé€šè®¯æ¡†æ¶æä¾›äº†ç»Ÿä¸€çš„bindå’Œconnetæ¥å£ï¼Œæ–¹ä¾¿è¿›è¡Œç®¡ç†å’Œæ‰©å±•ï¼Œå°è£…åœ¨æ¥å£ç±»ï¼šTransporterä¸­ï¼š
 
 ```
 @SPI("netty")
@@ -15,9 +15,9 @@ public interface Transporter {
     Client connect(URL url, ChannelHandler handler) throws RemotingException;
 }
 ```
-Ìá¹©ÁËbindºÍconnect½Ó¿Ú£¬·Ö±ğ¶ÔÓ¦Õâ·şÎñÆ÷¶ËºÍ¿Í»§¶Ë£¬¾ßÌåÓĞÄÄĞ©ÊµÏÖÀà£¬ÈçÏÂÍ¼ËùÊ¾£º
+æä¾›äº†bindå’Œconnectæ¥å£ï¼Œåˆ†åˆ«å¯¹åº”è¿™æœåŠ¡å™¨ç«¯å’Œå®¢æˆ·ç«¯ï¼Œå…·ä½“æœ‰å“ªäº›å®ç°ç±»ï¼Œå¦‚ä¸‹å›¾æ‰€ç¤ºï¼š
 
-ÒÔÄ¬ÈÏÊ¹ÓÃµÄnetty¿ò¼ÜÎªÀı£¬´úÂëÈçÏÂ£º
+ä»¥é»˜è®¤ä½¿ç”¨çš„nettyæ¡†æ¶ä¸ºä¾‹ï¼Œä»£ç å¦‚ä¸‹ï¼š
 
 ```
 public class NettyTransporter implements Transporter {
@@ -36,15 +36,15 @@ public class NettyTransporter implements Transporter {
  
 }
 ```
-¾ßÌåµÄ·şÎñÆ÷¶Ë·â×°ÔÚNettyServerÖĞ£¬¿Í»§¶Ë·â×°ÔÚNettyClient£»url²ÎÊıÊÇ°üº¬ÁËxmlÅäÖÃµÄĞÅÏ¢(°üÀ¨£º¶ÔÍâµÄ½Ó¿Ú£¬Ê¹ÓÃµÄĞ­Òé£¬Ê¹ÓÃµÄĞòÁĞ»¯·½Ê½£¬Ê¹ÓÃµÄÍ¨Ñ¶¿ò¼ÜµÈ)£¬listenerÊÇÒ»¸öHandler£¬ÔÚ½âÂëÖ®ºó½«Êı¾İ½»¸øËü×öºóĞøµÄÒµÎñ´¦Àí£»¶ÔÓ¦ÒÔÉÏµÄ¼¸ÖÖÍ¨Ñ¶¿ªÔ´¿ò¼Ü£¬·Ö±ğÌá¹©ÁË¶ÔÓ¦µÄTransporter°üÀ¨£ºNettyTransporter£¬NettyTransporter(netty4)£¬MinaTransporterÒÔ¼°GrizzlyTransporter£¬¾ßÌåÊ¹ÓÃÄÄÖÖÀàĞÍµÄTransporter£¬ÔÚTransportersÀàÖĞÌá¹©ÁËgetTransporter·½·¨£º
+å…·ä½“çš„æœåŠ¡å™¨ç«¯å°è£…åœ¨NettyServerä¸­ï¼Œå®¢æˆ·ç«¯å°è£…åœ¨NettyClientï¼›urlå‚æ•°æ˜¯åŒ…å«äº†xmlé…ç½®çš„ä¿¡æ¯(åŒ…æ‹¬ï¼šå¯¹å¤–çš„æ¥å£ï¼Œä½¿ç”¨çš„åè®®ï¼Œä½¿ç”¨çš„åºåˆ—åŒ–æ–¹å¼ï¼Œä½¿ç”¨çš„é€šè®¯æ¡†æ¶ç­‰)ï¼Œlisteneræ˜¯ä¸€ä¸ªHandlerï¼Œåœ¨è§£ç ä¹‹åå°†æ•°æ®äº¤ç»™å®ƒåšåç»­çš„ä¸šåŠ¡å¤„ç†ï¼›å¯¹åº”ä»¥ä¸Šçš„å‡ ç§é€šè®¯å¼€æºæ¡†æ¶ï¼Œåˆ†åˆ«æä¾›äº†å¯¹åº”çš„TransporteråŒ…æ‹¬ï¼šNettyTransporterï¼ŒNettyTransporter(netty4)ï¼ŒMinaTransporterä»¥åŠGrizzlyTransporterï¼Œå…·ä½“ä½¿ç”¨å“ªç§ç±»å‹çš„Transporterï¼Œåœ¨Transportersç±»ä¸­æä¾›äº†getTransporteræ–¹æ³•ï¼š
 
 ```
 public static Transporter getTransporter() {
     return ExtensionLoader.getExtensionLoader(Transporter.class).getAdaptiveExtension();
 }
 ```
-ÕâÀï²¢Ã»ÓĞÏñÔÚ»ñÈ¡¾ßÌåserializationÀàÒ»Ñù£¬Í¨¹ıÔÚurlÖ¸¶¨transporter²ÎÊı£¬È»ºó¼ÓÔØ¾ßÌåµÄtransporterÀà£¬¶øÊÇÉú³ÉÁËÒ»¸ö¶¯Ì¬µÄtransporter£¬ÓÉ´Ë¶¯Ì¬transporterÈ¥¼ÓÔØ¾ßÌåµÄÀà£»
-ÒòÎªServer¶ËºÍClient¿ÉÒÔ·Ö±ğÉèÖÃ³É²»Í¬µÄÍ¨Ñ¶¿ò¼Ü£¬Ò»´Î»ñÈ¡Î¨Ò»µÄTransporter²»ÄÜÂú×ã´ËĞèÇó£»¾ßÌåµÄÉú³É¶¯Ì¬´úÂëµÄ·½·¨ÔÚExtensionLoaderµÄcreateAdaptiveExtensionClassCode·½·¨ÖĞ£¬´Ë´¦²»ÔÚÁĞ³öÔ´Âë£¬ÔÚ´ËÕ¹Ê¾Ò»ÏÂÄ¬ÈÏÉú³ÉµÄ¶¯Ì¬´úÂëÀ©Õ¹Àà£º
+è¿™é‡Œå¹¶æ²¡æœ‰åƒåœ¨è·å–å…·ä½“serializationç±»ä¸€æ ·ï¼Œé€šè¿‡åœ¨urlæŒ‡å®štransporterå‚æ•°ï¼Œç„¶ååŠ è½½å…·ä½“çš„transporterç±»ï¼Œè€Œæ˜¯ç”Ÿæˆäº†ä¸€ä¸ªåŠ¨æ€çš„transporterï¼Œç”±æ­¤åŠ¨æ€transporterå»åŠ è½½å…·ä½“çš„ç±»ï¼›
+å› ä¸ºServerç«¯å’ŒClientå¯ä»¥åˆ†åˆ«è®¾ç½®æˆä¸åŒçš„é€šè®¯æ¡†æ¶ï¼Œä¸€æ¬¡è·å–å”¯ä¸€çš„Transporterä¸èƒ½æ»¡è¶³æ­¤éœ€æ±‚ï¼›å…·ä½“çš„ç”ŸæˆåŠ¨æ€ä»£ç çš„æ–¹æ³•åœ¨ExtensionLoaderçš„createAdaptiveExtensionClassCodeæ–¹æ³•ä¸­ï¼Œæ­¤å¤„ä¸åœ¨åˆ—å‡ºæºç ï¼Œåœ¨æ­¤å±•ç¤ºä¸€ä¸‹é»˜è®¤ç”Ÿæˆçš„åŠ¨æ€ä»£ç æ‰©å±•ç±»ï¼š
 
 ```
 package com.alibaba.dubbo.remoting;
@@ -101,7 +101,7 @@ public class Transporter$Adaptive implements com.alibaba.dubbo.remoting.Transpor
     }
 }
 ```
-¿ÉÒÔ·¢ÏÖServer¶Ë¿ÉÒÔÍ¨¹ıtransporterºÍserverÁ½¸ö²ÎÊıÀ´ÉèÖÃÀ©Õ¹Àà£¬¶øÇÒserver²ÎÊıÉèÖÃµÄÖµÊÇ¿ÉÒÔ¸²¸Çtransporter²ÎÊıµÄÖµ£¬Í¬ÀíClientÒ²ÀàËÆ£»×îºó²»¹ÜÊÇbind()»¹ÊÇconnet()¶¼ÊÇÍ¨¹ıExtensionLoaderµÄgetExtension·½·¨À´»ñÈ¡¾ßÌåµÄtransporterÀà£»Í¬serialize²ã£¬Ïà¹ØµÄtransporterÒ²Í¬Ñù¶¨ÒåÔÚMETA-INF/dubbo/internal/com.alibaba.dubbo.remoting.TransporterÎÄ¼şÖĞ£º
+å¯ä»¥å‘ç°Serverç«¯å¯ä»¥é€šè¿‡transporterå’Œserverä¸¤ä¸ªå‚æ•°æ¥è®¾ç½®æ‰©å±•ç±»ï¼Œè€Œä¸”serverå‚æ•°è®¾ç½®çš„å€¼æ˜¯å¯ä»¥è¦†ç›–transporterå‚æ•°çš„å€¼ï¼ŒåŒç†Clientä¹Ÿç±»ä¼¼ï¼›æœ€åä¸ç®¡æ˜¯bind()è¿˜æ˜¯connet()éƒ½æ˜¯é€šè¿‡ExtensionLoaderçš„getExtensionæ–¹æ³•æ¥è·å–å…·ä½“çš„transporterç±»ï¼›åŒserializeå±‚ï¼Œç›¸å…³çš„transporterä¹ŸåŒæ ·å®šä¹‰åœ¨META-INF/dubbo/internal/com.alibaba.dubbo.remoting.Transporteræ–‡ä»¶ä¸­ï¼š
 
 ```
 netty=com.alibaba.dubbo.remoting.transport.netty.NettyTransporter
@@ -110,9 +110,9 @@ mina=com.alibaba.dubbo.remoting.transport.mina.MinaTransporter
 grizzly=com.alibaba.dubbo.remoting.transport.grizzly.GrizzlyTransporter
 ```
 
-##Server¶ËºÍClient·ÖÎö
-###1.Server¶Ë
-ÔÚÊµÀı»¯¾ßÌåµÄServerÀàÊ±£¬»áÊ×ÏÈµ÷ÓÃ¸¸ÀàµÄ¹¹ÔìÆ÷£¬½øĞĞ²ÎÊı³õÊ¼»¯£¬Í¬Ê±µ÷ÓÃbind()·½·¨£¬Æô¶¯·şÎñÆ÷£»¸¸ÀàAbstractServer¹¹ÔìÆ÷ÈçÏÂ£º
+##Serverç«¯å’ŒClientåˆ†æ
+###1.Serverç«¯
+åœ¨å®ä¾‹åŒ–å…·ä½“çš„Serverç±»æ—¶ï¼Œä¼šé¦–å…ˆè°ƒç”¨çˆ¶ç±»çš„æ„é€ å™¨ï¼Œè¿›è¡Œå‚æ•°åˆå§‹åŒ–ï¼ŒåŒæ—¶è°ƒç”¨bind()æ–¹æ³•ï¼Œå¯åŠ¨æœåŠ¡å™¨ï¼›çˆ¶ç±»AbstractServeræ„é€ å™¨å¦‚ä¸‹ï¼š
 
 ```
 public AbstractServer(URL url, ChannelHandler handler) throws RemotingException {
@@ -141,7 +141,7 @@ public AbstractServer(URL url, ChannelHandler handler) throws RemotingException 
         executor = (ExecutorService) dataStore.get(Constants.EXECUTOR_SERVICE_COMPONENT_KEY, Integer.toString(url.getPort()));
     }
 ```
-Ö÷Òª´Óurl»ñÈ¡Æô¶¯²ÎÊı°üÀ¨£ºip£¬port£¬accepts(¿É½ÓÊÜµÄÁ¬½ÓÊı£¬0±íÊ¾²»ÊÜÏŞÖÆÊıÁ¿£¬Ä¬ÈÏÎª0)£¬idleTimeoutµÈ£»È»ºóµ÷ÓÃdoOpen·½·¨Í¨¹ı¾ßÌåµÄÍ¨Ñ¶¿ò¼Ü°ó¶¨¶Ë¿ÚÆô¶¯·şÎñ£»ÒÑÄ¬ÈÏÊ¹ÓÃµÄNettyÎªÀı£¬²é¿´doOpen()·½·¨ÈçÏÂ£º
+ä¸»è¦ä»urlè·å–å¯åŠ¨å‚æ•°åŒ…æ‹¬ï¼šipï¼Œportï¼Œaccepts(å¯æ¥å—çš„è¿æ¥æ•°ï¼Œ0è¡¨ç¤ºä¸å—é™åˆ¶æ•°é‡ï¼Œé»˜è®¤ä¸º0)ï¼ŒidleTimeoutç­‰ï¼›ç„¶åè°ƒç”¨doOpenæ–¹æ³•é€šè¿‡å…·ä½“çš„é€šè®¯æ¡†æ¶ç»‘å®šç«¯å£å¯åŠ¨æœåŠ¡ï¼›å·²é»˜è®¤ä½¿ç”¨çš„Nettyä¸ºä¾‹ï¼ŒæŸ¥çœ‹doOpen()æ–¹æ³•å¦‚ä¸‹ï¼š
 
 ```
 protected void doOpen() throws Throwable {
@@ -176,7 +176,7 @@ protected void doOpen() throws Throwable {
        channel = bootstrap.bind(getBindAddress());
    }
 ```
-ÒÔÉÏÊÇ³£¹æµÄÆô¶¯netty³ÌĞò£¬ĞèÒªÖ¸¶¨±à½âÂëÆ÷£¬nettyHandler£»±à½âÂëÒÑ¾­ÔÚÉÏÎÄÖĞ½éÉÜ¹ıÁË£¬´Ë´¦²»ÔÚÏêÏ¸½éÉÜ£¬ÖØµã½éÉÜnettyHandler£»server¶ËÔÚÊı¾İ¾­¹ı½âÂëÖ®ºó¾Í½»¸øNettyHandlerÀ´´¦Àí£¬NettyHandler¼Ì³ĞÓÚNettyµÄSimpleChannelHandlerÀà£¬ÖØĞ´ÁËchannelConnected£¬channelDisconnected£¬messageReceived£¬writeRequestedÒÔ¼°exceptionCaught·½·¨£¬»ù±¾ÉÏ¾ÍÊÇ³£¹æµÄ¼¸ÖÖ²Ù×÷£º½¨Á¢Á¬½Ó£¬¶Ï¿ªÁ¬½Ó£¬½ÓÊÕÏûÏ¢£¬·¢ËÍÏûÏ¢£¬Òì³£´¦Àí£»¿´Ò»ÏÂ²¿·ÖÔ´Âë£º
+ä»¥ä¸Šæ˜¯å¸¸è§„çš„å¯åŠ¨nettyç¨‹åºï¼Œéœ€è¦æŒ‡å®šç¼–è§£ç å™¨ï¼ŒnettyHandlerï¼›ç¼–è§£ç å·²ç»åœ¨ä¸Šæ–‡ä¸­ä»‹ç»è¿‡äº†ï¼Œæ­¤å¤„ä¸åœ¨è¯¦ç»†ä»‹ç»ï¼Œé‡ç‚¹ä»‹ç»nettyHandlerï¼›serverç«¯åœ¨æ•°æ®ç»è¿‡è§£ç ä¹‹åå°±äº¤ç»™NettyHandleræ¥å¤„ç†ï¼ŒNettyHandlerç»§æ‰¿äºNettyçš„SimpleChannelHandlerç±»ï¼Œé‡å†™äº†channelConnectedï¼ŒchannelDisconnectedï¼ŒmessageReceivedï¼ŒwriteRequestedä»¥åŠexceptionCaughtæ–¹æ³•ï¼ŒåŸºæœ¬ä¸Šå°±æ˜¯å¸¸è§„çš„å‡ ç§æ“ä½œï¼šå»ºç«‹è¿æ¥ï¼Œæ–­å¼€è¿æ¥ï¼Œæ¥æ”¶æ¶ˆæ¯ï¼Œå‘é€æ¶ˆæ¯ï¼Œå¼‚å¸¸å¤„ç†ï¼›çœ‹ä¸€ä¸‹éƒ¨åˆ†æºç ï¼š
 
 ```
 @Override
@@ -233,7 +233,7 @@ protected void doOpen() throws Throwable {
        }
    }
 ```
-½«nettyÔ­ÉúµÄchannel°ü×°³ÉdubboµÄNettyChannel£¬Í¬Ê±½«NettyChannel±£´æÔÚNettyChannelµÄÄÚ²¿¾²Ì¬±äÁ¿channelMapÖĞ£»ÕâÀïµÄ·½·¨¶¼Í³Ò»µ÷ÓÃÁËgetOrAddChannel·½·¨£¬ÏÈÌí¼Ó½øÈ¥£¬×îºóÔÚfinallyÖĞÅĞ¶¨channelÊÇ·ñÒÑ¾­¹Ø±Õ£¬Èç¹û¹Ø±Õ´ÓchannelMapÖĞÒÆ³ı£»ÖĞ¼ä²¿·Öµ÷ÓÃÁËhandler¶ÔÓ¦µÄ·½·¨£¬´Ë´¦µÄhandler¾ÍÊÇÔÚÊµÀı»¯Ê±´«ÈëµÄNettyServer£¬NettyServer±¾ÉíÒ²ÊÇÒ»¸öChannelHandler£¬¿ÉÒÔ¿´Ò»ÏÂchannelHandler½Ó¿ÚÀà£º
+å°†nettyåŸç”Ÿçš„channelåŒ…è£…æˆdubboçš„NettyChannelï¼ŒåŒæ—¶å°†NettyChannelä¿å­˜åœ¨NettyChannelçš„å†…éƒ¨é™æ€å˜é‡channelMapä¸­ï¼›è¿™é‡Œçš„æ–¹æ³•éƒ½ç»Ÿä¸€è°ƒç”¨äº†getOrAddChannelæ–¹æ³•ï¼Œå…ˆæ·»åŠ è¿›å»ï¼Œæœ€ååœ¨finallyä¸­åˆ¤å®šchannelæ˜¯å¦å·²ç»å…³é—­ï¼Œå¦‚æœå…³é—­ä»channelMapä¸­ç§»é™¤ï¼›ä¸­é—´éƒ¨åˆ†è°ƒç”¨äº†handlerå¯¹åº”çš„æ–¹æ³•ï¼Œæ­¤å¤„çš„handlerå°±æ˜¯åœ¨å®ä¾‹åŒ–æ—¶ä¼ å…¥çš„NettyServerï¼ŒNettyServeræœ¬èº«ä¹Ÿæ˜¯ä¸€ä¸ªChannelHandlerï¼Œå¯ä»¥çœ‹ä¸€ä¸‹channelHandleræ¥å£ç±»ï¼š
 
 ```
 public interface ChannelHandler {
@@ -249,7 +249,7 @@ public interface ChannelHandler {
     void caught(Channel channel, Throwable exception) throws RemotingException;
 }
 ```
-¾ßÌåµÄserverÀàÖĞÒ²¿ÉÒÔ×öÒ»Ğ©´¦Àí£¬±ÈÈçconnectedÊ±ÅĞ¶ÎÊÇ·ñ³¬¹ıaccepts£¬Èç¹û³¬¹ı¾Ü¾øÁ¬½Ó£»´¦ÀíÍêÖ®ºó½»¸øÊµÀı»¯ServerÊ±´«ÈëµÄChannelHandler´¦Àí£¬´ËÀà¾ßÌåÊÇÔÚHeaderExchangerÖĞ±»³õÊ¼»¯µÄ£º
+å…·ä½“çš„serverç±»ä¸­ä¹Ÿå¯ä»¥åšä¸€äº›å¤„ç†ï¼Œæ¯”å¦‚connectedæ—¶åˆ¤æ®µæ˜¯å¦è¶…è¿‡acceptsï¼Œå¦‚æœè¶…è¿‡æ‹’ç»è¿æ¥ï¼›å¤„ç†å®Œä¹‹åäº¤ç»™å®ä¾‹åŒ–Serveræ—¶ä¼ å…¥çš„ChannelHandlerå¤„ç†ï¼Œæ­¤ç±»å…·ä½“æ˜¯åœ¨HeaderExchangerä¸­è¢«åˆå§‹åŒ–çš„ï¼š
 
 ```
 public class HeaderExchanger implements Exchanger {
@@ -268,10 +268,10 @@ public class HeaderExchanger implements Exchanger {
  
 }
 ```
-¿ÉÒÔ·¢ÏÖÕâÀï¾ßÌåµÄChannelHandlerÊÇDecodeHandler£¬×¢ÕâÀïµÄDecodeºÍNetty±¾ÉíµÄdecode²»Ò»Ñù£¬Netty±¾ÉíµÄdecodeÔÚÖ´ĞĞNettyHandlerÖ®Ç°¾ÍÖ´ĞĞ½âÂëÁË£»ºóĞøµÄ²Ù×÷ÔÚExchange²ã½øĞĞ´¦Àí£¬±¾ÎÄÔİÊ±ÏÈ²»×ö½éÉÜ£»
+å¯ä»¥å‘ç°è¿™é‡Œå…·ä½“çš„ChannelHandleræ˜¯DecodeHandlerï¼Œæ³¨è¿™é‡Œçš„Decodeå’ŒNettyæœ¬èº«çš„decodeä¸ä¸€æ ·ï¼ŒNettyæœ¬èº«çš„decodeåœ¨æ‰§è¡ŒNettyHandlerä¹‹å‰å°±æ‰§è¡Œè§£ç äº†ï¼›åç»­çš„æ“ä½œåœ¨Exchangeå±‚è¿›è¡Œå¤„ç†ï¼Œæœ¬æ–‡æš‚æ—¶å…ˆä¸åšä»‹ç»ï¼›
 
-###2.Client¶Ë
-Í¬Ñù²é¿´¸¸ÀàAbstractClient£¬¹¹Ôì·½·¨ÈçÏÂ£º
+###2.Clientç«¯
+åŒæ ·æŸ¥çœ‹çˆ¶ç±»AbstractClientï¼Œæ„é€ æ–¹æ³•å¦‚ä¸‹ï¼š
 
 ```
 public AbstractClient(URL url, ChannelHandler handler) throws RemotingException {
@@ -319,7 +319,7 @@ public AbstractClient(URL url, ChannelHandler handler) throws RemotingException 
                 .getDefaultExtension().remove(Constants.CONSUMER_SIDE, Integer.toString(url.getPort()));
     }
 ```
-¿Í»§¶ËĞèÒªÌá¹©ÖØÁ¬»úÖÆ£¬ËùÒÔ³õÊ¼»¯µÄ¼¸¸ö²ÎÊı¶¼ºÍÖØÁ¬ÓĞ¹Ø£¬send_reconnect±íÊ¾ÔÚ·¢ËÍÏûÏ¢Ê±·¢ÏÖÁ¬½ÓÒÑ¾­¶Ï¿ªÊÇ·ñ·¢ÆğÖØÁ¬£¬reconnect_warning_period±íÊ¾¶à¾Ã±¨Ò»´ÎÖØÁ¬¾¯¸æ£¬shutdown_timeout±íÊ¾Á¬½Ó·şÎñÆ÷Ò»Ö±Á¬½Ó²»ÉÏµÄ³¬Ê±Ê±¼ä£»½ÓÏÂÀ´¾ÍÊÇµ÷ÓÃdoOpen()·½·¨£¬Í¬ÑùÒÑNettyÎªÀı£º
+å®¢æˆ·ç«¯éœ€è¦æä¾›é‡è¿æœºåˆ¶ï¼Œæ‰€ä»¥åˆå§‹åŒ–çš„å‡ ä¸ªå‚æ•°éƒ½å’Œé‡è¿æœ‰å…³ï¼Œsend_reconnectè¡¨ç¤ºåœ¨å‘é€æ¶ˆæ¯æ—¶å‘ç°è¿æ¥å·²ç»æ–­å¼€æ˜¯å¦å‘èµ·é‡è¿ï¼Œreconnect_warning_periodè¡¨ç¤ºå¤šä¹…æŠ¥ä¸€æ¬¡é‡è¿è­¦å‘Šï¼Œshutdown_timeoutè¡¨ç¤ºè¿æ¥æœåŠ¡å™¨ä¸€ç›´è¿æ¥ä¸ä¸Šçš„è¶…æ—¶æ—¶é—´ï¼›æ¥ä¸‹æ¥å°±æ˜¯è°ƒç”¨doOpen()æ–¹æ³•ï¼ŒåŒæ ·å·²Nettyä¸ºä¾‹ï¼š
 
 ```
 protected void doOpen() throws Throwable {
@@ -344,7 +344,7 @@ protected void doOpen() throws Throwable {
        });
    }
 ```
-Netty¿Í»§¶ËµÄ³£¹æ´úÂë£¬ÉèÖÃÁËºÍServer¶ËÏàÍ¬µÄNettyHandler£¬decoderºÍencoder£»ÏÂÃæÖØµã¿´¿´connect·½·¨£º
+Nettyå®¢æˆ·ç«¯çš„å¸¸è§„ä»£ç ï¼Œè®¾ç½®äº†å’ŒServerç«¯ç›¸åŒçš„NettyHandlerï¼Œdecoderå’Œencoderï¼›ä¸‹é¢é‡ç‚¹çœ‹çœ‹connectæ–¹æ³•ï¼š
 
 ```
 protected void connect() throws RemotingException {
@@ -379,7 +379,7 @@ protected void connect() throws RemotingException {
         }
     }
 ```
-Ê×ÏÈÅĞ¶¨ÊÇ·ñÒÑ¾­Á¬½Ó£¬Èç¹ûÁ¬½ÓÖ±½Óreturn£»½ÓÏÂÀ´³õÊ¼»¯Á¬½Ó×´Ì¬¼ì²éÆ÷£¬¶¨ÆÚ¼ì²échannelÊÇ·ñÁ¬½Ó£¬Á¬½Ó¶Ï¿ª»á½øĞĞÖØÁ¬²Ù×÷£¬¾ßÌå´úÂëÈçÏÂ£º
+é¦–å…ˆåˆ¤å®šæ˜¯å¦å·²ç»è¿æ¥ï¼Œå¦‚æœè¿æ¥ç›´æ¥returnï¼›æ¥ä¸‹æ¥åˆå§‹åŒ–è¿æ¥çŠ¶æ€æ£€æŸ¥å™¨ï¼Œå®šæœŸæ£€æŸ¥channelæ˜¯å¦è¿æ¥ï¼Œè¿æ¥æ–­å¼€ä¼šè¿›è¡Œé‡è¿æ“ä½œï¼Œå…·ä½“ä»£ç å¦‚ä¸‹ï¼š
 
 
 ```
@@ -416,12 +416,12 @@ private synchronized void initConnectStatusCheckCommand() {
         }
     }
 ```
-´´½¨ÁËÒ»¸öRunnable£¬ÓÃÀ´¼ì²âÊÇ·ñÁ¬½Ó£¬Èç¹ûÁ¬½Ó¶Ï¿ª£¬µ÷ÓÃconnect·½·¨£»¶¨Ê±µ÷¶È½»¸øScheduledThreadPoolExecutorÀ´Ö´ĞĞ£»³õÊ¼»¯Ö®ºó¾Íµ÷ÓÃ¾ßÌåClientµÄdoConnect²Ù×÷£¬Ò²ÊÇÍ¨Ñ¶¿ò¼ÜµÄÒ»Ğ©³£¹æ´úÂë£¬´Ë´¦²»ÁĞ³öÁË£»ºóĞø¹ØÓÚNettyChannelµÄ½éÉÜºÍServer¶ËÀàËÆ£¬²»¹ı¶à½øĞĞ½éÉÜ£»
+åˆ›å»ºäº†ä¸€ä¸ªRunnableï¼Œç”¨æ¥æ£€æµ‹æ˜¯å¦è¿æ¥ï¼Œå¦‚æœè¿æ¥æ–­å¼€ï¼Œè°ƒç”¨connectæ–¹æ³•ï¼›å®šæ—¶è°ƒåº¦äº¤ç»™ScheduledThreadPoolExecutoræ¥æ‰§è¡Œï¼›åˆå§‹åŒ–ä¹‹åå°±è°ƒç”¨å…·ä½“Clientçš„doConnectæ“ä½œï¼Œä¹Ÿæ˜¯é€šè®¯æ¡†æ¶çš„ä¸€äº›å¸¸è§„ä»£ç ï¼Œæ­¤å¤„ä¸åˆ—å‡ºäº†ï¼›åç»­å…³äºNettyChannelçš„ä»‹ç»å’ŒServerç«¯ç±»ä¼¼ï¼Œä¸è¿‡å¤šè¿›è¡Œä»‹ç»ï¼›
 
-##×Ü½á
-±¾ÎÄÖØµã·ÖÎöÁËdubbo¼Ü¹¹ÖĞµÄtransport²ã£¬¾ßÌåÎ§ÈÆTransporter, Client, Server£¬ChannelHandler¼¸¸öÀàÕ¹¿ª£¬¹ØÓÚºóĞøµÄ´¦Àí½«ÔÚexchangeĞÅÏ¢½»»»²ã£»
+##æ€»ç»“
+æœ¬æ–‡é‡ç‚¹åˆ†æäº†dubboæ¶æ„ä¸­çš„transportå±‚ï¼Œå…·ä½“å›´ç»•Transporter, Client, Serverï¼ŒChannelHandlerå‡ ä¸ªç±»å±•å¼€ï¼Œå…³äºåç»­çš„å¤„ç†å°†åœ¨exchangeä¿¡æ¯äº¤æ¢å±‚ï¼›
 
-##Ê¾Àı´úÂëµØÖ·
+##ç¤ºä¾‹ä»£ç åœ°å€
 [https://github.com/ksfzhaohui/blog][2]
 [https://gitee.com/OutOfMemory/blog][3]
 

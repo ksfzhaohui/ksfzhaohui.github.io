@@ -1,13 +1,18 @@
-﻿##系列文章
-[Dubbo分析Serialize层][1]
-[Dubbo分析之Transport层][2]
-[Dubbo分析之Exchange 层][3]
-[Dubbo分析之Protocol层][4]
+﻿## 系列文章
 
-##前言
-紧接着上文[Dubbo分析之Exchange层][5]，继续分析protocol远程调用层，官方介绍：封装RPC调用，以Invocation, Result为中心，扩展接口为Protocol, Invoker, Exporter；
+[Dubbo分析Serialize层](https://my.oschina.net/OutOfMemory/blog/2236611)  
+[Dubbo分析之Transport层](https://my.oschina.net/OutOfMemory/blog/2251388)  
+[Dubbo分析之Exchange 层](https://my.oschina.net/OutOfMemory/blog/2252445)  
+[Dubbo分析之Protocol层](https://my.oschina.net/OutOfMemory/blog/2413695)  
+[Dubbo分析之Cluster层](https://my.oschina.net/OutOfMemory/blog/2885469)  
+[Dubbo分析之Registry层](https://my.oschina.net/OutOfMemory/blog/2991498)
 
-##Protocol接口类分析
+## 前言
+
+紧接着上文[Dubbo分析之Exchange层](https://my.oschina.net/OutOfMemory/blog/2252445)，继续分析protocol远程调用层，官方介绍：封装RPC调用，以Invocation, Result为中心，扩展接口为Protocol, Invoker, Exporter；
+
+## Protocol接口类分析
+
 Protocol可以说是Dubbo的核心层了，在此基础上可以扩展很多主流的服务，比如：redis，Memcached，rmi，WebService，http(tomcat，jetty)等等；下面看一下接口类源码：
 
 ```
@@ -41,6 +46,7 @@ public interface Protocol {
   
 }
 ```
+
 主要定义了2个接口，一个是暴露远程服务，另一个是引用远程服务，其实就是服务端和客户端；dubbo提供了对多种服务的扩展，可以查看META-INF/dubbo/internal/com.alibaba.dubbo.rpc.Protocol：
 
 ```
@@ -60,7 +66,8 @@ rest=com.alibaba.dubbo.rpc.protocol.rest.RestProtocol
 registry=com.alibaba.dubbo.registry.integration.RegistryProtocol
 qos=com.alibaba.dubbo.qos.protocol.QosProtocolWrapper
 ```
-dubbo协议是默认提供的协议，其他扩展的协议包括：hessian，http(tomcat，jetty)，injvm，memcached，redis，rest，rmi，thrift，webservice；以上扩展的协议有些仅仅是作为引用远程服务存在(客户端)，比如redis，memcached，通过特定的命令对缓存进行操作；当然也可以扩展自己的协议，分别实现接口类Protocol, Invoker, Exporter；之前分别介绍的serialize层，transport层以及exchange层主要是在使用默认的DubboProtocol才依赖这几个底层，其他扩展协议直接依赖第三方扩展包；
+
+dubbo协议是默认提供的协议，其他扩展的协议包括：hessian，http(tomcat，jetty)，injvm，memcached，redis，rest，rmi，thrift，webservice；以上扩展的协议有些仅仅是作为引用远程服务存在(客户端)，比如redis，memcached，通过特定的命令对缓存进行操作；当然也可以扩展自己的协议，分别实现接口类Protocol, Invoker, Exporter；之前分别介绍的serialize层，transport层以及exchange层主要是在使用默认的DubboProtocol才依赖这几个底层，其他扩展协议直接依赖第三方扩展包；  
 下面重点分析一下DubboProtocol类，首先看一下refer实现方法：
 
 ```
@@ -72,6 +79,7 @@ public <T> Invoker<T> refer(Class<T> serviceType, URL url) throws RpcException {
     return invoker;
 }
 ```
+
 在客户端定一个的每个dubbo:reference，都会在此处实例化一个对应的DubboInvoker；在方法内部首先对序列化优化进行处理，主要是对Kryo,FST等序列化方式进行优化，此方法不仅在客户端，同时服务器端也存在；接下来就是创建了一个DubboInvoker，同时创建与服务器端的连接：
 
 ```
@@ -96,6 +104,7 @@ private ExchangeClient[] getClients(URL url) {
         return clients;
     }
 ```
+
 默认向指定的服务器创建一个连接，可以通过指定connections设置建立多个连接，在并发比较大的情况下可以设置多个；
 
 ```
@@ -128,6 +137,7 @@ private ExchangeClient initClient(URL url) {
         return client;
     }
 ```
+
 此方法主要通过Exchange层接口来和服务端建立连接，同时提供了懒连接的方式，要等到真正发送请求的时候才建立连接，返回ExchangeClient；DubboInvoker内部通过ExchangeClient来发送请求给服务端；再来看一下export方法：
 
 ```
@@ -159,6 +169,7 @@ public <T> Exporter<T> export(Invoker<T> invoker) throws RpcException {
        return exporter;
    }
 ```
+
 每个dubbo:service都会绑定一个Exporter，首先通过url获取一个key(包括：port，serviceName，serviceVersion，serviceGroup)，然后将实例化的DubboExporter通过key值保存在一个Map中，后续在接收到消息的时候从新定位到具体的Exporter；接下来就是创建服务器：
 
 ```
@@ -205,9 +216,11 @@ private void openServer(URL url) {
         return server;
     }
 ```
+
 以上主要就是通过Exchangers的bind方法来启动服务器，并返回对应的ExchangeServer，同样也保存在本地的Map中；最后同样做了序列化优化处理；
 
-##Invoker类分析
+## Invoker类分析
+
 refer()返回的Invoker由协议实现，协议通常需要在此Invoker中发送远程请求，export()传入的Invoker由框架实现并传入，协议不需要关心；接口类如下：
 
 ```
@@ -218,6 +231,7 @@ public interface Invoker<T> extends Node {
     Result invoke(Invocation invocation) throws RpcException;
 }
 ```
+
 本节介绍的是refer方法返回的Invoker，默认的dubbo协议下，实现了DubboInvoker，实现了其中的invoke方法，此方法在客户端调用远程方法的时候会被调用；
 
 ```
@@ -273,6 +287,7 @@ public Result invoke(Invocation inv) throws RpcException {
  
 protected abstract Result doInvoke(Invocation invocation) throws Throwable;
 ```
+
 在DubboInvoker的抽象类中提供了invoke方法，做统一的附件(Attachment)处理，方法传入的参数是一个RpcInvocation对象，包含了方法调用的相关参数：
 
 ```
@@ -293,6 +308,7 @@ public class RpcInvocation implements Invocation, Serializable {
     ....省略...
 }
 ```
+
 包含了方法名称，方法参数，参数值，附件信息；可能你会发现没有接口，版本等信息，这些信息其实包含在附件中；在invoke方法中首先处理的就是把attachment信息保存到RpcInvocation中；接下来就是调用DubboInvoker中的doInvoke方法：
 
 ```
@@ -332,7 +348,8 @@ protected Result doInvoke(final Invocation invocation) throws Throwable {
         }
     }
 ```
-此方法首先获取ExchangeClient，如果实例化了多个ExchangeClient，会通过顺序的方式遍历使用ExchangeClient；通过ExchangeClient将RpcInvocation发送给服务器端，提供了三种发送方式：单边通信方式，双边通信(同步)，双边通信(异步)；在上文[Dubbo分析之Exchange层][6]中，发送完请求之后直接返回DefaultFuture参数，如果调用get方法将阻塞直到返回结果或者超时，同步方式就是直接调用get方法，阻塞等待结果，下面重点看一下异步方式；异步方式将返回的DefaultFuture放入了RpcContext中，然后返回了一个空对象，这里其实使用了ThreadLocal功能，所以每次在客户端业务代码中，调用完异步请求，都需要通过RpcContext获取ResponseFuture，比如：
+
+此方法首先获取ExchangeClient，如果实例化了多个ExchangeClient，会通过顺序的方式遍历使用ExchangeClient；通过ExchangeClient将RpcInvocation发送给服务器端，提供了三种发送方式：单边通信方式，双边通信(同步)，双边通信(异步)；在上文[Dubbo分析之Exchange层](https://my.oschina.net/OutOfMemory/blog/2252445)中，发送完请求之后直接返回DefaultFuture参数，如果调用get方法将阻塞直到返回结果或者超时，同步方式就是直接调用get方法，阻塞等待结果，下面重点看一下异步方式；异步方式将返回的DefaultFuture放入了RpcContext中，然后返回了一个空对象，这里其实使用了ThreadLocal功能，所以每次在客户端业务代码中，调用完异步请求，都需要通过RpcContext获取ResponseFuture，比如：
 
 ```
 // 此调用会立即返回null
@@ -354,10 +371,12 @@ Bar bar = barFuture.get();
   
 // 如果foo需要5秒返回，bar需要6秒返回，实际只需等6秒，即可获取到foo和bar，进行接下来的处理。
 ```
+
 官网的一个列子，很好的说明了异步的使用方式以及其优势；
 
-##Exporter类分析
-在上文[Dubbo分析之Exchange层][7]中，服务端接收到消息之后，调用handler的reply方法处理消息，而此handler定义在DubboProtocol中，如下：
+## Exporter类分析
+
+在上文[Dubbo分析之Exchange层](https://my.oschina.net/OutOfMemory/blog/2252445)中，服务端接收到消息之后，调用handler的reply方法处理消息，而此handler定义在DubboProtocol中，如下：
 
 ```
 private ExchangeHandler requestHandler = new ExchangeHandlerAdapter() {
@@ -401,6 +420,7 @@ private ExchangeHandler requestHandler = new ExchangeHandlerAdapter() {
         ...省略...
 }
 ```
+
 服务端接收到message就是上面的RpcInvocation，里面包含了接口，方法，参数等信息，服务器端通过反射的方式来处理；首先获取了对应的DubboExporter，如果获取，通过key(包括：port，serviceName，serviceVersion，serviceGroup)获取对应的DubboExporter，然后调用DubboExporter中的invoker，此时的invoker是系统传过来的，不像客户端Invoker是协议端自己创建的，系统创建的invoker，以链表的方式存在，内部调用对应的filter，具体有哪些filter，在启动服务时已经初始化好了在ProtocolFilterWrapper的buildInvokerChain中，具体有哪些filter可以查看META-INF/dubbo/internal/com.alibaba.dubbo.rpc.Filter:
 
 ```
@@ -424,6 +444,7 @@ trace=com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter
 future=com.alibaba.dubbo.rpc.protocol.dubbo.filter.FutureFilter
 monitor=com.alibaba.dubbo.monitor.support.MonitorFilter
 ```
+
 这里列出了所有的filter，包含消费端和服务端，具体使用哪些，通过filter的注解@Activate来进行过滤，每个filter就行了分组；具体执行的顺序是怎么样的，同样在注解里面指定了，格式如下：
 
 ```
@@ -431,22 +452,14 @@ monitor=com.alibaba.dubbo.monitor.support.MonitorFilter
 @Activate(group = Constants.PROVIDER, order = -10000)
 @Activate(group = Constants.CONSUMER, value = Constants.GENERIC_KEY, order = 20000)
 ```
+
 每个固定的filter有各自的功能，同样也可以进行扩展，处理完了交给下一个，最后通过反射调用返回RpcResult；
 
-##总结
+## 总结
+
 本文大体介绍了一下Protocol层使用的默认dubbo协议介绍，Protocol层还对其他第三方协议进行了扩展，后面会继续介绍；另外关于filter还可以在详细介绍一下；
 
-##示例代码地址
-[https://github.com/ksfzhaohui/blog][8]
-[https://gitee.com/OutOfMemory/blog][9]
+## 示例代码地址
 
-
-  [1]: https://segmentfault.com/a/1190000016620859
-  [2]: https://segmentfault.com/a/1190000016777060
-  [3]: https://segmentfault.com/a/1190000016802475
-  [4]: https://segmentfault.com/a/1190000016885261
-  [5]: https://segmentfault.com/a/1190000016802475
-  [6]: https://segmentfault.com/a/1190000016802475
-  [7]: https://segmentfault.com/a/1190000016802475
-  [8]: https://github.com/ksfzhaohui/blog
-  [9]: https://gitee.com/OutOfMemory/blog
+[https://github.com/ksfzhaohui...](https://github.com/ksfzhaohui/blog)  
+[https://gitee.com/OutOfMemory...](https://gitee.com/OutOfMemory/blog)

@@ -1,12 +1,16 @@
-﻿##系列文章
-[Dubbo分析Serialize层][1]
-[Dubbo分析之Transport层][2]
-[Dubbo分析之Exchange 层][3]
+﻿## 系列文章
 
-##前言
-紧接着上文Dubbo分析之Transport层，本文继续介绍Exchange层，此层官方介绍为信息交换层：封装请求响应模式，同步转异步，以 Request, Response 为中心，扩展接口为 Exchanger, ExchangeChannel, ExchangeClient, ExchangeServer；下面分别进行介绍
+[Dubbo分析Serialize层](https://my.oschina.net/OutOfMemory/blog/2236611)  
+[Dubbo分析之Transport层](https://my.oschina.net/OutOfMemory/blog/2251388)  
+[Dubbo分析之Exchange 层](https://my.oschina.net/OutOfMemory/blog/2252445)  
+[Dubbo分析之Protocol层](https://my.oschina.net/OutOfMemory/blog/2413695)
 
-##Exchanger分析
+## 前言
+
+紧接着上文[Dubbo分析之Transport层](https://my.oschina.net/OutOfMemory/blog/2251388)，本文继续介绍Exchange层，此层官方介绍为信息交换层：封装请求响应模式，同步转异步，以 Request, Response 为中心，扩展接口为 Exchanger, ExchangeChannel, ExchangeClient, ExchangeServer；下面分别进行介绍
+
+## Exchanger分析
+
 Exchanger是此层的核心接口类，提供了connect()和bind()接口，分别返回ExchangeClient和ExchangeServer；dubbo提供了此接口的默认实现类HeaderExchanger，代码如下：
 
 ```
@@ -26,9 +30,11 @@ public class HeaderExchanger implements Exchanger {
  
 }
 ```
+
 在实现类中在connect和bind中分别实例化了HeaderExchangeClient和HeaderExchangeServer，传入的参数是Transporters，可以认为这里就是Transport层的入口类；这里的ExchangeClient/ExchangeServer其实就是对Client/Server的包装，同时传入了自己的ChannelHandler；ChannelHandler已经在Transport层介绍过了，提供了连接建立，连接端口，发送请求，接受请求等接口；已默认使用的Netty为例，这里就是对NettyClient和NettyServer的包装，同时传入DecodeHandler，在NettyHandler中被调用；
 
-##ExchangeClient分析
+## ExchangeClient分析
+
 ExchangeClient本身也继承于Client，同时也继承于ExchangeChannel：
 
 ```
@@ -49,6 +55,7 @@ public interface ExchangeChannel extends Channel {
  
 }
 ```
+
 ExchangeChannel负责将上层的data包装成Request，然后发送给Transport层；具体的逻辑在HeaderExchangeChannel中：
 
 ```
@@ -71,6 +78,7 @@ public ResponseFuture request(Object request, int timeout) throws RemotingExcept
        return future;
    }
 ```
+
 创建了一个Request，在构造器中同时会产生一个RequestId；设置了协议版本，是否双向通信，最后设置了真实的业务数据；接下来实例化了一个DefaultFuture类，此类实现了同步转异步的方式，channel调用send发送请求之后，不需要等待结果，直接将DefaultFuture返回给上层，上层可以通过调用DefaultFuture的get方法来获取响应，get方法会阻塞等待获取服务器的响应才会返回；Client接收消息在handler里面，比如Netty在NettyHandler里面messageReceived方法介绍响应消息，NettyHandler最终会调用上面传入的DecodeHandler，DecodeHandler会先判断一下是否已经解码，如果解码就直接调用HeaderExchangeHandler，默认已经设置了编码解码器，所以会直接调用HeaderExchangeHandler里面的received方法：
 
 ```
@@ -111,6 +119,7 @@ public void received(Channel channel, Object message) throws RemotingException {
        }
    }
 ```
+
 服务端和客户端都会使用此方法，这里是客户端接受的是Response，直接调用handleResponse方法：
 
 ```
@@ -120,6 +129,7 @@ static void handleResponse(Channel channel, Response response) throws RemotingEx
     }
 }
 ```
+
 接收到响应之后，再去告诉DefaultFuture已经收到响应，DefaultFuture本身存放了requestId对应DefaultFuture的一个ConcurrentHashMap；具体怎么映射过去，Response也包含一个responseId，此responseId和requestId是相同的；
 
 ```
@@ -158,6 +168,7 @@ public static void received(Channel channel, Response response) {
       }
   }
 ```
+
 通过responseId获取了之前请求时创建的DefaultFuture，然后再更新DefaultFuture内部的response对象，更新完之后在调用Condition的signal方法，用户唤起通过DefaultFuture的get方法获取响应的阻塞线程：
 
 ```
@@ -187,9 +198,11 @@ public Object get(int timeout) throws RemotingException {
         return returnFromResponse();
     }
 ```
+
 可以发现阻塞要么被获取被signal方法唤醒，要么等待超时；以上大致是客户端发送获取响应的流程，下面看看服务器端流程
 
-##ExchangeServer分析
+## ExchangeServer分析
+
 ExchangeServer继承于Server，同时提供了两个包装服务端Channel的方法
 
 ```
@@ -200,6 +213,7 @@ public interface ExchangeServer extends Server {
     ExchangeChannel getExchangeChannel(InetSocketAddress remoteAddress);
 }
 ```
+
 服务器端主要用于接收Request消息，然后处理消息，最后把响应发送给客户端，相关接收消息已经在上面介绍过了，同样是在HeaderExchangeHandler里面的received方法中，只不过这里的消息类型为Request；
 
 ```
@@ -231,18 +245,14 @@ Response handleRequest(ExchangeChannel channel, Request req) throws RemotingExce
       return res;
   }
 ```
+
 首先创建了一个Response，并且指定responseId为requestId，方便在客户端定位到具体的DefaultFuture；然后调用handler的reply方法处理消息，返回结果，如何处理的将在后面的protocol层介绍，大致就是通过Request的信息，反射调用Server端的服务，然后返回结果，然后将结果放入Response对象中，通过channel将消息发送客户端；
 
-##总结
+## 总结
+
 本文介绍了Exchange层的大体流程，围绕Exchanger，ExchangeClient和ExchangeServer展开；请求封装成Request，响应封装成Response，客户端通过异步的方式接收服务器请求；
 
-##示例代码地址
-[https://github.com/ksfzhaohui/blog][4]
-[https://gitee.com/OutOfMemory/blog][5]
+## 示例代码地址
 
-
-  [1]: https://segmentfault.com/a/1190000016620859
-  [2]: https://segmentfault.com/a/1190000016777060
-  [3]: https://segmentfault.com/a/1190000016802475
-  [4]: https://github.com/ksfzhaohui/blog
-  [5]: https://gitee.com/OutOfMemory/blog
+[https://github.com/ksfzhaohui...](https://github.com/ksfzhaohui/blog)  
+[https://gitee.com/OutOfMemory...](https://gitee.com/OutOfMemory/blog)

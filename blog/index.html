@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <link rel="stylesheet" href="../static/plugins/docsify/4.2.8/themes/vue.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
 
 </head>
 <body>
@@ -19,7 +19,6 @@
     window.$docsify = {
 	    loadNavbar: true,
         name: 'ksfzhaohui的博客',
-        
         maxLevel: 5,
         auto2top: true,
 		plugins: [
@@ -83,7 +82,7 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">
       var gitalk = new Gitalk({
         clientID: '998ada58736bb59fc96c',
@@ -91,6 +90,8 @@
         repo: 'blog-comments',
         owner: 'ksfzhaohui',
         admin: ['ksfzhaohui'],
+		labels: ['about'],
+        id: '/about',
         title: location.href
       });
 </script>

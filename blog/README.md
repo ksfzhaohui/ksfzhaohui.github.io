@@ -68,9 +68,9 @@
 - [Java压缩算法性能比较](markdown/2016/Java压缩算法性能比较.md)
 - [对协程的一些理解](markdown/2016/对协程的一些理解.md)
 - [Java调用Lua](markdown/2016/Java调用Lua.md)
-- [2PC/3PC到底是啥](markdown/2016/2PC/3PC到底是啥.md)
+- [2PC/3PC到底是啥](markdown/2016/2PC3PC到底是啥.md)
 - [Protostuff序列化分析](markdown/2016/Protostuff序列化分析.md)
-- [从ACID到CAP/BASE](markdown/2016/从ACID到CAP/BASE.md)
+- [从ACID到CAP/BASE](markdown/2016/从ACID到CAPBASE.md)
 - [Disruptor和LinkedBlockingQueue性能对比以及分析](markdown/2016/Disruptor和LinkedBlockingQueue性能对比以及分析.md)
 - [Java CAS操作的ABA问题](markdown/2016/Java CAS操作的ABA问题.md)
 - [Netty通过MBean监控流量](markdown/2016/Netty通过MBean监控流量.md)
@@ -90,8 +90,6 @@
 - [Eclipse中创建gradle项目](markdown/2016/Eclipse中创建gradle项目.md)
 - [消息中间件-Activemq之Broker-Cluster](markdown/2016/消息中间件-Activemq之Broker-Cluster.md)
 - [消息中间件-Activemq之Master-Slaver](markdown/2016/消息中间件-Activemq之Master-Slaver.md)
-- [Raft算法浅析](markdown/2016/Raft算法浅析.md)
-- [Raft算法浅析](markdown/2016/Raft算法浅析.md)
 
 ---
 

@@ -90,7 +90,7 @@
   }
   <!-- id长度需要小于50-->
   if(idStr.length>50){
-     idStr.substring(0,49);
+     idStr=idStr.substring(0,50);
   }
   var gitalk = new Gitalk({
     clientID: '27188b76f790a26ca3a6',

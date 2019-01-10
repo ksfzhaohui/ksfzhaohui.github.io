@@ -1,36 +1,36 @@
-## RocketMQÕûÌå½á¹¹
+ï»¿## RocketMQæ•´ä½“ç»“æ„
 
 ![](https://oscimg.oschina.net/oscnet/b95324fc1ac6246060bdf2bb1e0edba92e3.jpg)
 
-ÈçÉÏÍ¼ËùÊ¾£¬ÕûÌå¿ÉÒÔ·Ö³É4¸ö½ÇÉ«£¬·Ö±ğÊÇ£ºProducer£¬Consumer£¬BrokerÒÔ¼°NameServer£»
+å¦‚ä¸Šå›¾æ‰€ç¤ºï¼Œæ•´ä½“å¯ä»¥åˆ†æˆ4ä¸ªè§’è‰²ï¼Œåˆ†åˆ«æ˜¯ï¼šProducerï¼ŒConsumerï¼ŒBrokerä»¥åŠNameServerï¼›
 
 ### 1.NameServer
 
-¿ÉÒÔÀí½âÎªÊÇÏûÏ¢¶ÓÁĞµÄĞ­µ÷Õß£¬BrokerÏòËü×¢²áÂ·ÓÉĞÅÏ¢£¬Í¬Ê±ClientÏòÆä»ñÈ¡Â·ÓÉĞÅÏ¢£¬Èç¹ûÊ¹ÓÃ¹ıZookeeper£¬¾Í±È½ÏÈİÒ×Àí½âÁË£¬µ«ÊÇ¹¦ÄÜ±ÈZookeeperÈõ£»  
-NameServer±¾ÉíÊÇÃ»ÓĞ×´Ì¬µÄ£¬²¢ÇÒ¶à¸öNameServerÖ±½Ó²¢Ã»ÓĞÍ¨ĞÅ£¬¿ÉÒÔºáÏòÀ©Õ¹¶àÌ¨£¬Broker»áºÍÃ¿Ò»Ì¨NameServer½¨Á¢³¤Á¬½Ó£»
+å¯ä»¥ç†è§£ä¸ºæ˜¯æ¶ˆæ¯é˜Ÿåˆ—çš„åè°ƒè€…ï¼ŒBrokerå‘å®ƒæ³¨å†Œè·¯ç”±ä¿¡æ¯ï¼ŒåŒæ—¶Clientå‘å…¶è·å–è·¯ç”±ä¿¡æ¯ï¼Œå¦‚æœä½¿ç”¨è¿‡Zookeeperï¼Œå°±æ¯”è¾ƒå®¹æ˜“ç†è§£äº†ï¼Œä½†æ˜¯åŠŸèƒ½æ¯”Zookeeperå¼±ï¼›  
+NameServeræœ¬èº«æ˜¯æ²¡æœ‰çŠ¶æ€çš„ï¼Œå¹¶ä¸”å¤šä¸ªNameServerç›´æ¥å¹¶æ²¡æœ‰é€šä¿¡ï¼Œå¯ä»¥æ¨ªå‘æ‰©å±•å¤šå°ï¼ŒBrokerä¼šå’Œæ¯ä¸€å°NameServerå»ºç«‹é•¿è¿æ¥ï¼›
 
 ### 2.Broker
 
-BrokerÊÇRocketMQµÄºËĞÄ£¬Ìá¹©ÁËÏûÏ¢µÄ½ÓÊÕ£¬´æ´¢£¬À­È¡µÈ¹¦ÄÜ£¬Ò»°ã¶¼ĞèÒª±£Ö¤BrokerµÄ¸ß¿ÉÓÃ£¬ËùÒÔ»áÅäÖÃBroker Slave£¬µ±Master¹ÒµôÖ®ºó£¬ConsumerÈ»ºó¿ÉÒÔÏû·ÑSlave£»  
-Broker·ÖÎªMasterºÍSlave£¬Ò»¸öMaster¿ÉÒÔ¶ÔÓ¦¶à¸öSlave£¬MasterÓëSlaveµÄ¶ÔÓ¦¹ØÏµÍ¨¹ıÖ¸¶¨ÏàÍ¬µÄBrokerName£¬²»Í¬µÄBrokerIdÀ´¶¨Òå£¬BrokerIdÎª0±íÊ¾Master£¬·Ç0±íÊ¾Slave£»
+Brokeræ˜¯RocketMQçš„æ ¸å¿ƒï¼Œæä¾›äº†æ¶ˆæ¯çš„æ¥æ”¶ï¼Œå­˜å‚¨ï¼Œæ‹‰å–ç­‰åŠŸèƒ½ï¼Œä¸€èˆ¬éƒ½éœ€è¦ä¿è¯Brokerçš„é«˜å¯ç”¨ï¼Œæ‰€ä»¥ä¼šé…ç½®Broker Slaveï¼Œå½“MasteræŒ‚æ‰ä¹‹åï¼ŒConsumerç„¶åå¯ä»¥æ¶ˆè´¹Slaveï¼›  
+Brokeråˆ†ä¸ºMasterå’ŒSlaveï¼Œä¸€ä¸ªMasterå¯ä»¥å¯¹åº”å¤šä¸ªSlaveï¼ŒMasterä¸Slaveçš„å¯¹åº”å…³ç³»é€šè¿‡æŒ‡å®šç›¸åŒçš„BrokerNameï¼Œä¸åŒçš„BrokerIdæ¥å®šä¹‰ï¼ŒBrokerIdä¸º0è¡¨ç¤ºMasterï¼Œé0è¡¨ç¤ºSlaveï¼›
 
 ### 3.Producer
 
-ÏûÏ¢¶ÓÁĞµÄÉú²úÕß£¬ĞèÒªÓëNameServer½¨Á¢Á¬½Ó£¬´ÓNameServer»ñÈ¡TopicÂ·ÓÉĞÅÏ¢£¬²¢ÏòÌá¹©Topic·şÎñµÄBroker Master½¨Á¢Á¬½Ó£»ProducerÎŞ×´Ì¬£¬¿´¼¯Èº²¿Êğ£»
+æ¶ˆæ¯é˜Ÿåˆ—çš„ç”Ÿäº§è€…ï¼Œéœ€è¦ä¸NameServerå»ºç«‹è¿æ¥ï¼Œä»NameServerè·å–Topicè·¯ç”±ä¿¡æ¯ï¼Œå¹¶å‘æä¾›TopicæœåŠ¡çš„Broker Masterå»ºç«‹è¿æ¥ï¼›Produceræ— çŠ¶æ€ï¼Œçœ‹é›†ç¾¤éƒ¨ç½²ï¼›
 
 ### 4.Consumer
 
-ÏûÏ¢¶ÓÁĞµÄÏû·ÑÕß£¬Í¬ÑùÓëNameServer½¨Á¢Á¬½Ó£¬´ÓNameServer»ñÈ¡TopicÂ·ÓÉĞÅÏ¢£¬²¢ÏòÌá¹©Topic·şÎñµÄBroker Master£¬Slave½¨Á¢Á¬½Ó£»
+æ¶ˆæ¯é˜Ÿåˆ—çš„æ¶ˆè´¹è€…ï¼ŒåŒæ ·ä¸NameServerå»ºç«‹è¿æ¥ï¼Œä»NameServerè·å–Topicè·¯ç”±ä¿¡æ¯ï¼Œå¹¶å‘æä¾›TopicæœåŠ¡çš„Broker Masterï¼ŒSlaveå»ºç«‹è¿æ¥ï¼›
 
-### 5.TopicºÍMessage Queue
+### 5.Topicå’ŒMessage Queue
 
-ÔÚ½éÉÜÍêÒÔÉÏ4¸ö½ÇÉ«ÒÔºó£¬»¹ĞèÒªÖØµã½éÉÜÒ»ÏÂÉÏÃæÌáµ½µÄTopicºÍMessage Queue£»×ÖÃæÒâË¼¾ÍÊÇÖ÷Ìâ£¬ÓÃÀ´Çø·Ö²»Í¬ÀàĞÍµÄÏûÏ¢£¬·¢ËÍºÍ½ÓÊÕÏûÏ¢Ç°¶¼ĞèÒªÏÈ´´½¨Topic£¬Õë¶ÔTopicÀ´·¢ËÍºÍ½ÓÊÕÏûÏ¢£¬ÎªÁËÌá¸ßĞÔÄÜºÍÍÌÍÂÁ¿£¬ÒıÈëÁËMessage Queue£¬Ò»¸öTopic¿ÉÒÔÉèÖÃÒ»¸ö»ò¶à¸öMessage Queue£¬ÓĞµãÀàËÆkafkaµÄ·ÖÇø(Partition)£¬ÕâÑùÏûÏ¢¾Í¿ÉÒÔ²¢ĞĞÍù¸÷¸öMessage Queue·¢ËÍÏûÏ¢£¬Ïû·ÑÕßÒ²¿ÉÒÔ²¢ĞĞµÄ´Ó¶à¸öMessage Queue¶ÁÈ¡ÏûÏ¢£»
+åœ¨ä»‹ç»å®Œä»¥ä¸Š4ä¸ªè§’è‰²ä»¥åï¼Œè¿˜éœ€è¦é‡ç‚¹ä»‹ç»ä¸€ä¸‹ä¸Šé¢æåˆ°çš„Topicå’ŒMessage Queueï¼›å­—é¢æ„æ€å°±æ˜¯ä¸»é¢˜ï¼Œç”¨æ¥åŒºåˆ†ä¸åŒç±»å‹çš„æ¶ˆæ¯ï¼Œå‘é€å’Œæ¥æ”¶æ¶ˆæ¯å‰éƒ½éœ€è¦å…ˆåˆ›å»ºTopicï¼Œé’ˆå¯¹Topicæ¥å‘é€å’Œæ¥æ”¶æ¶ˆæ¯ï¼Œä¸ºäº†æé«˜æ€§èƒ½å’Œååé‡ï¼Œå¼•å…¥äº†Message Queueï¼Œä¸€ä¸ªTopicå¯ä»¥è®¾ç½®ä¸€ä¸ªæˆ–å¤šä¸ªMessage Queueï¼Œæœ‰ç‚¹ç±»ä¼¼kafkaçš„åˆ†åŒº(Partition)ï¼Œè¿™æ ·æ¶ˆæ¯å°±å¯ä»¥å¹¶è¡Œå¾€å„ä¸ªMessage Queueå‘é€æ¶ˆæ¯ï¼Œæ¶ˆè´¹è€…ä¹Ÿå¯ä»¥å¹¶è¡Œçš„ä»å¤šä¸ªMessage Queueè¯»å–æ¶ˆæ¯ï¼›
 
-## µ¥»úÅäÖÃºÍ²¿Êğ
+## å•æœºé…ç½®å’Œéƒ¨ç½²
 
-ÒÔÏÂ²¿ÊğÔÚ**centos7£¬jdk1.8£¬rocketmq4.3.2**£»Æô¶¯RocketMQµÄË³ĞòÊÇÏÈÆô¶¯NameServer£¬È»ºóÔÙÆô¶¯Broker£»
+ä»¥ä¸‹éƒ¨ç½²åœ¨**centos7ï¼Œjdk1.8ï¼Œrocketmq4.3.2**ï¼›å¯åŠ¨RocketMQçš„é¡ºåºæ˜¯å…ˆå¯åŠ¨NameServerï¼Œç„¶åå†å¯åŠ¨Brokerï¼›
 
-### 1.NameServerÆô¶¯
+### 1.NameServerå¯åŠ¨
 
 ```
 [root@localhost bin]# ./mqnamesrv
@@ -39,9 +39,9 @@ Java HotSpot(TM) 64-Bit Server VM warning: UseCMSCompactAtFullCollection is depr
 The Name Server boot success. serializeType=JSON
 ```
 
-ÈçÉÏÈÕÖ¾±íÊ¾Æô¶¯³É¹¦£¬Ä¬ÈÏ¶Ë¿ÚÎª9876£»
+å¦‚ä¸Šæ—¥å¿—è¡¨ç¤ºå¯åŠ¨æˆåŠŸï¼Œé»˜è®¤ç«¯å£ä¸º9876ï¼›
 
-### 2.BrokerÆô¶¯
+### 2.Brokerå¯åŠ¨
 
 ```
 [root@localhost bin]# ./mqbroker
@@ -53,7 +53,7 @@ Java HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x00000005c00
 # /root/rocketmq-all-4.3.2-bin-release/bin/hs_err_pid3977.log
 ```
 
-Æô¶¯Ê§°Ü£¬±¨ÄÚ´æ²»×ã£¬Ö÷ÒªÊÇrocketmqÄ¬ÈÏÅäÖÃµÄÆô¶¯²ÎÊıÖµ±È½Ï´ó£¬ĞŞ¸Ärunbroker.sh¼´¿É
+å¯åŠ¨å¤±è´¥ï¼ŒæŠ¥å†…å­˜ä¸è¶³ï¼Œä¸»è¦æ˜¯rocketmqé»˜è®¤é…ç½®çš„å¯åŠ¨å‚æ•°å€¼æ¯”è¾ƒå¤§ï¼Œä¿®æ”¹runbroker.shå³å¯
 
 ```
 [root@localhost bin]# vi runbroker.sh
@@ -61,31 +61,31 @@ Java HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x00000005c00
 JAVA_OPT="${JAVA_OPT} -server -Xms8g -Xmx8g -Xmn4g"
 ```
 
-Ä¬ÈÏÅäÖÃµÄ¿ÉÓÃÄÚ´æÎª8g£¬ĞéÄâ»úÄÚ´æ²»¹»£¬ĞŞ¸ÄÎªÈçÏÂ¼´¿É
+é»˜è®¤é…ç½®çš„å¯ç”¨å†…å­˜ä¸º8gï¼Œè™šæ‹Ÿæœºå†…å­˜ä¸å¤Ÿï¼Œä¿®æ”¹ä¸ºå¦‚ä¸‹å³å¯
 
 ```
 JAVA_OPT="${JAVA_OPT} -server -Xms128m -Xmx128m -Xmn128m"
 ```
 
-ÔÙ´ÎÆô¶¯£¬ÈÕÖ¾ÈçÏÂ£¬±íÊ¾Æô¶¯³É¹¦£¬Ä¬ÈÏ¶Ë¿ÚÎª10911£»
+å†æ¬¡å¯åŠ¨ï¼Œæ—¥å¿—å¦‚ä¸‹ï¼Œè¡¨ç¤ºå¯åŠ¨æˆåŠŸï¼Œé»˜è®¤ç«¯å£ä¸º10911ï¼›
 
 ```
 [root@localhost bin]# ./mqbroker
 The broker[localhost.localdomain, 192.168.237.128:10911] boot success. serializeType=JSON
 ```
 
-### 3.¼òµ¥²âÊÔ
+### 3.ç®€å•æµ‹è¯•
 
-#### 3.1Éú²úÕß
+#### 3.1ç”Ÿäº§è€…
 
 ```
 public class SyncProducer {
 
 ?????public static void main(String[] args) throws Exception {
-???????????// ¹¹ÔìProducer
+???????????// æ„é€ Producer
 ???????????DefaultMQProducer producer = new DefaultMQProducer("ProducerGroupName");
 ???????????producer.setNamesrvAddr("192.168.237.128:9876");
-???????????// ³õÊ¼»¯Producer£¬Õû¸öÓ¦ÓÃÉúÃüÖÜÆÚÄÚ£¬Ö»ĞèÒª³õÊ¼»¯1´Î
+???????????// åˆå§‹åŒ–Producerï¼Œæ•´ä¸ªåº”ç”¨ç”Ÿå‘½å‘¨æœŸå†…ï¼Œåªéœ€è¦åˆå§‹åŒ–1æ¬¡
 ???????????producer.start();
 ???????????for (int i = 0; i < 100; i++) {
 ????????????????Message msg = new Message("TopicTest", "TagA",
@@ -98,9 +98,9 @@ public class SyncProducer {
 }
 ```
 
-´´½¨ÁËÒ»¸öDefaultMQProducer¶ÔÏó£¬Í¬Ê±ÉèÖÃÁËGroupNameºÍNameServerµØÖ·£¬È»ºó´´½¨MessageÏûÏ¢Í¨¹ıDefaultMQProducer½«ÏûÏ¢·¢ËÍ³öÈ¥£¬·µ»ØÒ»¸öSendResult¶ÔÏó£»
+åˆ›å»ºäº†ä¸€ä¸ªDefaultMQProducerå¯¹è±¡ï¼ŒåŒæ—¶è®¾ç½®äº†GroupNameå’ŒNameServeråœ°å€ï¼Œç„¶ååˆ›å»ºMessageæ¶ˆæ¯é€šè¿‡DefaultMQProducerå°†æ¶ˆæ¯å‘é€å‡ºå»ï¼Œè¿”å›ä¸€ä¸ªSendResultå¯¹è±¡ï¼›
 
-#### 3.2Ïû·ÑÕß
+#### 3.2æ¶ˆè´¹è€…
 
 ```
 public class PushConsumer {
@@ -122,11 +122,11 @@ public class PushConsumer {
 }
 ```
 
-Í¬ÑùÖ¸¶¨ÁËGroupNameºÍNameServerµØÖ·£¬¶©ÔÄÁËTopic£»
+åŒæ ·æŒ‡å®šäº†GroupNameå’ŒNameServeråœ°å€ï¼Œè®¢é˜…äº†Topicï¼›
 
-#### 3.3ÔËĞĞ²âÊÔ
+#### 3.3è¿è¡Œæµ‹è¯•
 
-Ö±½ÓÔËĞĞÉú²úÕß±¨ÈçÏÂ´íÎó£º
+ç›´æ¥è¿è¡Œç”Ÿäº§è€…æŠ¥å¦‚ä¸‹é”™è¯¯ï¼š
 
 ```
 Exception in thread "main" org.apache.rocketmq.client.exception.MQClientException: No route info of this topic, TopicTest
@@ -138,18 +138,18 @@ See http://rocketmq.apache.org/docs/faq/ for further details.
     at com.rocketmq.SyncProducer.main(SyncProducer.java:26)
 ```
 
-´íÎóÏÔÊ¾"Ã»ÓĞ´ËTopicµÄÂ·ÓÉĞÅÏ¢"£¬Ò²¾ÍÊÇÉú²úÕßÔÚ·¢ËÍÏûÏ¢µÄÊ±ºòÃ»ÓĞ»ñÈ¡µ½Â·ÓÉĞÅÏ¢£¬ÕÒ²»µ½Ö¸¶¨µÄBroker,¿ÉÄÜµÄÔ­Òò£º  
-1.BrokerÃ»ÓĞÕıÈ·Á¬½ÓNameServer  
-2.ProducerÃ»ÓĞÁ¬½ÓNameServer  
-3.TopicÃ»ÓĞ±»ÕıÈ·´´½¨  
-SyncProducerÖĞÖ¸¶¨ÁËNameServerµÄµØÖ·£¬Í¬Ê±RocketMQÄ¬ÈÏÇé¿öÏÂ»á×Ô¶¯´´½¨Topic£¬ËùÒÔÔ­ÒòÊÇBrokerÃ»ÓĞ×¢²áµ½NameServer£¬ÖØĞÂÖ¸¶¨NameServerÔÙÆô¶¯£º
+é”™è¯¯æ˜¾ç¤º"æ²¡æœ‰æ­¤Topicçš„è·¯ç”±ä¿¡æ¯"ï¼Œä¹Ÿå°±æ˜¯ç”Ÿäº§è€…åœ¨å‘é€æ¶ˆæ¯çš„æ—¶å€™æ²¡æœ‰è·å–åˆ°è·¯ç”±ä¿¡æ¯ï¼Œæ‰¾ä¸åˆ°æŒ‡å®šçš„Broker,å¯èƒ½çš„åŸå› ï¼š  
+1.Brokeræ²¡æœ‰æ­£ç¡®è¿æ¥NameServer  
+2.Produceræ²¡æœ‰è¿æ¥NameServer  
+3.Topicæ²¡æœ‰è¢«æ­£ç¡®åˆ›å»º  
+SyncProducerä¸­æŒ‡å®šäº†NameServerçš„åœ°å€ï¼ŒåŒæ—¶RocketMQé»˜è®¤æƒ…å†µä¸‹ä¼šè‡ªåŠ¨åˆ›å»ºTopicï¼Œæ‰€ä»¥åŸå› æ˜¯Brokeræ²¡æœ‰æ³¨å†Œåˆ°NameServerï¼Œé‡æ–°æŒ‡å®šNameServerå†å¯åŠ¨ï¼š
 
 ```
 [root@localhost bin]# ./mqbroker -n localhost:9876
 The broker[localhost.localdomain, 192.168.237.128:10911] boot success. serializeType=JSON and name server is localhost:9876
 ```
 
-ÔÙ´ÎÔËĞĞSyncProducer£¬ÈÕÖ¾ÈçÏÂ£º
+å†æ¬¡è¿è¡ŒSyncProducerï¼Œæ—¥å¿—å¦‚ä¸‹ï¼š
 
 ```
 SendResult [sendStatus=SEND_OK, msgId=0A0D53073B6073D16E933086C4C60000, offsetMsgId=C0A8ED8000002A9F000000000000229C, messageQueue=MessageQueue[topic=TopicTest, brokerName=localhost.localdomain, queueId=1], queueOffset=11]
@@ -173,7 +173,7 @@ SendResult [sendStatus=SEND_OK, msgId=0A0D53073B6073D16E933086C50A0008, offsetMs
 SendResult [sendStatus=SEND_OK, msgId=0A0D53073B6073D16E933086C50D0009, offsetMsgId=C0A8ED8000002A9F00000000000028D5, messageQueue=MessageQueue [topic=TopicTest, brokerName=localhost.localdomain, queueId=2], queueOffset=11]
 ```
 
-Ïû·ÑÕßÊ¹ÓÃµÄÊÇpushÄ£Ê½£¬¿ÉÒÔÊµÊ±½ÓÊÜÏûÏ¢£º
+æ¶ˆè´¹è€…ä½¿ç”¨çš„æ˜¯pushæ¨¡å¼ï¼Œå¯ä»¥å®æ—¶æ¥å—æ¶ˆæ¯ï¼š
 
 ```
 ConsumeMessageThread_13Receive New Messages :[MessageExt [queueId=1, storeSize=177,queueOffset=11, sysFlag=0, bornTimestamp=1547086138566, bornHost=/192.168.237.1:53524, storeTimestamp=1547139430770, storeHost=/192.168.237.128:10911, msgId=C0A8ED8000002A9F000000000000229C, commitLogOffset=8860, bodyCRC=705268097, reconsumeTimes=0, preparedTransactionOffset=0, toString()=Message{topic='TopicTest', flag=0, properties={MIN_OFFSET=0, MAX_OFFSET=12, CONSUME_START_TIME=1547086138573, UNIQ_KEY=0A0D53073B6073D16E933086C4C60000, WAIT=true, TAGS=TagA}, body=[72, 101, 108, 108, 111, 32, 82, 111, 99, 107, 101, 116, 77, 81, 48], transactionId='null'}]]
@@ -197,26 +197,26 @@ ConsumeMessageThread_10Receive New Messages :[MessageExt [queueId=1, storeSize=1
 ConsumeMessageThread_7Receive New Messages :[MessageExt [queueId=2, storeSize=177, queueOffset=11, sysFlag=0, bornTimestamp=1547086138637, bornHost=/192.168.237.1:53524, storeTimestamp=1547139430833, storeHost=/192.168.237.128:10911, msgId=C0A8ED8000002A9F00000000000028D5, commitLogOffset=10453, bodyCRC=1406480677, reconsumeTimes=0, preparedTransactionOffset=0, toString()=Message{topic='TopicTest', flag=0, properties={MIN_OFFSET=0, MAX_OFFSET=12, CONSUME_START_TIME=1547086138641, UNIQ_KEY=0A0D53073B6073D16E933086C50D0009, WAIT=true, TAGS=TagA}, body=[72, 101, 108, 108, 111, 32, 82, 111, 99, 107, 101, 116, 77, 81, 57], transactionId='null'}]]
 ```
 
-## ¶à»ú¼¯ÈºÅäÖÃºÍ²¿Êğ
+## å¤šæœºé›†ç¾¤é…ç½®å’Œéƒ¨ç½²
 
-·Ö±ğ²¿ÊğÁ½Ì¨NameServer£¬Á½Ì¨Broker²¢ÇÒ·Ö±ğÌá¹©Slave£¬×¼±¸Á½Ì¨µçÄÔ·Ö±ğÊÇ±¾»úµÄwindowsÒÔ¼°ĞéÄâ»úcentos£»
+åˆ†åˆ«éƒ¨ç½²ä¸¤å°NameServerï¼Œä¸¤å°Brokerå¹¶ä¸”åˆ†åˆ«æä¾›Slaveï¼Œå‡†å¤‡ä¸¤å°ç”µè„‘åˆ†åˆ«æ˜¯æœ¬æœºçš„windowsä»¥åŠè™šæ‹Ÿæœºcentosï¼›
 
-### 1.Æô¶¯NameServer
+### 1.å¯åŠ¨NameServer
 
-·Ö±ğÆô¶¯2Ì¨NameServer£¬¶Ë¿ÚºÅ¶¼Ê¹ÓÃÄ¬ÈÏµÄ9876£¬µØÖ·¶Ë¿ÚÈçÏÂ£º
+åˆ†åˆ«å¯åŠ¨2å°NameServerï¼Œç«¯å£å·éƒ½ä½¿ç”¨é»˜è®¤çš„9876ï¼Œåœ°å€ç«¯å£å¦‚ä¸‹ï¼š
 
 ```
 192.168.237.128:9876
 10.13.83.7:9876
 ```
 
-### 2.Æô¶¯Broker
+### 2.å¯åŠ¨Broker
 
-Ã¿Ì¨»úÆ÷ÉÏ·Ö±ğÆô¶¯Ò»¸öMasterºÍÒ»¸öSlave£¬»¥ÎªÖ÷±¸£¬ÔÚÖ÷Ä¿Â¼ÏÂµÄconfÎÄ¼ş¼ĞÏÂÌá¹©ÁË¶àÖÖbrokerÅäÖÃÄ£Ê½£¬·Ö±ğÓĞ£º2m-2s-async£¬2m-2s-sync£¬2m-noslave£¬¿ÉÒÔÒÔ´ËÎªÄ£°æ×öÈçÏÂÅäÖÃ£º
+æ¯å°æœºå™¨ä¸Šåˆ†åˆ«å¯åŠ¨ä¸€ä¸ªMasterå’Œä¸€ä¸ªSlaveï¼Œäº’ä¸ºä¸»å¤‡ï¼Œåœ¨ä¸»ç›®å½•ä¸‹çš„confæ–‡ä»¶å¤¹ä¸‹æä¾›äº†å¤šç§brokeré…ç½®æ¨¡å¼ï¼Œåˆ†åˆ«æœ‰ï¼š2m-2s-asyncï¼Œ2m-2s-syncï¼Œ2m-noslaveï¼Œå¯ä»¥ä»¥æ­¤ä¸ºæ¨¡ç‰ˆåšå¦‚ä¸‹é…ç½®ï¼š
 
-#### 2.1ÅäÖÃ10.13.83.7MasterºÍSlave
+#### 2.1é…ç½®10.13.83.7Masterå’ŒSlave
 
-MasterÅäÖÃÈçÏÂ£º
+Masteré…ç½®å¦‚ä¸‹ï¼š
 
 ```
 namesrvAddr=192.168.237.128:9876;10.13.83.7:9876
@@ -231,7 +231,7 @@ listenPort=10911
 storePathRootDir=E:/rocketmq-all-4.3.2-bin-release/store-a-m
 ```
 
-SlaveÅäÖÃÈçÏÂ£º
+Slaveé…ç½®å¦‚ä¸‹ï¼š
 
 ```
 namesrvAddr=192.168.237.128:9876;10.13.83.7:9876
@@ -246,7 +246,7 @@ listenPort=10811
 storePathRootDir=E:/rocketmq-all-4.3.2-bin-release/store-a-s
 ```
 
-·Ö±ğÆô¶¯½á¹ûÈçÏÂ£º
+åˆ†åˆ«å¯åŠ¨ç»“æœå¦‚ä¸‹ï¼š
 
 ```
 E:\rocketmq-all-4.3.2-bin-release\bin>mqbroker -c E:\rocketmq-all-4.3.2-bin-rele
@@ -255,7 +255,7 @@ The broker[broker-a, 10.13.83.7:10911] boot success. serializeType=JSON and name
  server is 192.168.237.128:9876;10.13.83.7:9876
 ```
 
-ÒÔÉÏÊÇMasterÆô¶¯ÈÕÖ¾£¬SlaveÈÕÖ¾ÈçÏÂ£º
+ä»¥ä¸Šæ˜¯Masterå¯åŠ¨æ—¥å¿—ï¼ŒSlaveæ—¥å¿—å¦‚ä¸‹ï¼š
 
 ```
 E:\rocketmq-all-4.3.2-bin-release\bin>mqbroker -c E:\rocketmq-all-4.3.2-bin-rele
@@ -264,9 +264,9 @@ The broker[broker-a, 10.13.83.7:10811] boot success. serializeType=JSON and name
  server is 192.168.237.128:9876;10.13.83.7:9876
 ```
 
-#### 2.2ÅäÖÃ10.13.83.7Slave
+#### 2.2é…ç½®10.13.83.7Slave
 
-MasterÅäÖÃÈçÏÂ£º
+Masteré…ç½®å¦‚ä¸‹ï¼š
 
 ```
 namesrvAddr=192.168.237.128:9876;10.13.83.7:9876
@@ -281,7 +281,7 @@ listenPort=10911
 storePathRootDir=/root/rocketmq-all-4.3.2-bin-release/store-b-m
 ```
 
-SlaveÅäÖÃÈçÏÂ£º
+Slaveé…ç½®å¦‚ä¸‹ï¼š
 
 ```
 namesrvAddr=192.168.237.128:9876;10.13.83.7:9876
@@ -296,7 +296,7 @@ listenPort=10811
 storePathRootDir=/root/rocketmq-all-4.3.2-bin-release/store-b-s
 ```
 
-Æô¶¯ÈÕÖ¾·Ö±ğÈçÏÂ£º
+å¯åŠ¨æ—¥å¿—åˆ†åˆ«å¦‚ä¸‹ï¼š
 
 ```
 [root@localhost bin]# ./mqbroker -c ../conf/broker-m.conf 
@@ -308,53 +308,53 @@ The broker[broker-b, 192.168.237.128:10911] boot success. serializeType=JSON and
 The broker[broker-b, 192.168.237.128:10811] boot success. serializeType=JSON and name server is 192.168.237.128:9876;10.13.83.7:9876
 ```
 
-### 3.ÅäÖÃËµÃ÷
+### 3.é…ç½®è¯´æ˜
 
 #### 1.namesrvAddr
 
-NameServerµØÖ·£¬¿ÉÒÔÅäÖÃ¶à¸ö£¬ÓÃ¶ººÅ·Ö¸ô£»
+NameServeråœ°å€ï¼Œå¯ä»¥é…ç½®å¤šä¸ªï¼Œç”¨é€—å·åˆ†éš”ï¼›
 
 #### 2.brokerClusterName
 
-ËùÊô¼¯ÈºÃû³Æ£¬Èç¹û½Úµã½Ï¶à¿ÉÒÔÅäÖÃ¶à¸ö
+æ‰€å±é›†ç¾¤åç§°ï¼Œå¦‚æœèŠ‚ç‚¹è¾ƒå¤šå¯ä»¥é…ç½®å¤šä¸ª
 
 #### 3.brokerName
 
-brokerÃû³Æ£¬masterºÍslaveÊ¹ÓÃÏàÍ¬µÄÃû³Æ£¬±íÃ÷ËûÃÇµÄÖ÷´Ó¹ØÏµ
+brokeråç§°ï¼Œmasterå’Œslaveä½¿ç”¨ç›¸åŒçš„åç§°ï¼Œè¡¨æ˜ä»–ä»¬çš„ä¸»ä»å…³ç³»
 
 #### 4.brokerId
 
-0±íÊ¾Master£¬´óÓÚ0±íÊ¾²»Í¬µÄslave
+0è¡¨ç¤ºMasterï¼Œå¤§äº0è¡¨ç¤ºä¸åŒçš„slave
 
 #### 5.deleteWhen
 
-±íÊ¾¼¸µã×öÏûÏ¢É¾³ı¶¯×÷£¬Ä¬ÈÏÊÇÁè³¿4µã
+è¡¨ç¤ºå‡ ç‚¹åšæ¶ˆæ¯åˆ é™¤åŠ¨ä½œï¼Œé»˜è®¤æ˜¯å‡Œæ™¨4ç‚¹
 
 #### 6.fileReservedTime
 
-ÔÚ´ÅÅÌÉÏ±£ÁôÏûÏ¢µÄÊ±³¤£¬µ¥Î»ÊÇĞ¡Ê±
+åœ¨ç£ç›˜ä¸Šä¿ç•™æ¶ˆæ¯çš„æ—¶é•¿ï¼Œå•ä½æ˜¯å°æ—¶
 
 #### 7.brokerRole
 
-ÓĞÈı¸öÖµ£ºSYNC\_MASTER£¬ASYNC\_MASTER£¬SLAVE£»Í¬²½ºÍÒì²½±íÊ¾MasterºÍSlaveÖ®¼äÍ¬²½Êı¾İµÄ»úÖÆ£»
+æœ‰ä¸‰ä¸ªå€¼ï¼šSYNC\_MASTERï¼ŒASYNC\_MASTERï¼ŒSLAVEï¼›åŒæ­¥å’Œå¼‚æ­¥è¡¨ç¤ºMasterå’ŒSlaveä¹‹é—´åŒæ­¥æ•°æ®çš„æœºåˆ¶ï¼›
 
 #### 8.flushDiskType
 
-Ë¢ÅÌ²ßÂÔ£¬È¡ÖµÎª£ºASYNC\_FLUSH£¬SYNC\_FLUSH±íÊ¾Í¬²½Ë¢ÅÌºÍÒì²½Ë¢ÅÌ£»SYNC\_FLUSHÏûÏ¢Ğ´Èë´ÅÅÌºó²Å·µ»Ø³É¹¦×´Ì¬£¬ASYNC\_FLUSH²»ĞèÒª£»
+åˆ·ç›˜ç­–ç•¥ï¼Œå–å€¼ä¸ºï¼šASYNC\_FLUSHï¼ŒSYNC\_FLUSHè¡¨ç¤ºåŒæ­¥åˆ·ç›˜å’Œå¼‚æ­¥åˆ·ç›˜ï¼›SYNC\_FLUSHæ¶ˆæ¯å†™å…¥ç£ç›˜åæ‰è¿”å›æˆåŠŸçŠ¶æ€ï¼ŒASYNC\_FLUSHä¸éœ€è¦ï¼›
 
 #### 9.listenPort
 
-Æô¶¯¼àÌıµÄ¶Ë¿ÚºÅ
+å¯åŠ¨ç›‘å¬çš„ç«¯å£å·
 
 #### 10.storePathRootDir
 
-´æ´¢ÏûÏ¢µÄ¸ùÄ¿Â¼
+å­˜å‚¨æ¶ˆæ¯çš„æ ¹ç›®å½•
 
-## ¹ÜÀí¹¤¾ß
+## ç®¡ç†å·¥å…·
 
-### 1.ÃüÁîĞĞ¹ÜÀí¹¤¾ß
+### 1.å‘½ä»¤è¡Œç®¡ç†å·¥å…·
 
-mqadminÊÇRocketMQ×Ô´øµÄÃüÁîĞĞ¹ÜÀí¹¤¾ß£¬¿ÉÒÔ´´½¨¡¢ĞŞ¸ÄTopic£¬²éÑ¯ÏûÏ¢£¬¸üĞÂÅäÖÃĞÅÏ¢µÈ²Ù×÷£¬¾ßÌå¿ÉÒÔÍ¨¹ıÈçÏÂÃüÁî²é¿´£º
+mqadminæ˜¯RocketMQè‡ªå¸¦çš„å‘½ä»¤è¡Œç®¡ç†å·¥å…·ï¼Œå¯ä»¥åˆ›å»ºã€ä¿®æ”¹Topicï¼ŒæŸ¥è¯¢æ¶ˆæ¯ï¼Œæ›´æ–°é…ç½®ä¿¡æ¯ç­‰æ“ä½œï¼Œå…·ä½“å¯ä»¥é€šè¿‡å¦‚ä¸‹å‘½ä»¤æŸ¥çœ‹ï¼š
 
 ```
 E:\rocketmq-all-4.3.2-bin-release\bin>mqadmin
@@ -408,7 +408,7 @@ t).
 See 'mqadmin help <command>' for more information on a specific command.
 ```
 
-ÁĞ³öÁËËùÓĞÖ§³ÖµÄÃüÁîÒÔ¼°¼òµ¥µÄ½éÉÜ£¬Èç¹ûÏë¿´ÏêÏ¸µÄ¿ÉÒÔÈçÏÂÃüÁî£º
+åˆ—å‡ºäº†æ‰€æœ‰æ”¯æŒçš„å‘½ä»¤ä»¥åŠç®€å•çš„ä»‹ç»ï¼Œå¦‚æœæƒ³çœ‹è¯¦ç»†çš„å¯ä»¥å¦‚ä¸‹å‘½ä»¤ï¼š
 
 ```
 E:\rocketmq-all-4.3.2-bin-release\bin>mqadmin help statsAll
@@ -420,21 +420,21 @@ usage: mqadmin statsAll [-a] [-h] [-n <arg>] [-t <arg>]
  -t,--topic <arg>         print select topic only
 ```
 
-### 2.Í¼ĞÎ½çÃæ¹ÜÀí¹¤¾ß
+### 2.å›¾å½¢ç•Œé¢ç®¡ç†å·¥å…·
 
-³ıÁËÃüÁî£¬»¹Ìá¹©ÁËÍ¼ĞÎ½çÃæ¹ÜÀí¹¤¾ß£¬ÔÚRocketMQµÄÀ©Õ¹°üÀïÃæ£¬¾ßÌåµØÖ·ÈçÏÂ£º
+é™¤äº†å‘½ä»¤ï¼Œè¿˜æä¾›äº†å›¾å½¢ç•Œé¢ç®¡ç†å·¥å…·ï¼Œåœ¨RocketMQçš„æ‰©å±•åŒ…é‡Œé¢ï¼Œå…·ä½“åœ°å€å¦‚ä¸‹ï¼š
 
 ```
 https://github.com/apache/rocketmq-externals/tree/release-rocketmq-console-1.0.0/rocketmq-console
 ```
 
-Ä¿Ç°µÄÎÈ¶¨°æ±¾ÊÇ1.0.0£¬¿ÉÒÔÏÂÔØÏÂÀ´ÔÚ±¾µØÔËĞĞ£¬¶Ôapplication.properties×ö¼òµ¥ÅäÖÃ£º
+ç›®å‰çš„ç¨³å®šç‰ˆæœ¬æ˜¯1.0.0ï¼Œå¯ä»¥ä¸‹è½½ä¸‹æ¥åœ¨æœ¬åœ°è¿è¡Œï¼Œå¯¹application.propertiesåšç®€å•é…ç½®ï¼š
 
 ```
 rocketmq.config.namesrvAddr=10.13.83.7:9876
 ```
 
-ĞèÒªÖ¸¶¨NameServerµÄµØÖ·£¬È»ºó¾Í¿ÉÒÔ´ò°üÔËĞĞÁË£¬ÔË×÷Ö®ºó»áÆô¶¯8080¶Ë¿Ú£¬Ö±½Ó·ÃÎÊµØÖ·£º
+éœ€è¦æŒ‡å®šNameServerçš„åœ°å€ï¼Œç„¶åå°±å¯ä»¥æ‰“åŒ…è¿è¡Œäº†ï¼Œè¿ä½œä¹‹åä¼šå¯åŠ¨8080ç«¯å£ï¼Œç›´æ¥è®¿é—®åœ°å€ï¼š
 
 ```
 http://localhost:8080
@@ -442,6 +442,6 @@ http://localhost:8080
 
 ![](https://oscimg.oschina.net/oscnet/4e6af5773de8faa6f4216a80e3d5c9f0811.jpg)
 
-## ×Ü½á
+## æ€»ç»“
 
-±¾ÎÄ´Ó×î¼òµ¥µÄ°²×°²¿ÊğÈëÊÖ£¬²¢¶Ô³£ÓÃµÄÅäÖÃ²ÎÊı×öÁË¼òµ¥½éÉÜ£»È»ºóÁË½âÁËRocketMQµÄ²¿ÊğµÄÕûÌå½á¹¹£¬·Ö±ğ¶ÔÆäÖĞµÄ½ÇÉ«×öÁË¼òµ¥½éÉÜ£»×îºó½éÉÜÁËÁ½ÖÖRocketMQµÄ¹ÜÀí¹¤¾ß£¬·½±ã¶ÔRocketMQµÄ¼à¿ØºÍ¹ÜÀí¡£
+æœ¬æ–‡ä»æœ€ç®€å•çš„å®‰è£…éƒ¨ç½²å…¥æ‰‹ï¼Œå¹¶å¯¹å¸¸ç”¨çš„é…ç½®å‚æ•°åšäº†ç®€å•ä»‹ç»ï¼›ç„¶åäº†è§£äº†RocketMQçš„éƒ¨ç½²çš„æ•´ä½“ç»“æ„ï¼Œåˆ†åˆ«å¯¹å…¶ä¸­çš„è§’è‰²åšäº†ç®€å•ä»‹ç»ï¼›æœ€åä»‹ç»äº†ä¸¤ç§RocketMQçš„ç®¡ç†å·¥å…·ï¼Œæ–¹ä¾¿å¯¹RocketMQçš„ç›‘æ§å’Œç®¡ç†ã€‚

@@ -4,6 +4,7 @@
 ### 2019年
 - [RocketMQ入门篇](markdown/2019/RocketMQ入门篇.md)
 - [RocketMQ生产者流程篇](markdown/2019/RocketMQ生产者流程篇.md)
+- [RocketMQ生产者消息篇](markdown/2019/RocketMQ生产者消息篇.md)
 
 ---
 

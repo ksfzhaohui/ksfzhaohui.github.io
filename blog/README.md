@@ -2,6 +2,7 @@
 >思绪来得快去得也快，偶尔会在这里停留
 
 ### 2019年
+- [谈谈Java任务的并行处理](markdown/2019/谈谈Java任务的并行处理.md)
 - [关于零拷贝的一点认识](markdown/2019/关于零拷贝的一点认识.md)
 - [从RocketMQ看长轮询(Long Polling)](markdown/2019/从RocketMQ看长轮询LongPolling.md)
 - [RocketMQ生产者消息篇](markdown/2019/RocketMQ生产者消息篇.md)

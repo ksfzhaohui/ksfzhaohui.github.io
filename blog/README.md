@@ -2,6 +2,9 @@
 >思绪来得快去得也快，偶尔会在这里停留
 
 ### 2019年
+- [如何快速安全的插入千万条数据](markdown/2019/如何快速安全的插入千万条数据.md)
+- [为什么Netty的FastThreadLocal速度快](markdown/2019/为什么Netty的FastThreadLocal速度快.md)
+- [从SpringBoot整合Mybatis分析自动配置](markdown/2019/从SpringBoot整合Mybatis分析自动配置.md)
 - [记一次升级Oracle驱动引发的死锁](markdown/2019/记一次升级Oracle驱动引发的死锁.md)
 - [谈谈Java任务的并行处理](markdown/2019/谈谈Java任务的并行处理.md)
 - [关于零拷贝的一点认识](markdown/2019/关于零拷贝的一点认识.md)

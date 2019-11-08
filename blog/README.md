@@ -2,6 +2,7 @@
 >思绪来得快去得也快，偶尔会在这里停留
 
 ### 2019年
+- [Mybatis之Mapper接口如何执行SQL](markdown/2019/Mybatis之Mapper接口如何执行SQL.md)
 - [如何快速安全的插入千万条数据](markdown/2019/如何快速安全的插入千万条数据.md)
 - [为什么Netty的FastThreadLocal速度快](markdown/2019/为什么Netty的FastThreadLocal速度快.md)
 - [从SpringBoot整合Mybatis分析自动配置](markdown/2019/从SpringBoot整合Mybatis分析自动配置.md)

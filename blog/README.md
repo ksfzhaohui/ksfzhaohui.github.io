@@ -2,6 +2,13 @@
 >思绪来得快去得也快，偶尔会在这里停留
 
 ### 2019年
+- [如何设计一个安全的对外接口](markdown/2019/如何设计一个安全的对外接口.md)
+- [Mybatis之缓存分析](markdown/2019/Mybatis之缓存分析.md)
+- [Mybatis之结果处理器](markdown/2019/Mybatis之结果处理器.md)
+- [Mybatis之类型处理器](markdown/2019/Mybatis之类型处理器.md)
+- [Mybatis之对象工厂](markdown/2019/Mybatis之对象工厂.md)
+- [Mybatis之XML如何映射到方法](markdown/2019/Mybatis之XML如何映射到方法.md)
+- [Mybatis之方法如何映射到XML](markdown/2019/Mybatis之方法如何映射到XML.md)
 - [Mybatis之Mapper接口如何执行SQL](markdown/2019/Mybatis之Mapper接口如何执行SQL.md)
 - [如何快速安全的插入千万条数据](markdown/2019/如何快速安全的插入千万条数据.md)
 - [为什么Netty的FastThreadLocal速度快](markdown/2019/为什么Netty的FastThreadLocal速度快.md)

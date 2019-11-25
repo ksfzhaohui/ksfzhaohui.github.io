@@ -2,6 +2,7 @@
 >思绪来得快去得也快，偶尔会在这里停留
 
 ### 2019年
+- [如何设计一个本地缓存](markdown/2019/如何设计一个本地缓存.md)
 - [如何设计一个安全的对外接口](markdown/2019/如何设计一个安全的对外接口.md)
 - [Mybatis之缓存分析](markdown/2019/Mybatis之缓存分析.md)
 - [Mybatis之结果处理器](markdown/2019/Mybatis之结果处理器.md)

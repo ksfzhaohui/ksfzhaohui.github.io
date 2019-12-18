@@ -2,6 +2,9 @@
 >思绪来得快去得也快，偶尔会在这里停留
 
 ### 2019年
+- [Kubernetes入门篇](markdown/2019/Kubernetes入门篇.md)
+- [Mybatis分页那点事](markdown/2019/Mybatis分页那点事.md)
+- [Mybatis之插件分析](markdown/2019/Mybatis之插件分析.md)
 - [如何设计一个本地缓存](markdown/2019/如何设计一个本地缓存.md)
 - [如何设计一个安全的对外接口](markdown/2019/如何设计一个安全的对外接口.md)
 - [Mybatis之缓存分析](markdown/2019/Mybatis之缓存分析.md)

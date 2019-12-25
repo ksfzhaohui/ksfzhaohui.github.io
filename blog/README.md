@@ -2,6 +2,8 @@
 >思绪来得快去得也快，偶尔会在这里停留
 
 ### 2019年
+- [Kubernetes 副本机制篇](markdown/2019/Kubernetes 副本机制篇.md)
+- [Kubernetes Pod操作篇](markdown/2019/KKubernetes Pod操作篇.md)
 - [Kubernetes入门篇](markdown/2019/Kubernetes入门篇.md)
 - [Mybatis分页那点事](markdown/2019/Mybatis分页那点事.md)
 - [Mybatis之插件分析](markdown/2019/Mybatis之插件分析.md)
